@@ -1,4 +1,4 @@
-package com.glfs.chatgpt.data.test;
+package cn.glfs.chatgpt.data.test;
 
 
 
