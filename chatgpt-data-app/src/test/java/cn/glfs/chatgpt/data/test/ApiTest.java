@@ -1,9 +1,8 @@
 package cn.glfs.chatgpt.data.test;
 
 
-
-import cn.glfs.chatcpt.data.trigger.http.dto.ChatGPTRequestDTO;
-import cn.glfs.chatcpt.data.trigger.http.dto.MessageEntity;
+import cn.glfs.chatgpt.data.trigger.http.dto.ChatGPTRequestDTO;
+import cn.glfs.chatgpt.data.trigger.http.dto.MessageEntity;
 import cn.glfs.chatgpt.data.types.enums.ChatGPTModel;
 import com.alibaba.fastjson.JSON;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -38,19 +37,19 @@ public class ApiTest {
      * 模拟3.5
      */
     @Test
-    public void test_chat_completions(){
+    public void test_chat_completions() {
         //1.创建参数
-        ChatCompletionRequest completionRequest=ChatCompletionRequest
-                        .builder()
-                        //新建列表：返回一个包含该参数作为唯一元素的不可变列表
-                        .messages(Collections.singletonList(Message.builder().role(Constants.Role.USER).content("写一个java冒泡排序").build()))
-                        .model(ChatCompletionRequest.Model.GPT_3_5_TURBO.getCode())
-                        .build();
+        ChatCompletionRequest completionRequest = ChatCompletionRequest
+                .builder()
+                //新建列表：返回一个包含该参数作为唯一元素的不可变列表
+                .messages(Collections.singletonList(Message.builder().role(Constants.Role.USER).content("写一个java冒泡排序").build()))
+                .model(ChatCompletionRequest.Model.GPT_3_5_TURBO.getCode())
+                .build();
         //2.发送请求
         ChatCompletionResponse chatCompletionResponse = openAiSession.completions(completionRequest);
         //3.解析结果
-        chatCompletionResponse.getChoices().forEach(e->{
-            log.info("测试结果:{}",e.getMessage());
+        chatCompletionResponse.getChoices().forEach(e -> {
+            log.info("测试结果:{}", e.getMessage());
         });
     }
 
@@ -78,7 +77,7 @@ public class ApiTest {
     }
 
     @Test
-    public void test_request_json(){
+    public void test_request_json() {
         List<MessageEntity> messages = new ArrayList<>();
 
 //        MessageEntity messageEntity00 = new MessageEntity();

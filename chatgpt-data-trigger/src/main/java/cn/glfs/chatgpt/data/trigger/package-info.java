@@ -3,4 +3,4 @@
  * @author Fuzhengwei bugstack.cn @小傅哥
  * @create 2023-07-16 07:54
  */
-package cn.glfs.chatcpt.data.trigger.http;
+package cn.glfs.chatgpt.data.trigger;

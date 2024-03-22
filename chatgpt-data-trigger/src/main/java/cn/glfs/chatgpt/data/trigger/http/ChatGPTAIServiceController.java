@@ -1,7 +1,7 @@
-package cn.glfs.chatcpt.data.trigger.http;
+package cn.glfs.chatgpt.data.trigger.http;
 
 
-import cn.glfs.chatcpt.data.trigger.http.dto.ChatGPTRequestDTO;
+import cn.glfs.chatgpt.data.trigger.http.dto.ChatGPTRequestDTO;
 import cn.glfs.chatgpt.data.domain.openai.model.aggregates.ChatProcessAggregate;
 import cn.glfs.chatgpt.data.domain.openai.model.entity.MessageEntity;
 import cn.glfs.chatgpt.data.domain.openai.service.IChatService;
@@ -70,5 +70,9 @@ public class ChatGPTAIServiceController {
             log.error("流式应答，请求模型：{} 发生异常", request.getModel(), e);
             throw new ChatGPTException(e.getMessage());
         }
+    }
+    @RequestMapping(value = "chat/completion2", method = RequestMethod.GET)
+    public String a(){
+        return "1234";
     }
 }

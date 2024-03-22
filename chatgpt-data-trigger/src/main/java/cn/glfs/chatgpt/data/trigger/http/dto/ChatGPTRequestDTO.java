@@ -1,4 +1,4 @@
-package cn.glfs.chatcpt.data.trigger.http.dto;
+package cn.glfs.chatgpt.data.trigger.http.dto;
 
 import cn.glfs.chatgpt.data.types.enums.ChatGPTModel;
 import lombok.AllArgsConstructor;

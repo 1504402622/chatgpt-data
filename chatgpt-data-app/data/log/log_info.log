@@ -226,3 +226,17 @@
 24-03-20.08:51:54.995 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  ApiTest                - 测试结果：{"id":"chatcmpl-94eTGEiySDs8tbPVDAHYFTV677HwL","object":"chat.completion.chunk","created":1710895910,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_4f0b692a78","choices":[{"index":0,"delta":{"content":"```"},"logprobs":null,"finish_reason":null}]}
 24-03-20.08:51:54.995 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  ApiTest                - 测试结果：{"id":"chatcmpl-94eTGEiySDs8tbPVDAHYFTV677HwL","object":"chat.completion.chunk","created":1710895910,"model":"gpt-3.5-turbo-0125","system_fingerprint":"fp_4f0b692a78","choices":[{"index":0,"delta":{},"logprobs":null,"finish_reason":"stop"}]}
 24-03-20.08:51:54.995 [OkHttp https://pro-share-aws-api.zcyai.com/...] INFO  ApiTest                - 测试结果：[DONE]
+24-03-20.14:29:56.425 [main            ] INFO  Application            - Starting Application using Java 18.0.2 on LAPTOP-7QN67S71 with PID 11548 (E:\java_Demo\chatgpt-data\chatgpt-data-app\target\classes started by lenovo in E:\java_Demo\chatgpt-data\chatgpt-data-app)
+24-03-20.14:29:56.428 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-03-20.14:29:57.353 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-03-20.14:29:57.362 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-03-20.14:29:57.363 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-03-20.14:29:57.363 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-03-20.14:29:57.507 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-03-20.14:29:57.507 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1022 ms
+24-03-20.14:29:57.986 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-03-20.14:29:58.016 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-03-20.14:29:58.025 [main            ] INFO  Application            - Started Application in 2.199 seconds (JVM running for 3.14)
+24-03-20.14:30:03.413 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-03-20.14:30:03.414 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-03-20.14:30:03.415 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms

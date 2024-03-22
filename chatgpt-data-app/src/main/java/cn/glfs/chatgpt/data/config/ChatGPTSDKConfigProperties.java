@@ -1,6 +1,7 @@
 package cn.glfs.chatgpt.data.config;
 
 
+
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
@@ -13,4 +14,5 @@ public class ChatGPTSDKConfigProperties {
     private String apiHost;
     private String apiKey;
     private String authToken;
+
 }
