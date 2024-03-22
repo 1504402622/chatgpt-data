@@ -1,18 +1,22 @@
 package cn.glfs.chatgpt.data.trigger.http;
 
 
+import cn.glfs.chatgpt.data.domain.auth.service.IAuthService;
 import cn.glfs.chatgpt.data.trigger.http.dto.ChatGPTRequestDTO;
 import cn.glfs.chatgpt.data.domain.openai.model.aggregates.ChatProcessAggregate;
 import cn.glfs.chatgpt.data.domain.openai.model.entity.MessageEntity;
 import cn.glfs.chatgpt.data.domain.openai.service.IChatService;
+import cn.glfs.chatgpt.data.types.common.Constants;
 import cn.glfs.chatgpt.data.types.exception.ChatGPTException;
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.stream.Collectors;
 
 
@@ -22,8 +26,11 @@ import java.util.stream.Collectors;
 @RequestMapping("/api/${app.config.api-version}/")
 public class ChatGPTAIServiceController {
 
-    @Resource//类似@Autowired
+    @Resource
     private IChatService chatService;
+
+    @Resource
+    private IAuthService authService;
 
     /**
      * 流式问题，ChatGPT 请求接口
@@ -51,7 +58,22 @@ public class ChatGPTAIServiceController {
             response.setCharacterEncoding("UTF-8");
             response.setHeader("Cache-Control", "no-cache");
 
-            // 2. 构建参数
+            // 2.构建异步响应对象（对Token过期拦截）
+            // 如果验证失败，则通过 emitter 发送一个 TOKEN_ERROR 的响应码，并立即完成响应。
+            ResponseBodyEmitter emitter = new ResponseBodyEmitter(3 * 60 * 1000L);
+            boolean success = authService.checkToken(token);
+
+            if(!success){
+                try {
+                    emitter.send(Constants.ResponseCode.TOKEN_ERROR.getCode());
+                }catch (IOException e){
+                    throw new RuntimeException(e);
+                }
+                emitter.complete();
+                return emitter;
+            }
+
+            // 3.构建参数
              ChatProcessAggregate chatProcessAggregate = ChatProcessAggregate.builder()
                     .token(token)
                     .model(request.getModel())
@@ -65,14 +87,15 @@ public class ChatGPTAIServiceController {
                     .build();
 
             // 3. 请求结果&返回
-            return chatService.completions(chatProcessAggregate);
+            return chatService.completions(emitter,chatProcessAggregate);
         } catch (Exception e) {
             log.error("流式应答，请求模型：{} 发生异常", request.getModel(), e);
             throw new ChatGPTException(e.getMessage());
         }
     }
-    @RequestMapping(value = "chat/completion2", method = RequestMethod.GET)
+    @RequestMapping(value = "chat", method = RequestMethod.GET)
     public String a(){
-        return "1234";
+        System.out.println("11111");
+        return "123";
     }
 }

@@ -11,8 +11,8 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.tomcat.util.codec.binary.Base64;
 import com.auth0.jwt.algorithms.Algorithm;
+import org.apache.commons.codec.binary.Base64;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -29,11 +29,12 @@ public abstract class AbstractAuthService implements IAuthService{
     /** SecretKey 后期通过配置的方式使用 */
     //在 JWT（JSON Web Token）中，密钥（key）用于对 JWT 进行数字签名（digital signature）和/或加密（encryption）
     // 以确保 JWT 的完整性、真实性并且保护其内容不被篡改
+
+
     private static final String defaultBase64EncodedSecretKey = "B*B^D%fe";
     /** 将默认的 Base64 编码后的密钥再次进行 Base64 编码*/
-    private final String base64EncodedSecretKey = Base64.encodeBase64String(defaultBase64EncodedSecretKey.getBytes());
-
-    private final Algorithm algorithm = Algorithm.HMAC256(org.apache.commons.codec.binary.Base64.decodeBase64(org.apache.commons.codec.binary.Base64.encodeBase64String(defaultBase64EncodedSecretKey.getBytes())));
+    private final String base64EncodedSecretKey = org.apache.commons.codec.binary.Base64.encodeBase64String(defaultBase64EncodedSecretKey.getBytes());
+    private final Algorithm algorithm = Algorithm.HMAC256(org.apache.commons.codec.binary.Base64.decodeBase64(Base64.encodeBase64String(defaultBase64EncodedSecretKey.getBytes())));
 
     protected abstract AuthStateEntity checkCode(String code);
 
@@ -100,7 +101,7 @@ public abstract class AbstractAuthService implements IAuthService{
                 .setIssuedAt(new Date(nowMillis))
                 // 签发人，也就是JWT是给谁的（逻辑上一般都是username或者userId）
                 .setSubject(issuer)
-                .signWith(SignatureAlgorithm.ES256,base64EncodedSecretKey);//这个地方是生成jwt使用的算法和秘钥
+                .signWith(SignatureAlgorithm.HS256, base64EncodedSecretKey);//这个地方是生成jwt使用的算法和秘钥
         //设置过期时间
         if(ttlMillis >= 0){
             long expMillis = nowMillis+ttlMillis;

@@ -43,8 +43,8 @@ public class WeiXinBehaviorService implements IWeiXinBehaviorService {
             return "";
         }
 
-        //文本类型
-        if(MsgTypeVO.TEXT.getCode().equals(userBehaviorMessageEntity.getMsgType())){
+        //验证码生成文本类型
+        if(MsgTypeVO.TEXT.getCode().equals(userBehaviorMessageEntity.getMsgType())&&userBehaviorMessageEntity.getContent().equals("403")){
             //缓存验证码
             String isExistCode = codeCache.getIfPresent(userBehaviorMessageEntity.getOpenId());
 
