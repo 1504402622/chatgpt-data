@@ -1,5 +1,6 @@
 package cn.glfs.chatgpt.data.config;
 
+
 import com.glfs.chatgpt.session.OpenAiSession;
 import com.glfs.chatgpt.session.OpenAiSessionFactory;
 import com.glfs.chatgpt.session.defaults.DefaultOpenAiSessionFactory;
@@ -16,6 +17,7 @@ import org.springframework.context.annotation.Configuration;
 public class ChatGPTSDKConfig {
     @Bean
     public OpenAiSession openAiSession(ChatGPTSDKConfigProperties properties){
+
         //1.配置文件
         com.glfs.chatgpt.session.Configuration configuration = new com.glfs.chatgpt.session.Configuration();
         configuration.setApiHost(properties.getApiHost());

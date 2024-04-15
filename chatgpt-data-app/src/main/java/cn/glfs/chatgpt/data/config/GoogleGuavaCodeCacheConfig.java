@@ -15,12 +15,20 @@ import java.util.concurrent.TimeUnit;
 @Configuration
 public class GoogleGuavaCodeCacheConfig {
 
-    //guava也是键值对存储的存储用户id和验证码
+    //guava存储用户id和验证码缓存
     @Bean(name = "codeCache")
     public Cache<String,String> codeCache(){
         return CacheBuilder.newBuilder()
                 //设置了缓存项在写入一定时间后过期的时间为 3 分钟
                 .expireAfterWrite(3, TimeUnit.MINUTES)
+                .build();
+    }
+
+    //guava对用户的免费次数已用次数缓存
+    @Bean(name = "visitCache")
+    public Cache<String, Integer> visitCache() {
+        return CacheBuilder.newBuilder()
+                .expireAfterWrite(12, TimeUnit.HOURS)
                 .build();
     }
 

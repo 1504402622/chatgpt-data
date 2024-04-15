@@ -1,0 +1,397 @@
+24-03-26.20:53:26.741 [main            ] INFO  Application            - Starting Application using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 3612 (E:\java_Demo\chatgpt-data\chatgpt-data-app\target\classes started by lenovo in E:\java_Demo\chatgpt-data)
+24-03-26.20:53:26.745 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-03-26.20:53:27.940 [main            ] ERROR SpringApplication      - Application run failed
+java.lang.IllegalArgumentException: Unable to instantiate org.mybatis.spring.boot.autoconfigure.MybatisDependsOnDatabaseInitializationDetector [org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector]
+	at org.springframework.boot.util.Instantiator.lambda$static$0(Instantiator.java:53)
+	at org.springframework.boot.util.Instantiator.instantiate(Instantiator.java:153)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+	at org.springframework.boot.util.Instantiator.instantiate(Instantiator.java:141)
+	at org.springframework.boot.util.Instantiator.instantiate(Instantiator.java:126)
+	at org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer$DependsOnDatabaseInitializationPostProcessor.getDetectors(DatabaseInitializationDependencyConfigurer.java:157)
+	at org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer$DependsOnDatabaseInitializationPostProcessor.detectDependsOnInitializationBeanNames(DatabaseInitializationDependencyConfigurer.java:144)
+	at org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer$DependsOnDatabaseInitializationPostProcessor.postProcessBeanFactory(DatabaseInitializationDependencyConfigurer.java:111)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:325)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:191)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:748)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at cn.glfs.chatgpt.data.Application.main(Application.java:14)
+Caused by: java.lang.UnsupportedClassVersionError: org/mybatis/spring/boot/autoconfigure/MybatisDependsOnDatabaseInitializationDetector has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 52.0
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:473)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:284)
+	at org.springframework.boot.util.Instantiator$TypeSupplier$1.get(Instantiator.java:233)
+	at org.springframework.boot.util.Instantiator.instantiate(Instantiator.java:148)
+	... 24 common frames omitted
+24-03-26.20:53:27.946 [main            ] WARN  SpringApplication      - Unable to close ApplicationContext
+org.springframework.beans.factory.CannotLoadBeanClassException: Error loading class [org.mybatis.spring.boot.autoconfigure.MybatisLanguageDriverAutoConfiguration] for bean with name 'org.mybatis.spring.boot.autoconfigure.MybatisLanguageDriverAutoConfiguration': problem with class file or dependent class; nested exception is java.lang.UnsupportedClassVersionError: org/mybatis/spring/boot/autoconfigure/MybatisLanguageDriverAutoConfiguration has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 52.0
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1559)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:704)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:674)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1684)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:669)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:661)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1302)
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:864)
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:852)
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:839)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:779)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at cn.glfs.chatgpt.data.Application.main(Application.java:14)
+Caused by: java.lang.UnsupportedClassVersionError: org/mybatis/spring/boot/autoconfigure/MybatisLanguageDriverAutoConfiguration has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 52.0
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:473)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:284)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:469)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1621)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1548)
+	... 16 common frames omitted
+24-03-26.21:00:56.677 [main            ] INFO  Application            - Starting Application using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 22556 (E:\java_Demo\chatgpt-data\chatgpt-data-app\target\classes started by lenovo in E:\java_Demo\chatgpt-data)
+24-03-26.21:00:56.679 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-03-26.21:00:57.917 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-03-26.21:00:57.928 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-03-26.21:00:57.928 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-03-26.21:00:57.929 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-03-26.21:00:58.070 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-03-26.21:00:58.070 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1351 ms
+24-03-26.21:00:59.370 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-03-26.21:00:59.391 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-03-26.21:00:59.400 [main            ] INFO  Application            - Started Application in 3.334 seconds (JVM running for 4.608)
+24-03-26.21:02:40.997 [http-nio-8090-exec-1] INFO  Cookie                 - A cookie header was received [Hm_lvt_1fb9ea953cca3054fb89b3cdf4a41a59=1711155756,1711326671,1711332290] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+24-03-26.21:02:41.006 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-03-26.21:02:41.007 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-03-26.21:02:41.008 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+24-03-26.21:05:31.904 [main            ] INFO  Application            - Starting Application using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 25964 (E:\java_Demo\chatgpt-data\chatgpt-data-app\target\classes started by lenovo in E:\java_Demo\chatgpt-data)
+24-03-26.21:05:31.907 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-03-26.21:05:33.269 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-03-26.21:05:33.283 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-03-26.21:05:33.284 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-03-26.21:05:33.284 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-03-26.21:05:33.446 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-03-26.21:05:33.446 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1498 ms
+24-03-26.21:05:34.944 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-03-26.21:05:34.969 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-03-26.21:05:34.980 [main            ] INFO  Application            - Started Application in 3.721 seconds (JVM running for 5.072)
+24-03-26.21:17:48.157 [http-nio-8090-exec-3] INFO  Cookie                 - A cookie header was received [Hm_lvt_1fb9ea953cca3054fb89b3cdf4a41a59=1711155756,1711326671,1711332290] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+24-03-26.21:17:48.166 [http-nio-8090-exec-3] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-03-26.21:17:48.166 [http-nio-8090-exec-3] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-03-26.21:17:48.167 [http-nio-8090-exec-3] INFO  DispatcherServlet      - Completed initialization in 1 ms
+24-03-26.21:17:48.197 [http-nio-8090-exec-3] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+24-03-26.21:31:00.138 [http-nio-8090-exec-6] INFO  AuthController         - 鉴权登录校验开始,验证码:5985
+24-03-26.21:31:00.142 [http-nio-8090-exec-6] INFO  AuthService            - 鉴权,用户收入的验证码不存在5985
+24-03-26.21:31:00.300 [http-nio-8090-exec-6] INFO  AuthController         - 鉴权登录校验完成,验证码:5985,结果:{"code":"0001","info":"验证码不存在"}
+24-03-26.21:31:04.906 [http-nio-8090-exec-7] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Invalid mime type "application/json;charset=utf-8'": utf-8']
+24-03-26.21:31:35.684 [main            ] INFO  Application            - Starting Application using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 25728 (E:\java_Demo\chatgpt-data\chatgpt-data-app\target\classes started by lenovo in E:\java_Demo\chatgpt-data)
+24-03-26.21:31:35.687 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-03-26.21:31:36.998 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-03-26.21:31:37.010 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-03-26.21:31:37.011 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-03-26.21:31:37.011 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-03-26.21:31:37.166 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-03-26.21:31:37.166 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1437 ms
+24-03-26.21:31:38.490 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-03-26.21:31:38.521 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-03-26.21:31:38.530 [main            ] INFO  Application            - Started Application in 3.492 seconds (JVM running for 5.126)
+24-03-26.21:39:31.280 [main            ] INFO  Application            - Starting Application using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 22600 (E:\java_Demo\chatgpt-data\chatgpt-data-app\target\classes started by lenovo in E:\java_Demo\chatgpt-data)
+24-03-26.21:39:31.283 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-03-26.21:39:32.473 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-03-26.21:39:32.482 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-03-26.21:39:32.482 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-03-26.21:39:32.483 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-03-26.21:39:32.618 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-03-26.21:39:32.618 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1296 ms
+24-03-26.21:39:33.851 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-03-26.21:39:33.870 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-03-26.21:39:33.879 [main            ] INFO  Application            - Started Application in 3.207 seconds (JVM running for 4.743)
+24-03-26.21:40:05.909 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-03-26.21:40:05.910 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-03-26.21:40:05.910 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 0 ms
+24-03-26.21:40:05.938 [http-nio-8090-exec-1] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'openid' for method parameter type String is not present]
+24-03-26.21:41:11.478 [main            ] INFO  Application            - Starting Application using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 7808 (E:\java_Demo\chatgpt-data\chatgpt-data-app\target\classes started by lenovo in E:\java_Demo\chatgpt-data)
+24-03-26.21:41:11.481 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-03-26.21:41:12.725 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-03-26.21:41:12.734 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-03-26.21:41:12.735 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-03-26.21:41:12.735 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-03-26.21:41:12.866 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-03-26.21:41:12.866 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1345 ms
+24-03-26.21:41:14.134 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-03-26.21:41:14.153 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-03-26.21:41:14.162 [main            ] INFO  Application            - Started Application in 3.264 seconds (JVM running for 4.609)
+24-03-26.21:44:27.244 [main            ] INFO  Application            - Starting Application using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 17452 (E:\java_Demo\chatgpt-data\chatgpt-data-app\target\classes started by lenovo in E:\java_Demo\chatgpt-data)
+24-03-26.21:44:27.247 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-03-26.21:44:28.485 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-03-26.21:44:28.495 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-03-26.21:44:28.496 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-03-26.21:44:28.496 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-03-26.21:44:28.630 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-03-26.21:44:28.630 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1335 ms
+24-03-26.21:44:29.850 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-03-26.21:44:29.868 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-03-26.21:44:29.877 [main            ] INFO  Application            - Started Application in 3.41 seconds (JVM running for 5.021)
+24-03-26.21:48:25.307 [main            ] INFO  Application            - Starting Application using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 30000 (E:\java_Demo\chatgpt-data\chatgpt-data-app\target\classes started by lenovo in E:\java_Demo\chatgpt-data)
+24-03-26.21:48:25.309 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-03-26.21:48:26.650 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-03-26.21:48:26.660 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-03-26.21:48:26.660 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-03-26.21:48:26.661 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-03-26.21:48:26.802 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-03-26.21:48:26.802 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1454 ms
+24-03-26.21:48:28.120 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-03-26.21:48:28.141 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-03-26.21:48:28.150 [main            ] INFO  Application            - Started Application in 3.441 seconds (JVM running for 4.884)
+24-03-26.21:58:54.828 [main            ] INFO  Application            - Starting Application using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 15592 (E:\java_Demo\chatgpt-data\chatgpt-data-app\target\classes started by lenovo in E:\java_Demo\chatgpt-data)
+24-03-26.21:58:54.831 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-03-26.21:58:56.135 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-03-26.21:58:56.149 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-03-26.21:58:56.150 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-03-26.21:58:56.151 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-03-26.21:58:56.299 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-03-26.21:58:56.299 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1424 ms
+24-03-26.21:58:57.556 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-03-26.21:58:57.576 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-03-26.21:58:57.586 [main            ] INFO  Application            - Started Application in 3.497 seconds (JVM running for 5.012)
+24-03-26.22:09:04.485 [main            ] INFO  Application            - Starting Application using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 9288 (E:\java_Demo\chatgpt-data\chatgpt-data-app\target\classes started by lenovo in E:\java_Demo\chatgpt-data)
+24-03-26.22:09:04.487 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-03-26.22:09:05.792 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-03-26.22:09:05.805 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-03-26.22:09:05.806 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-03-26.22:09:05.806 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-03-26.22:09:05.954 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-03-26.22:09:05.954 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1424 ms
+24-03-26.22:09:07.247 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-03-26.22:09:07.267 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-03-26.22:09:07.277 [main            ] INFO  Application            - Started Application in 3.377 seconds (JVM running for 4.704)
+24-03-26.22:12:00.464 [main            ] INFO  Application            - Starting Application using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 19860 (E:\java_Demo\chatgpt-data\chatgpt-data-app\target\classes started by lenovo in E:\java_Demo\chatgpt-data)
+24-03-26.22:12:00.466 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-03-26.22:12:01.629 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-03-26.22:12:01.639 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-03-26.22:12:01.640 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-03-26.22:12:01.640 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-03-26.22:12:01.772 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-03-26.22:12:01.773 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1266 ms
+24-03-26.22:12:03.000 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-03-26.22:12:03.019 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-03-26.22:12:03.028 [main            ] INFO  Application            - Started Application in 3.118 seconds (JVM running for 4.454)
+24-03-26.22:12:17.729 [main            ] INFO  Application            - Starting Application using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 28420 (E:\java_Demo\chatgpt-data\chatgpt-data-app\target\classes started by lenovo in E:\java_Demo\chatgpt-data)
+24-03-26.22:12:17.732 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-03-26.22:12:18.896 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-03-26.22:12:18.905 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-03-26.22:12:18.906 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-03-26.22:12:18.906 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-03-26.22:12:19.038 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-03-26.22:12:19.038 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1266 ms
+24-03-26.22:12:20.244 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-03-26.22:12:20.262 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-03-26.22:12:20.271 [main            ] INFO  Application            - Started Application in 3.097 seconds (JVM running for 4.419)
+24-03-26.22:12:47.686 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-03-26.22:12:47.686 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-03-26.22:12:47.687 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 0 ms
+24-03-26.22:13:18.048 [http-nio-8090-exec-2] INFO  WeiXinPortalController - 微信公众号验签信息wx861d0c8b6e7eb1b8开始 [fec585accf19291f307b1e0369106c944ad88d5b, 1711462397, 1116538007, 6421759421233690621]
+24-03-26.22:13:18.055 [http-nio-8090-exec-2] INFO  WeiXinPortalController - 微信公众号验签信息wx861d0c8b6e7eb1b8完成 check：true
+24-03-26.22:13:43.791 [http-nio-8090-exec-5] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'openid' for method parameter type String is not present]
+24-03-26.22:14:17.097 [http-nio-8090-exec-7] INFO  WeiXinPortalController - 接收微信公众号信息请求o7l1z6WC5UAS0D56aNRGBP3irAOo开始 <xml><ToUserName><![CDATA[gh_95eaac3ea5d1]]></ToUserName>
+<FromUserName><![CDATA[o7l1z6WC5UAS0D56aNRGBP3irAOo]]></FromUserName>
+<CreateTime>1711462455</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[403]]></Content>
+<MsgId>24502248345420857</MsgId>
+</xml>
+24-03-26.22:14:17.232 [http-nio-8090-exec-7] INFO  WeiXinPortalController - 接收微信公众号信息请求o7l1z6WC5UAS0D56aNRGBP3irAOo完成 <xml>
+  <ToUserName><![CDATA[o7l1z6WC5UAS0D56aNRGBP3irAOo]]></ToUserName>
+  <FromUserName><![CDATA[gh_95eaac3ea5d1]]></FromUserName>
+  <CreateTime>1711462457216</CreateTime>
+  <MsgType><![CDATA[text]]></MsgType>
+  <Content><![CDATA[您的验证码为：4587 有效期3分钟！]]></Content>
+</xml>
+24-03-26.22:15:26.152 [http-nio-8090-exec-9] INFO  AuthController         - 鉴权登录校验开始,验证码:5985
+24-03-26.22:15:26.152 [http-nio-8090-exec-9] INFO  AuthService            - 鉴权,用户收入的验证码不存在5985
+24-03-26.22:15:26.253 [http-nio-8090-exec-9] INFO  AuthController         - 鉴权登录校验完成,验证码:5985,结果:{"code":"0001","info":"验证码不存在"}
+24-03-26.22:15:29.539 [http-nio-8090-exec-10] INFO  AuthController         - 鉴权登录校验开始,验证码:0125
+24-03-26.22:15:29.539 [http-nio-8090-exec-10] INFO  AuthService            - 鉴权,用户收入的验证码不存在0125
+24-03-26.22:15:29.539 [http-nio-8090-exec-10] INFO  AuthController         - 鉴权登录校验完成,验证码:0125,结果:{"code":"0001","info":"验证码不存在"}
+24-03-26.22:15:35.205 [http-nio-8090-exec-1] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.lang.String cn.glfs.chatgpt.data.trigger.http.WeiXinPortalController.post(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]
+24-03-26.22:15:41.388 [http-nio-8090-exec-4] INFO  AuthController         - 鉴权登录校验开始,验证码:7541
+24-03-26.22:15:41.388 [http-nio-8090-exec-4] INFO  AuthService            - 鉴权,用户收入的验证码不存在7541
+24-03-26.22:15:41.389 [http-nio-8090-exec-4] INFO  AuthController         - 鉴权登录校验完成,验证码:7541,结果:{"code":"0001","info":"验证码不存在"}
+24-03-26.22:19:01.230 [main            ] INFO  Application            - Starting Application using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 18872 (E:\java_Demo\chatgpt-data\chatgpt-data-app\target\classes started by lenovo in E:\java_Demo\chatgpt-data)
+24-03-26.22:19:01.233 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-03-26.22:19:02.453 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-03-26.22:19:02.464 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-03-26.22:19:02.464 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-03-26.22:19:02.464 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-03-26.22:19:02.598 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-03-26.22:19:02.598 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1325 ms
+24-03-26.22:19:03.819 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-03-26.22:19:03.839 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-03-26.22:19:03.849 [main            ] INFO  Application            - Started Application in 3.199 seconds (JVM running for 4.557)
+24-03-26.22:21:20.681 [main            ] INFO  Application            - Starting Application using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 29848 (E:\java_Demo\chatgpt-data\chatgpt-data-app\target\classes started by lenovo in E:\java_Demo\chatgpt-data)
+24-03-26.22:21:20.683 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-03-26.22:21:21.906 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-03-26.22:21:21.915 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-03-26.22:21:21.916 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-03-26.22:21:21.916 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-03-26.22:21:22.055 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-03-26.22:21:22.055 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1331 ms
+24-03-26.22:21:23.309 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-03-26.22:21:23.328 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-03-26.22:21:23.337 [main            ] INFO  Application            - Started Application in 3.243 seconds (JVM running for 4.512)
+24-03-26.22:21:43.246 [http-nio-8090-exec-5] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-03-26.22:21:43.247 [http-nio-8090-exec-5] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-03-26.22:21:43.247 [http-nio-8090-exec-5] INFO  DispatcherServlet      - Completed initialization in 0 ms
+24-03-26.22:21:43.290 [http-nio-8090-exec-5] INFO  WeiXinPortalController - 接收微信公众号信息请求o7l1z6WC5UAS0D56aNRGBP3irAOo开始 <xml><ToUserName><![CDATA[gh_95eaac3ea5d1]]></ToUserName>
+<FromUserName><![CDATA[o7l1z6WC5UAS0D56aNRGBP3irAOo]]></FromUserName>
+<CreateTime>1711462901</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[403]]></Content>
+<MsgId>24502256373374347</MsgId>
+</xml>
+24-03-26.22:21:43.434 [http-nio-8090-exec-5] INFO  WeiXinPortalController - 接收微信公众号信息请求o7l1z6WC5UAS0D56aNRGBP3irAOo完成 <xml>
+  <ToUserName><![CDATA[o7l1z6WC5UAS0D56aNRGBP3irAOo]]></ToUserName>
+  <FromUserName><![CDATA[gh_95eaac3ea5d1]]></FromUserName>
+  <CreateTime>1711462903419</CreateTime>
+  <MsgType><![CDATA[text]]></MsgType>
+  <Content><![CDATA[您的验证码为：4902 有效期3分钟！]]></Content>
+</xml>
+24-03-26.22:23:30.079 [main            ] INFO  Application            - Starting Application using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 22452 (E:\java_Demo\chatgpt-data\chatgpt-data-app\target\classes started by lenovo in E:\java_Demo\chatgpt-data)
+24-03-26.22:23:30.081 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-03-26.22:23:31.268 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-03-26.22:23:31.278 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-03-26.22:23:31.278 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-03-26.22:23:31.279 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-03-26.22:23:31.414 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-03-26.22:23:31.415 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1295 ms
+24-03-26.22:23:32.737 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-03-26.22:23:32.756 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-03-26.22:23:32.766 [main            ] INFO  Application            - Started Application in 3.251 seconds (JVM running for 4.596)
+24-03-26.22:23:36.139 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-03-26.22:23:36.139 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-03-26.22:23:36.140 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+24-03-26.22:23:36.181 [http-nio-8090-exec-1] INFO  WeiXinPortalController - 接收微信公众号信息请求o7l1z6WC5UAS0D56aNRGBP3irAOo开始 <xml><ToUserName><![CDATA[gh_95eaac3ea5d1]]></ToUserName>
+<FromUserName><![CDATA[o7l1z6WC5UAS0D56aNRGBP3irAOo]]></FromUserName>
+<CreateTime>1711463014</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[403]]></Content>
+<MsgId>24502256053387955</MsgId>
+</xml>
+24-03-26.22:23:36.316 [http-nio-8090-exec-1] INFO  WeiXinPortalController - 接收微信公众号信息请求o7l1z6WC5UAS0D56aNRGBP3irAOo完成 <xml>
+  <ToUserName><![CDATA[o7l1z6WC5UAS0D56aNRGBP3irAOo]]></ToUserName>
+  <FromUserName><![CDATA[gh_95eaac3ea5d1]]></FromUserName>
+  <CreateTime>1711463016301</CreateTime>
+  <MsgType><![CDATA[text]]></MsgType>
+  <Content><![CDATA[您的验证码为：9339 有效期3分钟！]]></Content>
+</xml>
+24-03-26.22:25:22.460 [main            ] INFO  Application            - Starting Application using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 5428 (E:\java_Demo\chatgpt-data\chatgpt-data-app\target\classes started by lenovo in E:\java_Demo\chatgpt-data)
+24-03-26.22:25:22.463 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-03-26.22:25:23.684 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-03-26.22:25:23.694 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-03-26.22:25:23.694 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-03-26.22:25:23.694 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-03-26.22:25:23.832 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-03-26.22:25:23.833 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1329 ms
+24-03-26.22:25:25.057 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-03-26.22:25:25.076 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-03-26.22:25:25.086 [main            ] INFO  Application            - Started Application in 3.189 seconds (JVM running for 4.542)
+24-03-26.22:25:29.344 [http-nio-8090-exec-2] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-03-26.22:25:29.344 [http-nio-8090-exec-2] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-03-26.22:25:29.345 [http-nio-8090-exec-2] INFO  DispatcherServlet      - Completed initialization in 1 ms
+24-03-26.22:25:29.388 [http-nio-8090-exec-2] INFO  WeiXinPortalController - 接收微信公众号信息请求o7l1z6WC5UAS0D56aNRGBP3irAOo开始 <xml><ToUserName><![CDATA[gh_95eaac3ea5d1]]></ToUserName>
+<FromUserName><![CDATA[o7l1z6WC5UAS0D56aNRGBP3irAOo]]></FromUserName>
+<CreateTime>1711463127</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[403]]></Content>
+<MsgId>24502262544886615</MsgId>
+</xml>
+24-03-26.22:25:29.532 [http-nio-8090-exec-2] INFO  WeiXinPortalController - 接收微信公众号信息请求o7l1z6WC5UAS0D56aNRGBP3irAOo完成 <xml>
+  <ToUserName><![CDATA[o7l1z6WC5UAS0D56aNRGBP3irAOo]]></ToUserName>
+  <FromUserName><![CDATA[gh_95eaac3ea5d1]]></FromUserName>
+  <CreateTime>1711463129516</CreateTime>
+  <MsgType><![CDATA[text]]></MsgType>
+  <Content><![CDATA[您的验证码为：7056 有效期3分钟！]]></Content>
+</xml>
+24-03-26.22:25:37.929 [http-nio-8090-exec-3] INFO  AuthController         - 鉴权登录校验开始,验证码:2796
+24-03-26.22:25:37.929 [http-nio-8090-exec-3] INFO  AuthService            - 鉴权,用户收入的验证码不存在2796
+24-03-26.22:25:38.033 [http-nio-8090-exec-3] INFO  AuthController         - 鉴权登录校验完成,验证码:2796,结果:{"code":"0001","info":"验证码不存在"}
+24-03-26.22:26:58.635 [http-nio-8090-exec-9] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'openid' for method parameter type String is not present]
+24-03-26.22:28:33.443 [main            ] INFO  Application            - Starting Application using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 8520 (E:\java_Demo\chatgpt-data\chatgpt-data-app\target\classes started by lenovo in E:\java_Demo\chatgpt-data)
+24-03-26.22:28:33.447 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-03-26.22:28:34.664 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-03-26.22:28:34.673 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-03-26.22:28:34.674 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-03-26.22:28:34.674 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-03-26.22:28:34.809 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-03-26.22:28:34.809 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1318 ms
+24-03-26.22:28:36.037 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-03-26.22:28:36.056 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-03-26.22:28:36.065 [main            ] INFO  Application            - Started Application in 3.221 seconds (JVM running for 4.56)
+24-03-26.22:40:40.830 [main            ] INFO  Application            - Starting Application using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 24776 (E:\java_Demo\chatgpt-data\chatgpt-data-app\target\classes started by lenovo in E:\java_Demo\chatgpt-data)
+24-03-26.22:40:40.832 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-03-26.22:40:41.977 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-03-26.22:40:41.987 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-03-26.22:40:41.988 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-03-26.22:40:41.988 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-03-26.22:40:42.131 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-03-26.22:40:42.131 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1260 ms
+24-03-26.22:40:43.348 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-03-26.22:40:43.367 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-03-26.22:40:43.376 [main            ] INFO  Application            - Started Application in 3.128 seconds (JVM running for 4.416)
+24-03-26.23:49:32.840 [main            ] INFO  Application            - Starting Application using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 11612 (E:\java_Demo\chatgpt-data\chatgpt-data-app\target\classes started by lenovo in E:\java_Demo\chatgpt-data)
+24-03-26.23:49:32.845 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-03-26.23:49:34.405 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-03-26.23:49:34.418 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-03-26.23:49:34.419 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-03-26.23:49:34.420 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-03-26.23:49:34.578 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-03-26.23:49:34.578 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1649 ms
+24-03-26.23:49:35.987 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-03-26.23:49:36.007 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-03-26.23:49:36.017 [main            ] INFO  Application            - Started Application in 3.872 seconds (JVM running for 5.654)
+24-03-26.23:50:40.316 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-03-26.23:50:40.316 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-03-26.23:50:40.317 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+24-03-26.23:50:40.359 [http-nio-8090-exec-1] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'openid' for method parameter type String is not present]
+24-03-26.23:52:21.807 [http-nio-8090-exec-9] INFO  AuthController         - 鉴权登录校验开始,验证码:2796
+24-03-26.23:52:21.814 [http-nio-8090-exec-9] INFO  AuthService            - 鉴权,用户收入的验证码不存在2796
+24-03-26.23:52:21.993 [http-nio-8090-exec-9] INFO  AuthController         - 鉴权登录校验完成,验证码:2796,结果:{"code":"0001","info":"验证码不存在"}

@@ -1,0 +1,12 @@
+24-03-30.18:27:18.251 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m58s517ms473µs200ns).
+24-03-30.21:30:16.955 [http-nio-8090-exec-2] WARN  DefaultHandlerExceptionResolver - Async request timed out
+24-03-30.21:30:16.959 [http-nio-8090-exec-2] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+24-03-30.21:31:06.832 [http-nio-8090-exec-7] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+24-03-30.21:31:12.832 [http-nio-8090-exec-8] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+24-03-30.21:31:19.835 [http-nio-8090-exec-3] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+24-03-30.21:31:26.828 [http-nio-8090-exec-10] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+24-03-30.21:33:38.829 [http-nio-8090-exec-2] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+24-03-30.21:34:41.842 [http-nio-8090-exec-9] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+24-03-30.21:36:14.830 [http-nio-8090-exec-6] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+24-03-30.21:40:09.827 [http-nio-8090-exec-8] WARN  DefaultHandlerExceptionResolver - Async request timed out
+24-03-30.21:40:09.828 [http-nio-8090-exec-8] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]

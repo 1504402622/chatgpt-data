@@ -1,15 +1,16 @@
 # /usr/local/bin/docker-compose -f /docs/dev-ops/environment/environment-docker-compose.yml up -d
 version: '3.8'
 # docker-compose -f environment-docker-compose.yml up -d
+
 services:
   chatgpt-data-app:
     image: glfs/chatgpt-data-app:1.1
     container_name: chatgpt-data-app
     ports:
-      - "8091:8091"
+      - "8090:8090"
     environment:
       - TZ=PRC
-      - SERVER_PORT=8091
+      - SERVER_PORT=8090
       - APP_CONFIG_API_VERSION=v1
       - APP_CONFIG_CROSS_ORIGIN=*
       - THREAD_POOL_EXECUTOR_CONFIG_CORE_POOL_SIZE=20
@@ -18,10 +19,10 @@ services:
       - THREAD_POOL_EXECUTOR_CONFIG_BLOCK_QUEUE_SIZE=5000
       - THREAD_POOL_EXECUTOR_CONFIG_POLICY=CallerRunsPolicy
       - CHATGPT_SDK_CONFIG_API_HOST=https://pro-share-api.zcyai.com/
-      - CHATGPT_SDK_CONFIG_API_KEY=sk-PmMVgo7VKyJSBMAPCb4037F53bE84c6b9106Dc939971Ea9b
-      - WX_CONFIG_ORIGINALID=gh_c5ce6e4a0e0e
-      - WX_CONFIG_APPID=wxad979c0307864a66
-      - WX_CONFIG_TOKEN=b8b6
+      - CHATGPT_SDK_CONFIG_API_KEY=sk-x1J6vfuoi5FiBF3y2d8e8fB4E8B94f189140A962D0C0B9Ed
+      - WX_CONFIG_ORIGINALID=gh_95eaac3ea5d1
+      - WX_CONFIG_APPID=wx861d0c8b6e7eb1b8
+      - WX_CONFIG_TOKEN=6666
     volumes:
       - ./log:/data/log
     logging:
@@ -37,5 +38,5 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - NEXT_PUBLIC_API_HOST_URL=http://localhost:8091
+      - NEXT_PUBLIC_API_HOST_URL=http://localhost:8090
     restart: always

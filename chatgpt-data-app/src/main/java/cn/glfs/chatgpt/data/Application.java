@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * 启动类
  */
-@Configurable
+
 @SpringBootApplication
 public class Application {
     public static void main(String[] args) {

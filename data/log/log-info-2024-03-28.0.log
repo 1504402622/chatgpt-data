@@ -1,0 +1,502 @@
+24-03-28.08:23:05.731 [main            ] INFO  Application            - Starting Application using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 3440 (E:\java_Demo\chatgpt-data\chatgpt-data-app\target\classes started by lenovo in E:\java_Demo\chatgpt-data)
+24-03-28.08:23:05.735 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-03-28.08:23:09.819 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-03-28.08:23:09.863 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-03-28.08:23:09.865 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-03-28.08:23:09.865 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-03-28.08:23:10.323 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-03-28.08:23:10.323 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4508 ms
+24-03-28.08:23:13.517 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-03-28.08:23:13.559 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-03-28.08:23:13.572 [main            ] INFO  Application            - Started Application in 9.267 seconds (JVM running for 11.639)
+24-03-28.08:23:41.208 [http-nio-8090-exec-3] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-03-28.08:23:41.208 [http-nio-8090-exec-3] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-03-28.08:23:41.209 [http-nio-8090-exec-3] INFO  DispatcherServlet      - Completed initialization in 1 ms
+24-03-28.08:23:41.512 [http-nio-8090-exec-1] INFO  ChatGPTAIServiceController - 流式问答请求开始，使用模型：gpt-3.5-turbo 请求信息：[{"content":"请问有什么需要帮助的吗？","role":"system"},{"content":"您好
+","role":"user"}]
+24-03-28.08:23:41.578 [http-nio-8090-exec-1] INFO  ChatGPTAIServiceController - 流式问答请求处理，openid:o7l1z6WC5UAS0D56aNRGBP3irAOo 请求模型:gpt-3.5-turbo
+24-03-28.08:23:41.612 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-03-28.08:23:41.801 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-03-28.08:23:41.903 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> POST https://api.xty.app/v1/chat/completions
+24-03-28.08:23:41.903 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+24-03-28.08:23:41.903 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Length: 221
+24-03-28.08:23:41.903 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - apiKey: sk-PhkuxiwP0G5nSV6uBbEf19C6DeEf4e75B9A3592d71A1AfAc
+24-03-28.08:23:41.903 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Accept: text/event-stream
+24-03-28.08:23:41.903 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> END POST
+24-03-28.08:23:44.431 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- 200 https://api.xty.app/v1/chat/completions?token (2527ms)
+24-03-28.08:23:44.431 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - date: Thu, 28 Mar 2024 00:23:44 GMT
+24-03-28.08:23:44.431 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - content-type: text/event-stream
+24-03-28.08:23:44.431 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cache-control: no-cache
+24-03-28.08:23:44.431 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - x-oneapi-request-id: 20240328002343549873455d84HTzl1
+24-03-28.08:23:44.431 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-cache-status: DYNAMIC
+24-03-28.08:23:44.431 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=P7nlkTxbVekVC7TPTLjOaFppSBqSMBJ%2FvctXmt1Y8NnZDnrTNDpmn9TKnhZygMLRmG0YugaOu3icolBZDMvq0lIuOOU99Ou%2FSnlXilMIS%2FO88HbzsMubjnpALvZHQA%3D%3D"}],"group":"cf-nel","max_age":604800}
+24-03-28.08:23:44.431 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+24-03-28.08:23:44.431 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - server: cloudflare
+24-03-28.08:23:44.431 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-ray: 86b3791f7b30281f-SEA
+24-03-28.08:23:44.431 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - alt-svc: h3=":443"; ma=86400
+24-03-28.08:23:44.431 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- END HTTP
+24-03-28.08:23:44.669 [http-nio-8090-exec-2] INFO  AbstractChatService    - 流式问答请求完成，使用模型：gpt-3.5-turbo
+24-03-28.08:25:30.253 [http-nio-8090-exec-5] INFO  ChatGPTAIServiceController - 流式问答请求开始，使用模型：gpt-3.5-turbo 请求信息：[{"content":"您好
+","role":"user"},{"content":"您好！有什么可以帮助您的吗？","role":"system"},{"content":"linux查看ip地址
+","role":"user"}]
+24-03-28.08:25:30.255 [http-nio-8090-exec-5] INFO  ChatGPTAIServiceController - 流式问答请求处理，openid:o7l1z6WC5UAS0D56aNRGBP3irAOo 请求模型:gpt-3.5-turbo
+24-03-28.08:25:30.261 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> POST https://api.xty.app/v1/chat/completions
+24-03-28.08:25:30.261 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+24-03-28.08:25:30.261 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Length: 277
+24-03-28.08:25:30.261 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - apiKey: sk-PhkuxiwP0G5nSV6uBbEf19C6DeEf4e75B9A3592d71A1AfAc
+24-03-28.08:25:30.261 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Accept: text/event-stream
+24-03-28.08:25:30.262 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> END POST
+24-03-28.08:25:31.518 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- 200 https://api.xty.app/v1/chat/completions?token (1256ms)
+24-03-28.08:25:31.518 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - date: Thu, 28 Mar 2024 00:25:31 GMT
+24-03-28.08:25:31.518 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - content-type: text/event-stream
+24-03-28.08:25:31.518 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cache-control: no-cache
+24-03-28.08:25:31.518 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - x-oneapi-request-id: 20240328002530695431579D5DpOlia
+24-03-28.08:25:31.518 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-cache-status: DYNAMIC
+24-03-28.08:25:31.518 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=oVmk0fbuoZ%2BNpPbBbkUHKMsIXAUkYpqeAhdbHN0dKwPPobv2i%2F1xTP1bolzlcwbPGDpvxIpJBuNo3mu8XMbZ0oFbYAJsw7YcF2bbhL3L%2B%2F48aiUqBzhtaGMvUTXP1Q%3D%3D"}],"group":"cf-nel","max_age":604800}
+24-03-28.08:25:31.518 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+24-03-28.08:25:31.518 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - server: cloudflare
+24-03-28.08:25:31.518 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-ray: 86b37bbd0c4d281f-SEA
+24-03-28.08:25:31.518 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - alt-svc: h3=":443"; ma=86400
+24-03-28.08:25:31.518 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- END HTTP
+24-03-28.08:25:35.182 [http-nio-8090-exec-6] INFO  AbstractChatService    - 流式问答请求完成，使用模型：gpt-3.5-turbo
+24-03-28.08:50:34.987 [http-nio-8090-exec-8] INFO  ChatGPTAIServiceController - 流式问答请求开始，使用模型：gpt-3.5-turbo 请求信息：[{"content":"linux查看ip地址
+","role":"user"},{"content":"要查看Linux系统上的IP地址，您可以使用以下命令之一：
+
+1. 使用 ifconfig 命令：
+```
+ifconfig
+```
+
+2. 使用 ip addr 命令：
+```
+ip addr
+```
+
+这些命令将显示您系统上所有网络接口的详细信息，包括IP地址。您可以在终端中输入其中一个命令来查看IP地址。","role":"system"},{"content":"2024-03-28 08:49:33,382 (conf-file-poller-0) [WARN - org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.validateSinks(FlumeConfiguration.java:697)] Could not configure sink  k1 due to: Channel c1 c2 not in active set.
+org.apache.flume.conf.ConfigurationException: Channel c1 c2 not in active set.
+	at org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.validateSinks(FlumeConfiguration.java:684)
+	at org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.isValid(Flume","role":"user"}]
+24-03-28.08:50:34.989 [http-nio-8090-exec-8] INFO  ChatGPTAIServiceController - 流式问答请求处理，openid:o7l1z6WC5UAS0D56aNRGBP3irAOo 请求模型:gpt-3.5-turbo
+24-03-28.08:50:34.995 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> POST https://api.xty.app/v1/chat/completions
+24-03-28.08:50:34.995 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+24-03-28.08:50:34.995 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Length: 1052
+24-03-28.08:50:34.995 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - apiKey: sk-PhkuxiwP0G5nSV6uBbEf19C6DeEf4e75B9A3592d71A1AfAc
+24-03-28.08:50:34.995 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Accept: text/event-stream
+24-03-28.08:50:34.995 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> END POST
+24-03-28.08:50:37.255 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- 200 https://api.xty.app/v1/chat/completions?token (2259ms)
+24-03-28.08:50:37.255 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - date: Thu, 28 Mar 2024 00:50:37 GMT
+24-03-28.08:50:37.255 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - content-type: text/event-stream
+24-03-28.08:50:37.255 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cache-control: no-cache
+24-03-28.08:50:37.255 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - x-oneapi-request-id: 20240328005036116508054ifKntzQw
+24-03-28.08:50:37.255 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-cache-status: DYNAMIC
+24-03-28.08:50:37.255 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=SIH4hQ644%2FXXj9oMNX2mlEYeyWz2e1ZW3QD4LWM%2FU%2Fo7yZDfWq%2FgD9oZ3jfnKEeBvxp83e2B8W0XbsAs0toXC9RoZewh9rZdEJjO%2FM8MfzbIw%2B54GZunlLMoiyLq1A%3D%3D"}],"group":"cf-nel","max_age":604800}
+24-03-28.08:50:37.255 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+24-03-28.08:50:37.255 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - server: cloudflare
+24-03-28.08:50:37.255 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-ray: 86b3a07df9302841-SEA
+24-03-28.08:50:37.255 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - alt-svc: h3=":443"; ma=86400
+24-03-28.08:50:37.255 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- END HTTP
+24-03-28.08:50:40.303 [http-nio-8090-exec-9] INFO  AbstractChatService    - 流式问答请求完成，使用模型：gpt-3.5-turbo
+24-03-28.08:51:39.580 [http-nio-8090-exec-3] INFO  ChatGPTAIServiceController - 流式问答请求开始，使用模型：gpt-3.5-turbo 请求信息：[{"content":"2024-03-28 08:49:33,382 (conf-file-poller-0) [WARN - org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.validateSinks(FlumeConfiguration.java:697)] Could not configure sink  k1 due to: Channel c1 c2 not in active set.
+org.apache.flume.conf.ConfigurationException: Channel c1 c2 not in active set.
+	at org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.validateSinks(FlumeConfiguration.java:684)
+	at org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.isValid(Flume","role":"user"},{"content":"这似乎是一个Flume配置文件中的错误。根据错误消息，看起来是由于在配置文件中指定的通道（Channel）未处于活动状态导致的问题。
+
+您可以尝试检查您的Flume配置文件，确保所有使用的通道都处于活动状态。您可以查看配置文件中关于通道的部分，并确保所有通道都正确配置并处于活动状态。
+
+另外，您还可以检查Flume的日志文件，以获取更多详细的错误信息，帮助您更好地定位和解决问题。","role":"system"},{"content":"# 定义agent名称为a1
+# 设置3个组件的名称
+a1.sources = r1
+a1.sinks = k1
+# 多个channel使用空格分隔
+a1.channels = c1 c2
+
+# 配置source类型为NetCat,监听地址为本机，端口为44444
+a1.sources.r1.type = netcat
+a1.sources.r1.bind = localhost
+a1.sources.r1.port = 44444
+
+# 配置sink类型为Logger
+a1.sinks.k1.type = logger
+
+# 配置channel类型为内存，内存队列最大容量为1000，一个事务中从source接收的Events数量或者发送给sink的Events数量最大为100
+a1.channels.c1.type = memory
+a1.channels.c1.capacity = 1000
+a1.channels.c1.transactionCapacity = 100
+
+# 配置FileChannel,checkpointDir为检查点文件存储目录，dataDirs为日志数据存储目录，
+a1.channels.c2.type = file
+a1.channels.c2.checkpointDir = /opt/module/flume/bak/checkpoint
+a1.channels.c2.dataDirs = /opt/module/flume/bak/data
+
+# 将source和sink绑定到channel上
+# source同时绑定到c1和c2上
+a1.sources.r2.channels = c1 c2
+a1.sinks.k1.channel = c1 c2
+~                                 
+","role":"user"}]
+24-03-28.08:51:39.581 [http-nio-8090-exec-3] INFO  ChatGPTAIServiceController - 流式问答请求处理，openid:o7l1z6WC5UAS0D56aNRGBP3irAOo 请求模型:gpt-3.5-turbo
+24-03-28.08:51:39.586 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> POST https://api.xty.app/v1/chat/completions
+24-03-28.08:51:39.586 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+24-03-28.08:51:39.586 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Length: 2282
+24-03-28.08:51:39.586 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - apiKey: sk-PhkuxiwP0G5nSV6uBbEf19C6DeEf4e75B9A3592d71A1AfAc
+24-03-28.08:51:39.586 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Accept: text/event-stream
+24-03-28.08:51:39.586 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> END POST
+24-03-28.08:51:40.919 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- 200 https://api.xty.app/v1/chat/completions?token (1333ms)
+24-03-28.08:51:40.920 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - date: Thu, 28 Mar 2024 00:51:40 GMT
+24-03-28.08:51:40.920 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - content-type: text/event-stream
+24-03-28.08:51:40.920 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cache-control: no-cache
+24-03-28.08:51:40.920 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - x-oneapi-request-id: 20240328005139969589766WXDo0EVb
+24-03-28.08:51:40.920 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-cache-status: DYNAMIC
+24-03-28.08:51:40.920 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=iXWQe4eHU%2FbbEzo7DJfr30DDZTAPxE5u%2BcAx6KW2GExJ64g%2FWpVuwyMD7z6%2FYSdjupY9X9YVU8LkCYxkevhYwcg9MIiwDyOuOyhes7mrJ7ifwM3nAXcJa60qQmGw8w%3D%3D"}],"group":"cf-nel","max_age":604800}
+24-03-28.08:51:40.920 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+24-03-28.08:51:40.920 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - server: cloudflare
+24-03-28.08:51:40.920 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-ray: 86b3a20cf8592841-SEA
+24-03-28.08:51:40.920 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - alt-svc: h3=":443"; ma=86400
+24-03-28.08:51:40.920 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- END HTTP
+24-03-28.08:51:47.337 [http-nio-8090-exec-1] INFO  AbstractChatService    - 流式问答请求完成，使用模型：gpt-3.5-turbo
+24-03-28.08:53:42.300 [http-nio-8090-exec-5] INFO  ChatGPTAIServiceController - 流式问答请求开始，使用模型：gpt-3.5-turbo 请求信息：[{"content":"# 定义agent名称为a1
+# 设置3个组件的名称
+a1.sources = r1
+a1.sinks = k1
+# 多个channel使用空格分隔
+a1.channels = c1 c2
+
+# 配置source类型为NetCat,监听地址为本机，端口为44444
+a1.sources.r1.type = netcat
+a1.sources.r1.bind = localhost
+a1.sources.r1.port = 44444
+
+# 配置sink类型为Logger
+a1.sinks.k1.type = logger
+
+# 配置channel类型为内存，内存队列最大容量为1000，一个事务中从source接收的Events数量或者发送给sink的Events数量最大为100
+a1.channels.c1.type = memory
+a1.channels.c1.capacity = 1000
+a1.channels.c1.transactionCapacity = 100
+
+# 配置FileChannel,checkpointDir为检查点文件存储目录，dataDirs为日志数据存储目录，
+a1.channels.c2.type = file
+a1.channels.c2.checkpointDir = /opt/module/flume/bak/checkpoint
+a1.channels.c2.dataDirs = /opt/module/flume/bak/data
+
+# 将source和sink绑定到channel上
+# source同时绑定到c1和c2上
+a1.sources.r2.channels = c1 c2
+a1.sinks.k1.channel = c1 c2
+~                                 
+","role":"user"},{"content":"根据您提供的Flume配置文件，存在一些问题：
+
+1. 在配置文件中，您定义了两个通道（Channel）：c1 和 c2。但是在将源（source）和汇（sink）绑定到通道时，您可能出现了错误。在Flume中，一个源或汇只能绑定到一个通道上，而不是多个通道。
+
+2. 在源r2的配置中，您将其绑定到了两个通道c1和c2上，这是不正确的。每个源应该只绑定到一个通道上。
+
+3. 同样地，在汇k1的配置中，您也将其绑定到了两个通道c1和c2上，这也是不正确的。每个汇应该只绑定到一个通道上。
+
+您需要根据Flume的要求，将每个源和汇绑定到一个单独的通道上。您可以根据以下方式修改您的配置文件：
+
+```plaintext
+a1.sources.r1.channels = c1
+a1.sinks.k1.channel = c1
+
+a1.sources.r2.channels = c2
+```
+
+通过这样的修改，每个源和汇都只绑定到一个通道上，符合Flume的要求。请记得在修改后重新启动Flume Agent，以使更改生效。希望这能帮助您解决问题。","role":"system"},{"content":"ration.java:589)] Could not configure source  r1 due to: Failed to configure component!
+org.apache.flume.conf.ConfigurationException: Failed to configure component!
+	at org.apache.flume.conf.source.SourceConfiguration.configure(SourceConfiguration.java:111)
+	at org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.validateSources(FlumeConfiguration.java:566)
+	at org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.isValid(FlumeConfiguration.java:346)
+	at org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.access$000(FlumeConfiguration.java:212)
+	at org.apache.flume.conf.FlumeConfiguration.validateConfiguration(FlumeConfiguration.java:126)
+	at org.apache.flume.conf.FlumeConfiguration.<init>(FlumeConfiguration.java:108)
+	at org.apache.flume.node.PropertiesFileConfigurationProvider.getFlumeConfiguration(PropertiesFileConfigurationProvider.java:189)
+	at org.apache.flume.node.AbstractConfigurationProvider.getConfiguration(AbstractConfigurationProvider.java:93)
+	at org.apache.flume.node.PollingPropertiesFileConfigurationProvider$FileWatcherRunnable.run(PollingPropertiesFileConfigurationProvider.java:141)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.flume.conf.ConfigurationException: No channels set for r1
+	at org.apache.flume.conf.source.SourceConfiguration.configure(SourceConfiguration.java:69)
+	... 15 more
+2024-03-28 08:52:51,079 (conf-file-poller-0) [WARN - org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.validateSinks(FlumeConfiguration.java:697)] Could not configure sink  k1 due to: Channel c1 c2 not in active set.
+org.apache.flume.conf.ConfigurationException: Channel c1 c2 not in active set.
+	at org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.validateSinks(FlumeConfiguration.java:684)
+	at org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.isValid(FlumeConfiguration.java:347)
+	at org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.access$000(FlumeConfiguration.java:212)
+	at org.apache.flume.conf.FlumeConfiguration.validateConfiguration(FlumeConfiguration.java:126)
+	at org.apache.flume.conf.FlumeConfiguration.<init>(FlumeConfiguration.java:108)
+	at org.apache.flume.node.PropertiesFileConfigurationProvider.getFlumeConfiguration(PropertiesFileConfigurationProvider.java:189)
+	at org.apache.flume.node.AbstractConfigurationProvider.getConfiguration(AbstractConfigurationProvider.java:93)
+	at org.apache.flume.node.PollingPropertiesFileConfigurationProvider$FileWatcherRunnable.run(PollingPropertiesFileConfigurationProvider.java:141)
+","role":"user"}]
+24-03-28.08:53:42.301 [http-nio-8090-exec-5] INFO  ChatGPTAIServiceController - 流式问答请求处理，openid:o7l1z6WC5UAS0D56aNRGBP3irAOo 请求模型:gpt-3.5-turbo
+24-03-28.08:53:42.307 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> POST https://api.xty.app/v1/chat/completions
+24-03-28.08:53:42.307 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+24-03-28.08:53:42.307 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Length: 5488
+24-03-28.08:53:42.307 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - apiKey: sk-PhkuxiwP0G5nSV6uBbEf19C6DeEf4e75B9A3592d71A1AfAc
+24-03-28.08:53:42.307 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Accept: text/event-stream
+24-03-28.08:53:42.307 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> END POST
+24-03-28.08:53:43.596 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- 200 https://api.xty.app/v1/chat/completions?token (1288ms)
+24-03-28.08:53:43.596 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - date: Thu, 28 Mar 2024 00:53:43 GMT
+24-03-28.08:53:43.596 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - content-type: text/event-stream
+24-03-28.08:53:43.596 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cache-control: no-cache
+24-03-28.08:53:43.596 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - x-oneapi-request-id: 20240328005342689824293YPNamlau
+24-03-28.08:53:43.596 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-cache-status: DYNAMIC
+24-03-28.08:53:43.596 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=FhnFRjZi0jPi3ZsYvJQxxlMT8GYgs%2FlpuT55P7tSJBGyLJkkJPGhLOy%2BvS1%2F0UGI8%2B8as4FPrJaRu%2Fd9o9eR8J%2BBeXnLfEDzIQ%2Bzv%2BEvHgbtnnh2DclVFdk0J8pHgw%3D%3D"}],"group":"cf-nel","max_age":604800}
+24-03-28.08:53:43.596 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+24-03-28.08:53:43.596 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - server: cloudflare
+24-03-28.08:53:43.597 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-ray: 86b3a50bfa582841-SEA
+24-03-28.08:53:43.597 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - alt-svc: h3=":443"; ma=86400
+24-03-28.08:53:43.597 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- END HTTP
+24-03-28.08:53:46.355 [http-nio-8090-exec-6] INFO  AbstractChatService    - 流式问答请求完成，使用模型：gpt-3.5-turbo
+24-03-28.08:55:42.842 [http-nio-8090-exec-8] INFO  ChatGPTAIServiceController - 流式问答请求开始，使用模型：gpt-3.5-turbo 请求信息：[{"content":"ration.java:589)] Could not configure source  r1 due to: Failed to configure component!
+org.apache.flume.conf.ConfigurationException: Failed to configure component!
+	at org.apache.flume.conf.source.SourceConfiguration.configure(SourceConfiguration.java:111)
+	at org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.validateSources(FlumeConfiguration.java:566)
+	at org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.isValid(FlumeConfiguration.java:346)
+	at org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.access$000(FlumeConfiguration.java:212)
+	at org.apache.flume.conf.FlumeConfiguration.validateConfiguration(FlumeConfiguration.java:126)
+	at org.apache.flume.conf.FlumeConfiguration.<init>(FlumeConfiguration.java:108)
+	at org.apache.flume.node.PropertiesFileConfigurationProvider.getFlumeConfiguration(PropertiesFileConfigurationProvider.java:189)
+	at org.apache.flume.node.AbstractConfigurationProvider.getConfiguration(AbstractConfigurationProvider.java:93)
+	at org.apache.flume.node.PollingPropertiesFileConfigurationProvider$FileWatcherRunnable.run(PollingPropertiesFileConfigurationProvider.java:141)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.flume.conf.ConfigurationException: No channels set for r1
+	at org.apache.flume.conf.source.SourceConfiguration.configure(SourceConfiguration.java:69)
+	... 15 more
+2024-03-28 08:52:51,079 (conf-file-poller-0) [WARN - org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.validateSinks(FlumeConfiguration.java:697)] Could not configure sink  k1 due to: Channel c1 c2 not in active set.
+org.apache.flume.conf.ConfigurationException: Channel c1 c2 not in active set.
+	at org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.validateSinks(FlumeConfiguration.java:684)
+	at org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.isValid(FlumeConfiguration.java:347)
+	at org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.access$000(FlumeConfiguration.java:212)
+	at org.apache.flume.conf.FlumeConfiguration.validateConfiguration(FlumeConfiguration.java:126)
+	at org.apache.flume.conf.FlumeConfiguration.<init>(FlumeConfiguration.java:108)
+	at org.apache.flume.node.PropertiesFileConfigurationProvider.getFlumeConfiguration(PropertiesFileConfigurationProvider.java:189)
+	at org.apache.flume.node.AbstractConfigurationProvider.getConfiguration(AbstractConfigurationProvider.java:93)
+	at org.apache.flume.node.PollingPropertiesFileConfigurationProvider$FileWatcherRunnable.run(PollingPropertiesFileConfigurationProvider.java:141)
+","role":"user"},{"content":"根据错误日志显示，存在以下问题：
+
+1. 源（source）r1 没有设置通道（channel）。错误消息指出：“No channels set for r1”。您需要为源 r1 设置一个通道。
+
+2. 汇（sink）k1 的配置中指定了通道 c1 和 c2，但是错误消息指出：“Channel c1 c2 not in active set”。这意味着通道 c1 和 c2 不在活动集中。在Flume配置中，每个组件（源、通道、汇）必须在活动集中，才能正确配置。
+
+为了解决这些问题，您可以按照以下方式修改您的配置文件：
+
+```plaintext
+a1.sources.r1.channels = c1
+a1.sinks.k1.channel = c1
+```
+
+通过这样的修改，您为源 r1 指定了通道 c1，并将汇 k1 绑定到通道 c1 上。请确保通道 c1 在活动集中，并重新启动 Flume Agent 以使更改生效。希望这能帮助您解决问题。","role":"system"},{"content":"是不是source能一对一多，sink只能1对1个channel","role":"user"}]
+24-03-28.08:55:42.844 [http-nio-8090-exec-8] INFO  ChatGPTAIServiceController - 流式问答请求处理，openid:o7l1z6WC5UAS0D56aNRGBP3irAOo 请求模型:gpt-3.5-turbo
+24-03-28.08:55:42.849 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> POST https://api.xty.app/v1/chat/completions
+24-03-28.08:55:42.849 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+24-03-28.08:55:42.849 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Length: 4281
+24-03-28.08:55:42.850 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - apiKey: sk-PhkuxiwP0G5nSV6uBbEf19C6DeEf4e75B9A3592d71A1AfAc
+24-03-28.08:55:42.850 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Accept: text/event-stream
+24-03-28.08:55:42.850 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> END POST
+24-03-28.08:55:44.880 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- 200 https://api.xty.app/v1/chat/completions?token (2029ms)
+24-03-28.08:55:44.880 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - date: Thu, 28 Mar 2024 00:55:44 GMT
+24-03-28.08:55:44.880 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - content-type: text/event-stream
+24-03-28.08:55:44.880 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cache-control: no-cache
+24-03-28.08:55:44.880 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - x-oneapi-request-id: 20240328005543225067387xKdRHltz
+24-03-28.08:55:44.880 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-cache-status: DYNAMIC
+24-03-28.08:55:44.880 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=pCb1FztK7ADFKkd6jnSNEMThiGdOxH2yNCTOCUjMVi8LMAL1%2FYJud6bJh%2F7WwdmFj90MKXIDHXs9BiFM%2FNW5W31TYoeMluhXCda%2BnimAch%2FZGvFfJcrN%2B96po0bnZw%3D%3D"}],"group":"cf-nel","max_age":604800}
+24-03-28.08:55:44.880 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+24-03-28.08:55:44.880 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - server: cloudflare
+24-03-28.08:55:44.880 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-ray: 86b3a7fd59cb2841-SEA
+24-03-28.08:55:44.880 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - alt-svc: h3=":443"; ma=86400
+24-03-28.08:55:44.881 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- END HTTP
+24-03-28.08:55:49.396 [http-nio-8090-exec-9] INFO  AbstractChatService    - 流式问答请求完成，使用模型：gpt-3.5-turbo
+24-03-28.09:42:50.735 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m38s606ms503µs500ns).
+24-03-28.11:19:47.109 [http-nio-8090-exec-1] INFO  ChatGPTAIServiceController - 流式问答请求开始，使用模型：gpt-3.5-turbo 请求信息：[{"content":"生活","role":"user"}]
+24-03-28.11:19:47.118 [http-nio-8090-exec-1] INFO  ChatGPTAIServiceController - 流式问答请求处理，openid:o7l1z6WC5UAS0D56aNRGBP3irAOo 请求模型:gpt-3.5-turbo
+24-03-28.11:19:47.141 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> POST https://api.xty.app/v1/chat/completions
+24-03-28.11:19:47.141 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+24-03-28.11:19:47.141 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Length: 152
+24-03-28.11:19:47.141 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - apiKey: sk-PhkuxiwP0G5nSV6uBbEf19C6DeEf4e75B9A3592d71A1AfAc
+24-03-28.11:19:47.142 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Accept: text/event-stream
+24-03-28.11:19:47.142 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> END POST
+24-03-28.11:19:49.615 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- 200 https://api.xty.app/v1/chat/completions?token (2472ms)
+24-03-28.11:19:49.615 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - date: Thu, 28 Mar 2024 03:19:49 GMT
+24-03-28.11:19:49.615 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - content-type: text/event-stream
+24-03-28.11:19:49.615 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cache-control: no-cache
+24-03-28.11:19:49.615 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - x-oneapi-request-id: 2024032803194828659108842N7eLsB
+24-03-28.11:19:49.615 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-cache-status: DYNAMIC
+24-03-28.11:19:49.615 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=IozZu3ev6B7M%2FydRy9dOfR5uW6Ma6%2F75fsoIyXdsNS%2FdeH1jVo63fURu6A767lS%2BPsF17IzQOBMh1%2BpIU0j7Hq4kKkM3OY7wl%2F5Jh5tf8dh0zQ2kpryAn0ohk3INZQ%3D%3D"}],"group":"cf-nel","max_age":604800}
+24-03-28.11:19:49.615 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+24-03-28.11:19:49.615 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - server: cloudflare
+24-03-28.11:19:49.615 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-ray: 86b47b0d0e0b283b-SEA
+24-03-28.11:19:49.615 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - alt-svc: h3=":443"; ma=86400
+24-03-28.11:19:49.615 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- END HTTP
+24-03-28.11:19:53.281 [http-nio-8090-exec-2] INFO  AbstractChatService    - 流式问答请求完成，使用模型：gpt-3.5-turbo
+24-03-28.11:20:47.630 [http-nio-8090-exec-4] INFO  ChatGPTAIServiceController - 流式问答请求开始，使用模型：gpt-3.5-turbo 请求信息：[{"content":"生活","role":"user"},{"content":"生活是人类在地球上生存和发展的过程，是人们日常生活中的各种活动和经历的总和。生活包括物质生活和精神生活两个方面，涵盖了吃饭、穿衣、住房、交通、教育、工作、娱乐等方方面面。生活是多姿多彩的，充满了挑战和机遇，人们在生活中不断奋斗、追求幸福和快乐。生活中有苦有乐，有成功有失败，但正是这些经历和挑战让人们更加坚强和成熟。生活是一个不断学习和成长的过程，每个人都在不断地探索和发现生活的意义和价值。生活是美好的，让我们珍惜每一天，珍惜身边的人和事物，享受生活带给我们的快乐和幸福。","role":"system"},{"content":"一次上下文聊天你最多能总携带多少文字
+","role":"user"}]
+24-03-28.11:20:47.634 [http-nio-8090-exec-4] INFO  ChatGPTAIServiceController - 流式问答请求处理，openid:o7l1z6WC5UAS0D56aNRGBP3irAOo 请求模型:gpt-3.5-turbo
+24-03-28.11:20:47.639 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> POST https://api.xty.app/v1/chat/completions
+24-03-28.11:20:47.640 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+24-03-28.11:20:47.640 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Length: 979
+24-03-28.11:20:47.640 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - apiKey: sk-PhkuxiwP0G5nSV6uBbEf19C6DeEf4e75B9A3592d71A1AfAc
+24-03-28.11:20:47.640 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Accept: text/event-stream
+24-03-28.11:20:47.640 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> END POST
+24-03-28.11:20:48.847 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- 200 https://api.xty.app/v1/chat/completions?token (1206ms)
+24-03-28.11:20:48.847 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - date: Thu, 28 Mar 2024 03:20:48 GMT
+24-03-28.11:20:48.847 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - content-type: text/event-stream
+24-03-28.11:20:48.847 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cache-control: no-cache
+24-03-28.11:20:48.847 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - x-oneapi-request-id: 20240328032047768450494x5eDrxee
+24-03-28.11:20:48.847 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-cache-status: DYNAMIC
+24-03-28.11:20:48.847 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=dYvFx7qYASSpaxsD89BPpRtD%2BOX26k0eErUFSkCuBC5zEC%2B3%2ByxBPL7dlPKUOB05QP%2FcxS4CWolzdkbIGKuBE3igJamiKYNuGOkPOQ6UnTAZihbR2GL0iiEil%2BLXVw%3D%3D"}],"group":"cf-nel","max_age":604800}
+24-03-28.11:20:48.847 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+24-03-28.11:20:48.848 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - server: cloudflare
+24-03-28.11:20:48.848 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-ray: 86b47c80cfc7283b-SEA
+24-03-28.11:20:48.848 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - alt-svc: h3=":443"; ma=86400
+24-03-28.11:20:48.848 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- END HTTP
+24-03-28.11:20:49.836 [http-nio-8090-exec-5] INFO  AbstractChatService    - 流式问答请求完成，使用模型：gpt-3.5-turbo
+24-03-28.13:51:03.193 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m39s748ms783µs900ns).
+24-03-28.13:54:11.972 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m8s779ms374µs100ns).
+24-03-28.14:30:52.090 [http-nio-8090-exec-8] INFO  ChatGPTAIServiceController - 流式问答请求开始，使用模型：gpt-3.5-turbo 请求信息：[{"content":"一次上下文聊天你最多能总携带多少文字
+","role":"user"},{"content":"我目前的最大文本长度限制是4096个字符，大约是700个单词左右。如果您有更多的文本需要处理，可以分成多次发送给我。希望这个限制不会影响我们的对话体验。如果您有任何其他问题或需要帮助，请随时告诉我。","role":"system"},{"content":"一个类中注入另一个类的实体对象，那么这两个类之间的关系是什么，在设计模式中","role":"user"}]
+24-03-28.14:30:52.097 [http-nio-8090-exec-8] INFO  ChatGPTAIServiceController - 流式问答请求处理，openid:o7l1z6WC5UAS0D56aNRGBP3irAOo 请求模型:gpt-3.5-turbo
+24-03-28.14:30:52.115 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> POST https://api.xty.app/v1/chat/completions
+24-03-28.14:30:52.116 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+24-03-28.14:30:52.116 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Length: 656
+24-03-28.14:30:52.116 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - apiKey: sk-PhkuxiwP0G5nSV6uBbEf19C6DeEf4e75B9A3592d71A1AfAc
+24-03-28.14:30:52.116 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Accept: text/event-stream
+24-03-28.14:30:52.116 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> END POST
+24-03-28.14:32:12.319 [http-nio-8090-exec-9] INFO  ChatGPTAIServiceController - 流式问答请求开始，使用模型：gpt-3.5-turbo 请求信息：[{"content":"一个类中注入另一个类的实体对象，那么这两个类之间的关系是什么，在设计模式中","role":"user"},{"content":"","role":"system"},{"content":"一个类中注入另一个类的实体对象，那么这两个类之间的关系是什么，在设计模式中","role":"user"}]
+24-03-28.14:32:12.321 [http-nio-8090-exec-9] INFO  ChatGPTAIServiceController - 流式问答请求处理，openid:o7l1z6WC5UAS0D56aNRGBP3irAOo 请求模型:gpt-3.5-turbo
+24-03-28.14:32:12.331 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> POST https://api.xty.app/v1/chat/completions
+24-03-28.14:32:12.332 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+24-03-28.14:32:12.332 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Length: 428
+24-03-28.14:32:12.332 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - apiKey: sk-PhkuxiwP0G5nSV6uBbEf19C6DeEf4e75B9A3592d71A1AfAc
+24-03-28.14:32:12.332 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Accept: text/event-stream
+24-03-28.14:32:12.332 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> END POST
+24-03-28.14:32:48.994 [http-nio-8090-exec-7] INFO  WeiXinPortalController - 接收微信公众号信息请求o7l1z6WC5UAS0D56aNRGBP3irAOo开始 <xml><ToUserName><![CDATA[gh_95eaac3ea5d1]]></ToUserName>
+<FromUserName><![CDATA[o7l1z6WC5UAS0D56aNRGBP3irAOo]]></FromUserName>
+<CreateTime>1711607567</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[403]]></Content>
+<MsgId>24504327966394589</MsgId>
+</xml>
+24-03-28.14:32:49.415 [http-nio-8090-exec-7] INFO  WeiXinPortalController - 接收微信公众号信息请求o7l1z6WC5UAS0D56aNRGBP3irAOo完成 <xml>
+  <ToUserName><![CDATA[o7l1z6WC5UAS0D56aNRGBP3irAOo]]></ToUserName>
+  <FromUserName><![CDATA[gh_95eaac3ea5d1]]></FromUserName>
+  <CreateTime>1711607569368</CreateTime>
+  <MsgType><![CDATA[text]]></MsgType>
+  <Content><![CDATA[您的验证码为：2773 有效期3分钟！]]></Content>
+</xml>
+24-03-28.14:32:56.373 [http-nio-8090-exec-1] INFO  ChatGPTAIServiceController - 流式问答请求开始，使用模型：gpt-3.5-turbo 请求信息：[{"content":"请问有什么需要帮助的吗？","role":"system"},{"content":"一个类中注入另一个类的实体对象，那么这两个类之间的关系是什么，在设计模式中","role":"user"}]
+24-03-28.14:32:56.374 [http-nio-8090-exec-1] INFO  ChatGPTAIServiceController - 流式问答请求处理，openid:o7l1z6WC5UAS0D56aNRGBP3irAOo 请求模型:gpt-3.5-turbo
+24-03-28.14:32:56.379 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> POST https://api.xty.app/v1/chat/completions
+24-03-28.14:32:56.379 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+24-03-28.14:32:56.379 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Length: 324
+24-03-28.14:32:56.379 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - apiKey: sk-PhkuxiwP0G5nSV6uBbEf19C6DeEf4e75B9A3592d71A1AfAc
+24-03-28.14:32:56.379 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Accept: text/event-stream
+24-03-28.14:32:56.379 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> END POST
+24-03-28.14:33:52.599 [http-nio-8090-exec-2] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+24-03-28.14:33:52.599 [http-nio-8090-exec-2] INFO  AbstractChatService    - 流式问答请求完成，使用模型：gpt-3.5-turbo
+24-03-28.14:33:52.655 [http-nio-8090-exec-2] INFO  AbstractChatService    - 流式问答请求完成，使用模型：gpt-3.5-turbo
+24-03-28.14:34:13.068 [http-nio-8090-exec-4] INFO  ChatGPTAIServiceController - 流式问答请求开始，使用模型：gpt-3.5-turbo 请求信息：[{"content":"一个类中注入另一个类的实体对象，那么这两个类之间的关系是什么，在设计模式中","role":"user"},{"content":"","role":"system"},{"content":"一个类中注入另一个类的实体对象，那么这两个类之间的关系是什么，在设计模式中","role":"user"}]
+24-03-28.14:34:13.069 [http-nio-8090-exec-4] INFO  ChatGPTAIServiceController - 流式问答请求处理，openid:o7l1z6WC5UAS0D56aNRGBP3irAOo 请求模型:gpt-3.5-turbo
+24-03-28.14:34:13.075 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> POST https://api.xty.app/v1/chat/completions
+24-03-28.14:34:13.075 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+24-03-28.14:34:13.075 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Length: 428
+24-03-28.14:34:13.075 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - apiKey: sk-PhkuxiwP0G5nSV6uBbEf19C6DeEf4e75B9A3592d71A1AfAc
+24-03-28.14:34:13.075 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Accept: text/event-stream
+24-03-28.14:34:13.075 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> END POST
+24-03-28.14:34:47.674 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- 200 https://api.xty.app/v1/chat/completions?token (34598ms)
+24-03-28.14:34:47.674 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - date: Thu, 28 Mar 2024 06:34:46 GMT
+24-03-28.14:34:47.674 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - content-type: text/event-stream
+24-03-28.14:34:47.674 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cache-control: no-cache
+24-03-28.14:34:47.674 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - x-oneapi-request-id: 20240328063446120798975DRvbiDsn
+24-03-28.14:34:47.674 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-cache-status: DYNAMIC
+24-03-28.14:34:47.674 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=hMtGxA3QCLM2cnVe92HyaYEMBwWX%2BHDvE2H%2FaQb0eKYug3i0p0ui%2FVDfhrOX7RJ9Bt7F9m4ZjM0Ia3IJtC1mr165evRTrpfP1NZuF5Lw5Uwkv8Bd00uLTsekGhK%2FWA%3D%3D"}],"group":"cf-nel","max_age":604800}
+24-03-28.14:34:47.675 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+24-03-28.14:34:47.675 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - server: cloudflare
+24-03-28.14:34:47.675 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-ray: 86b598a488b9ebcf-SEA
+24-03-28.14:34:47.675 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - alt-svc: h3=":443"; ma=86400
+24-03-28.14:34:47.675 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- END HTTP
+24-03-28.14:34:53.429 [http-nio-8090-exec-5] INFO  AbstractChatService    - 流式问答请求完成，使用模型：gpt-3.5-turbo
+24-03-28.14:35:12.563 [http-nio-8090-exec-6] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+24-03-28.14:35:12.563 [http-nio-8090-exec-6] INFO  AbstractChatService    - 流式问答请求完成，使用模型：gpt-3.5-turbo
+24-03-28.14:35:12.565 [http-nio-8090-exec-6] INFO  AbstractChatService    - 流式问答请求完成，使用模型：gpt-3.5-turbo
+24-03-28.14:35:56.574 [http-nio-8090-exec-8] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+24-03-28.14:35:56.574 [http-nio-8090-exec-8] INFO  AbstractChatService    - 流式问答请求完成，使用模型：gpt-3.5-turbo
+24-03-28.14:36:18.067 [http-nio-8090-exec-9] INFO  ChatGPTAIServiceController - 流式问答请求开始，使用模型：gpt-3.5-turbo 请求信息：[{"content":"一个类中注入另一个类的实体对象，那么这两个类之间的关系是什么，在设计模式中","role":"user"},{"content":"这种情况下，一个类中注入另一个类的实体对象通常表示一种依赖关系。在设计模式中，这种关系通常被称为依赖注入（Dependency Injection）。
+
+依赖注入是一种设计模式，用于减少类之间的耦合度，提高代码的可维护性和可测试性。通过依赖注入，一个类可以将其依赖的对象通过构造函数、属性或方法注入进来，而不是在类内部直接实例化依赖的对象。这样做可以使类更加灵活，易于扩展和替换依赖的对象。
+
+在依赖注入中，被注入的类通常被称为依赖对象或依赖项，而注入依赖对象的类被称为依赖注入者。通过依赖注入，依赖注入者可以更好地管理其依赖对象，实现了松耦合的设计。
+
+常见的依赖注入方式包括构造函数注入、属性注入和方法注入等。在实际应用中，依赖注入通常与其他设计模式如工厂模式、单例模式等结合使用，以实现更加灵活和可维护的代码结构。","role":"system"},{"content":"依赖关系是一种使用关系，它是对象之间耦合度==最弱==的一种关联方式，是临时性的关联。在代码中，==某个类的方法通过**局部变量**、**方法的参数**或者**对静态方法的调用**来访问另一个类（被依赖类）中的某些方法来完成一些职责。==，这个依赖属于其中的哪一种？？
+
+","role":"user"}]
+24-03-28.14:36:18.069 [http-nio-8090-exec-9] INFO  ChatGPTAIServiceController - 流式问答请求处理，openid:o7l1z6WC5UAS0D56aNRGBP3irAOo 请求模型:gpt-3.5-turbo
+24-03-28.14:36:18.073 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> POST https://api.xty.app/v1/chat/completions
+24-03-28.14:36:18.073 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+24-03-28.14:36:18.073 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Length: 1717
+24-03-28.14:36:18.073 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - apiKey: sk-PhkuxiwP0G5nSV6uBbEf19C6DeEf4e75B9A3592d71A1AfAc
+24-03-28.14:36:18.073 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Accept: text/event-stream
+24-03-28.14:36:18.073 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> END POST
+24-03-28.14:36:19.561 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- 200 https://api.xty.app/v1/chat/completions?token (1487ms)
+24-03-28.14:36:19.561 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - date: Thu, 28 Mar 2024 06:36:18 GMT
+24-03-28.14:36:19.561 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - content-type: text/event-stream
+24-03-28.14:36:19.561 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cache-control: no-cache
+24-03-28.14:36:19.561 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - x-oneapi-request-id: 20240328063617882494892r7ynwqdP
+24-03-28.14:36:19.561 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-cache-status: DYNAMIC
+24-03-28.14:36:19.561 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=7s31DC7WULGU9yQ9GswoCyJzS%2F10y0yhSf7JOE8ABgAT5ILQgC44KHcFdI%2BlRVhYLlqOG7HltejWTlp43HbJVmzIMdMFzTXLo8lHlE8GsbnP3o2JD%2FwqoKJx99XTkw%3D%3D"}],"group":"cf-nel","max_age":604800}
+24-03-28.14:36:19.561 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+24-03-28.14:36:19.561 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - server: cloudflare
+24-03-28.14:36:19.561 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-ray: 86b59ae1f8baebcf-SEA
+24-03-28.14:36:19.561 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - alt-svc: h3=":443"; ma=86400
+24-03-28.14:36:19.561 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- END HTTP
+24-03-28.14:36:21.338 [http-nio-8090-exec-7] INFO  AbstractChatService    - 流式问答请求完成，使用模型：gpt-3.5-turbo
+24-03-28.14:38:25.997 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- 200 https://api.xty.app/v1/chat/completions?token (453881ms)
+24-03-28.14:38:25.997 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - date: Thu, 28 Mar 2024 06:38:25 GMT
+24-03-28.14:38:25.997 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - content-type: text/event-stream
+24-03-28.14:38:25.997 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cache-control: no-cache
+24-03-28.14:38:25.997 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - x-oneapi-request-id: 20240328063824487721025mQibNNZb
+24-03-28.14:38:25.997 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-cache-status: DYNAMIC
+24-03-28.14:38:25.997 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=zksxLNZld%2Bb9tGdb%2Bg6Pcw0wKBh0GffY2neqjiovvbHPg0ueGGQden2Mb0Dyqwb%2BaZ4rjkvEQ%2FRVqg9sMa0KlhdivcjwnslYZFAFvjKqYejKAW3B1jsy0kPG4Ifo1Q%3D%3D"}],"group":"cf-nel","max_age":604800}
+24-03-28.14:38:25.997 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+24-03-28.14:38:25.997 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - server: cloudflare
+24-03-28.14:38:25.998 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-ray: 86b59df95a62ebcf-SEA
+24-03-28.14:38:25.998 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - alt-svc: h3=":443"; ma=86400
+24-03-28.14:38:25.998 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- END HTTP
+24-03-28.14:39:53.050 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- 200 https://api.xty.app/v1/chat/completions?token (460719ms)
+24-03-28.14:39:53.050 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - date: Thu, 28 Mar 2024 06:39:52 GMT
+24-03-28.14:39:53.050 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - content-type: text/event-stream
+24-03-28.14:39:53.050 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cache-control: no-cache
+24-03-28.14:39:53.050 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - x-oneapi-request-id: 20240328063950725424374w9U2yq04
+24-03-28.14:39:53.050 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-cache-status: DYNAMIC
+24-03-28.14:39:53.050 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=ndksLXMKstI6%2BxY57pRbAy7CJQFLrW8q4HBpRoF0pnS937zHjCWwWWebCooQiRDvicov1BmFit440uYakge3B4sJp0li8FEcoCxB6GfzlbIx%2BkRbUefoBLffITCWLg%3D%3D"}],"group":"cf-nel","max_age":604800}
+24-03-28.14:39:53.051 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+24-03-28.14:39:53.051 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - server: cloudflare
+24-03-28.14:39:53.051 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-ray: 86b5a01449e6ebcf-SEA
+24-03-28.14:39:53.051 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - alt-svc: h3=":443"; ma=86400
+24-03-28.14:39:53.051 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- END HTTP
+24-03-28.14:40:43.127 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- 200 https://api.xty.app/v1/chat/completions?token (466746ms)
+24-03-28.14:40:43.127 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - date: Thu, 28 Mar 2024 06:40:42 GMT
+24-03-28.14:40:43.127 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - content-type: text/event-stream
+24-03-28.14:40:43.127 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cache-control: no-cache
+24-03-28.14:40:43.127 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - x-oneapi-request-id: 20240328064041480750244mS1kEXhb
+24-03-28.14:40:43.127 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-cache-status: DYNAMIC
+24-03-28.14:40:43.127 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=Pq9De1O7%2F85od%2F2HnFShQaVMqCZwALS4MFCqq0%2FzmMgBulgyM0tVmmfhvzHfK8yW4cSZUp52zVwYf12e54Tz%2Byg%2FVBWB7Lwqm7mpxoy1%2ByBu2YgtdQl%2FRMyQq9h13w%3D%3D"}],"group":"cf-nel","max_age":604800}
+24-03-28.14:40:43.127 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+24-03-28.14:40:43.127 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - server: cloudflare
+24-03-28.14:40:43.127 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-ray: 86b5a1517c86ebcf-SEA
+24-03-28.14:40:43.127 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - alt-svc: h3=":443"; ma=86400
+24-03-28.14:40:43.127 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- END HTTP
+24-03-28.15:53:50.714 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m36s821ms822µs799ns).
+24-03-28.16:36:16.455 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-03-28.16:36:16.468 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.

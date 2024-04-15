@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
  * 状态码工具类
  */
 public class Constants {
+    public final static String SPLIT = ",";
     @AllArgsConstructor
     @NoArgsConstructor
     @Getter

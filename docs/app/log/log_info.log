@@ -1,0 +1,146 @@
+24-03-22.21:09:30.174 [main            ] INFO  Application            - Starting Application v1.0-SNAPSHOT using Java 1.8.0_342 on 39e4cb60facf with PID 7 (/chatgpt-data-app.jar started by root in /)
+24-03-22.21:09:30.177 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-03-22.21:09:31.541 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-03-22.21:09:31.566 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-03-22.21:09:31.568 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-03-22.21:09:31.569 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-03-22.21:09:31.705 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-03-22.21:09:31.706 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1464 ms
+24-03-22.21:09:33.028 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-03-22.21:09:33.054 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-03-22.21:09:33.073 [main            ] INFO  Application            - Started Application in 3.719 seconds (JVM running for 4.466)
+24-03-22.21:09:47.407 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-03-22.21:09:47.408 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-03-22.21:09:47.410 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 2 ms
+24-03-22.21:24:17.678 [main            ] INFO  Application            - Starting Application v1.0-SNAPSHOT using Java 1.8.0_342 on cbb9386ef045 with PID 7 (/chatgpt-data-app.jar started by root in /)
+24-03-22.21:24:17.682 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-03-22.21:24:19.107 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-03-22.21:24:19.125 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-03-22.21:24:19.126 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-03-22.21:24:19.127 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-03-22.21:24:19.230 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-03-22.21:24:19.230 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1469 ms
+24-03-22.21:24:22.268 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-03-22.21:24:22.353 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-03-22.21:24:22.398 [main            ] INFO  Application            - Started Application in 5.427 seconds (JVM running for 5.992)
+24-03-22.21:24:26.958 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-03-22.21:24:26.959 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-03-22.21:24:26.964 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 4 ms
+24-03-22.21:27:42.646 [http-nio-8090-exec-1] INFO  WeiXinPortalController - 接收微信公众号信息请求o7l1z6WC5UAS0D56aNRGBP3irAOo开始 <xml><ToUserName><![CDATA[gh_95eaac3ea5d1]]></ToUserName>
+<FromUserName><![CDATA[o7l1z6WC5UAS0D56aNRGBP3irAOo]]></FromUserName>
+<CreateTime>1711114063</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[格里菲斯]]></Content>
+<MsgId>24497261816588992</MsgId>
+</xml>
+24-03-22.21:27:42.800 [http-nio-8090-exec-1] ERROR WeiXinPortalController - 接收微信公众号信息请求o7l1z6WC5UAS0D56aNRGBP3irAOo失败 <xml><ToUserName><![CDATA[gh_95eaac3ea5d1]]></ToUserName>
+<FromUserName><![CDATA[o7l1z6WC5UAS0D56aNRGBP3irAOo]]></FromUserName>
+<CreateTime>1711114063</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[格里菲斯]]></Content>
+<MsgId>24497261816588992</MsgId>
+</xml>
+cn.glfs.chatgpt.data.types.exception.ChatGPTException: null
+	at cn.glfs.chatgpt.data.domain.weixin.service.message.WeiXinBehaviorService.acceptUserBehavior(WeiXinBehaviorService.java:69)
+	at cn.glfs.chatgpt.data.trigger.http.WeiXinPortalController.post(WeiXinPortalController.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+24-03-22.21:27:46.790 [http-nio-8090-exec-3] INFO  WeiXinPortalController - 接收微信公众号信息请求o7l1z6WC5UAS0D56aNRGBP3irAOo开始 <xml><ToUserName><![CDATA[gh_95eaac3ea5d1]]></ToUserName>
+<FromUserName><![CDATA[o7l1z6WC5UAS0D56aNRGBP3irAOo]]></FromUserName>
+<CreateTime>1711114067</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[403]]></Content>
+<MsgId>24497264182468131</MsgId>
+</xml>
+24-03-22.21:27:46.817 [http-nio-8090-exec-3] INFO  WeiXinPortalController - 接收微信公众号信息请求o7l1z6WC5UAS0D56aNRGBP3irAOo完成 <xml>
+  <ToUserName><![CDATA[o7l1z6WC5UAS0D56aNRGBP3irAOo]]></ToUserName>
+  <FromUserName><![CDATA[gh_95eaac3ea5d1]]></FromUserName>
+  <CreateTime>1711114066802</CreateTime>
+  <MsgType><![CDATA[text]]></MsgType>
+  <Content><![CDATA[您的验证码为：7332 有效期3分钟！]]></Content>
+</xml>
+24-03-22.21:28:04.195 [http-nio-8090-exec-5] INFO  AuthController         - 鉴权登录校验开始,验证码:7332
+24-03-22.21:28:04.443 [http-nio-8090-exec-5] INFO  AuthController         - 鉴权登录校验完成,验证码:7332,结果:{"code":"0000","info":"验证成功","openId":"o7l1z6WC5UAS0D56aNRGBP3irAOo","token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvN2wxejZXQzVVQVMwRDU2YU5SR0JQM2lyQU9vIiwib3BlbklkIjoibzdsMXo2V0M1VUFTMEQ1NmFOUkdCUDNpckFPbyIsImV4cCI6MTcxMTcxODg4NCwiaWF0IjoxNzExMTE0MDg0LCJqdGkiOiI2ZjY4ODgzNC0xMjgzLTQyZTgtOGU5MC0wMGQ3MzllOTFhNjgifQ.mNwf-Mpn-0_OvuIkKki-8-oYMkU5p2Oi4bx8R-ewRMI"}
+24-03-22.21:28:10.724 [http-nio-8090-exec-9] INFO  ChatGPTAIServiceController - 流式问答请求开始，使用模型：gpt-3.5-turbo 请求信息：[{"content":"请问有什么需要帮助的吗？","role":"system"},{"content":"你好","role":"user"}]
+24-03-22.21:28:10.792 [OkHttp https://pro-share-api.zcyai.com/...] INFO  OkHttpClient           - --> POST https://pro-share-api.zcyai.com/v1/chat/completions
+24-03-22.21:28:10.793 [OkHttp https://pro-share-api.zcyai.com/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+24-03-22.21:28:10.793 [OkHttp https://pro-share-api.zcyai.com/...] INFO  OkHttpClient           - Content-Length: 219
+24-03-22.21:28:10.793 [OkHttp https://pro-share-api.zcyai.com/...] INFO  OkHttpClient           - Accept: text/event-stream
+24-03-22.21:28:10.794 [OkHttp https://pro-share-api.zcyai.com/...] INFO  OkHttpClient           - --> END POST
+24-03-22.21:28:18.811 [OkHttp https://pro-share-api.zcyai.com/...] INFO  OkHttpClient           - <-- HTTP FAILED: java.net.UnknownHostException: pro-share-api.zcyai.com: Temporary failure in name resolution
+24-03-22.21:28:37.764 [http-nio-8090-exec-10] INFO  WeiXinPortalController - 接收微信公众号信息请求o7l1z6WC5UAS0D56aNRGBP3irAOo开始 <xml><ToUserName><![CDATA[gh_95eaac3ea5d1]]></ToUserName>
+<FromUserName><![CDATA[o7l1z6WC5UAS0D56aNRGBP3irAOo]]></FromUserName>
+<CreateTime>1711114118</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[403]]></Content>
+<MsgId>24497262009215066</MsgId>
+</xml>
+24-03-22.21:28:37.776 [http-nio-8090-exec-10] INFO  WeiXinPortalController - 接收微信公众号信息请求o7l1z6WC5UAS0D56aNRGBP3irAOo完成 <xml>
+  <ToUserName><![CDATA[o7l1z6WC5UAS0D56aNRGBP3irAOo]]></ToUserName>
+  <FromUserName><![CDATA[gh_95eaac3ea5d1]]></FromUserName>
+  <CreateTime>1711114117773</CreateTime>
+  <MsgType><![CDATA[text]]></MsgType>
+  <Content><![CDATA[您的验证码为：7151 有效期3分钟！]]></Content>
+</xml>
+24-03-22.21:28:42.332 [http-nio-8090-exec-2] INFO  WeiXinPortalController - 接收微信公众号信息请求o7l1z6WC5UAS0D56aNRGBP3irAOo开始 <xml><ToUserName><![CDATA[gh_95eaac3ea5d1]]></ToUserName>
+<FromUserName><![CDATA[o7l1z6WC5UAS0D56aNRGBP3irAOo]]></FromUserName>
+<CreateTime>1711114123</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[403]]></Content>
+<MsgId>24497264644698739</MsgId>
+</xml>
+24-03-22.21:28:42.344 [http-nio-8090-exec-2] INFO  WeiXinPortalController - 接收微信公众号信息请求o7l1z6WC5UAS0D56aNRGBP3irAOo完成 <xml>
+  <ToUserName><![CDATA[o7l1z6WC5UAS0D56aNRGBP3irAOo]]></ToUserName>
+  <FromUserName><![CDATA[gh_95eaac3ea5d1]]></FromUserName>
+  <CreateTime>1711114122341</CreateTime>
+  <MsgType><![CDATA[text]]></MsgType>
+  <Content><![CDATA[您的验证码为：7151 有效期3分钟！]]></Content>
+</xml>
