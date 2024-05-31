@@ -4,7 +4,7 @@ version: '3.8'
 
 services:
   chatgpt-data-app:
-    image: glfs/chatgpt-data-app:1.1
+    image: gelifisikk/chatgpt-data-app:1.0
     container_name: chatgpt-data-app
     ports:
       - "8090:8090"
@@ -18,8 +18,8 @@ services:
       - THREAD_POOL_EXECUTOR_CONFIG_KEEP_ALIVE_TIME=5000
       - THREAD_POOL_EXECUTOR_CONFIG_BLOCK_QUEUE_SIZE=5000
       - THREAD_POOL_EXECUTOR_CONFIG_POLICY=CallerRunsPolicy
-      - CHATGPT_SDK_CONFIG_API_HOST=https://pro-share-api.zcyai.com/
-      - CHATGPT_SDK_CONFIG_API_KEY=sk-x1J6vfuoi5FiBF3y2d8e8fB4E8B94f189140A962D0C0B9Ed
+      - CHATGLM_SDK_CONFIG_API_HOST=https://api.xty.app/
+      - CHATGLM_SDK_CONFIG_API_KEY=sk-vByCQ4XTfdDbvUWBB6FeC3D6A4Bc4bDaB280BfE8630fC224
       - WX_CONFIG_ORIGINALID=gh_95eaac3ea5d1
       - WX_CONFIG_APPID=wx861d0c8b6e7eb1b8
       - WX_CONFIG_TOKEN=6666
@@ -34,7 +34,7 @@ services:
 
   chatgpt-web:
     container_name: chatgpt-web
-    image: glfs/chatgpt-web:1.0
+    image: gelifisikk/chatgpt-web:1.0
     ports:
       - "3000:3000"
     environment:

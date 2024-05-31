@@ -20,6 +20,9 @@ import java.io.IOException;
 import java.util.stream.Collectors;
 
 
+/**
+ * 流式问答功能
+ */
 @Slf4j
 @RestController()
 @CrossOrigin("${app.config.cross-origin}")
@@ -92,14 +95,11 @@ public class ChatGPTAIServiceController {
 
             // 5. 请求结果&返回
             return chatService.completions(emitter,chatProcessAggregate);
+
         } catch (Exception e) {
             log.error("流式应答，请求模型：{} 发生异常", request.getModel(), e);
             throw new ChatGPTException(e.getMessage());
         }
     }
-    @RequestMapping(value = "chat", method = RequestMethod.GET)
-    public String a(){
-        System.out.println("11111");
-        return "123";
-    }
+
 }

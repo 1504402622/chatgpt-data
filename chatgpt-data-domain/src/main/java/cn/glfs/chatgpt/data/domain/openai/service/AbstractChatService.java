@@ -41,6 +41,7 @@ public abstract class AbstractChatService implements IChatService{
                     null != userAccountQuotaEntity ? DefaultLogicFactory.LogicModel.MODEL_TYPE.getCode() : DefaultLogicFactory.LogicModel.NULL.getCode(),
                     null != userAccountQuotaEntity ? DefaultLogicFactory.LogicModel.USER_QUOTA.getCode() : DefaultLogicFactory.LogicModel.NULL.getCode()
             );
+
             if (!LogicCheckTypeVO.SUCCESS.equals(ruleLogicEntity.getType())){
                 emitter.send(ruleLogicEntity.getInfo());
                 emitter.complete();

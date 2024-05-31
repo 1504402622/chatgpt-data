@@ -20,7 +20,6 @@ import javax.annotation.Resource;
 /**
  * 授权登录
  */
-
 @Slf4j
 @RestController()
 @CrossOrigin("${app.config.cross-origin}")//跨域

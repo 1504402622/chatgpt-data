@@ -1,1 +1,1 @@
-docker build -f ./Dockerfile -t glfs/chatgpt-data-app:1.1 .
+docker build -f ./Dockerfile -t gelifisikk/chatgpt-data-app:1.0 .

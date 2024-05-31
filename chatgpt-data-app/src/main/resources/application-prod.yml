@@ -1,26 +1,102 @@
 server:
-  port: 80
+  port: 8091
 
-# 应用配置
+#应用配置
 app:
   config:
     # 版本，方便通过接口版本升级
     api-version: v1
-    # 跨域，开发阶段可以设置为 * 不限制只有来自该指定域名的请求才会被允许跨域访问应用程序资源
-    cross-origin: https://itedus.cn
+    # 跨域，开发阶段可以设置为 * 不限制
+    cross-origin: '*'
+    # 访问频次限制
+    limit-count: 50
+    # 白名单，不做频次拦截【微信的openai】oxfA9w8-23yvwTmo2ombz0E4zJv4
+    # 是根据用户关注公众号发送403获取验证码的时候，获取到的 openid 你可以配置多个。以及分别去掉配置进行验证。
+    white-list: o7l1z6WC5UAS0D56aNRGBP3irAOo
 
+
+#线程池配置
+
+thread:
+  pool:
+    executor:
+      config:
+        block-queue-size: 5000
+        core-pool-size: 20
+        max-pool-size: 50
+        keep-alive-time: 5000
+        policy: CallerRunsPolicy
 
 # ChatGPT SDK Config
 chatgpt:
   sdk:
     config:
       # 官网地址 https://api.openai.com/
-      api-host: https://pro-share-aws-api.zcyai.com/
+      api-host: https://api.xty.app/
       # 官网申请 https://platform.openai.com/account/api-keys
-      api-key: sk-x1J6vfuoi5FiBF3y2d8e8fB4E8B94f189140A962D0C0B9Ed
+      # sk-x1J6vfuoi5FiBF3y2d8e8fB4E8B94f189140A962D0C0B9Ed
+      api-key: sk-vByCQ4XTfdDbvUWBB6FeC3D6A4Bc4bDaB280BfE8630fC224
+      #备用key1：sk-vByCQ4XTfdDbvUWBB6FeC3D6A4Bc4bDaB280BfE8630fC224
+      #备用key2：sk-9Lq297e43tDiprhL92DcDb0f6e194693AfB72eEdAeAc0491
+      #使用次数查询：https://api.xty.app
+
+      # http://api.xfg.im:8080/authorize?username=xfg&password=123
+      # auth-token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ4ZmciLCJleHAiOjE2ODMyODE2NzEsImlhdCI6MTY4MzI3ODA3MSwianRpIjoiMWUzZTkwYjYtY2UyNy00NzNlLTk5ZTYtYWQzMWU1MGVkNWE4IiwidXNlcm5hbWUiOiJ4ZmcifQ.YgQRJ2U5-9uydtd6Wbkg2YatsoX-y8mS_OJ3FdNRaX0
+
+# 微信公众号配置信息
+# originalid：原始ID
+# appid：个人AppID
+# token：开通接口服务自定义设置
+wx:
+  config:
+    originalid: gh_95eaac3ea5d1
+    appid: wx861d0c8b6e7eb1b8
+    token: 6666
+
+
+# 数据库配置；SpringBoot 默认连接池为 HikariDataSource
+spring:
+  datasource:
+    username: root
+    password: 1234
+    url: jdbc:mysql://127.0.0.1:3306/openai?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useSSL=true
+    driver-class-name: com.mysql.jdbc.Driver
+  hikari:
+    pool-name: Retail_HikariCP
+    minimum-idle: 15 #最小空闲连接数量
+    idle-timeout: 180000 #空闲连接存活最大时间，默认600000（10分钟）
+    maximum-pool-size: 25 #连接池最大连接数，默认是10
+    auto-commit: true  #此属性控制从池返回的连接的默认自动提交行为,默认值：true
+    max-lifetime: 1800000 #此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认1800000即30分钟
+    connection-timeout: 30000 #数据库连接超时时间,默认30秒，即30000
+    connection-test-query: SELECT 1
+  type: com.zaxxer.hikari.HikariDataSource
+
+mybatis:
+  mapper-locations: classpath:/mybatis/mapper/*.xml
+  config-location:  classpath:/mybatis/config/mybatis-config.xml
 
 # 日志
 logging:
   level:
     root: info
   config: classpath:logback-spring.xml
+
+
+# 支付配置；如果你申请了支付渠道，则可以配置 enable = true，否则就配置 false 走流程测试
+wxpay:
+  config:
+    # 状态；true = 开启、false 关闭
+    enabled: false
+    # 申请支付主体的 appid
+    appid:
+    # 商户号
+    mchid:
+    # 回调地址
+    notify-url: http://你的地址.natapp1.cc/api/v1/mall/pay_notify
+    # 商户API私钥路径
+    private-key-path: cert/apiclient_key.pem
+    # 商户证书序列号：openssl x509 -in apiclient_cert.pem -noout -serial
+    merchant-serial-number:
+    # 商户APIV3密钥
+    api-v3-key:

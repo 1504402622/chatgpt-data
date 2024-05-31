@@ -1,8 +1,10 @@
 package cn.glfs.chatgpt.data.config;
 
 
+import cn.glfs.chatgpt.data.trigger.mq.OrderPaySuccessListener;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
+import com.google.common.eventbus.EventBus;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -32,4 +34,11 @@ public class GoogleGuavaCodeCacheConfig {
                 .build();
     }
 
+    //发货监听 OrderPaySuccessListener 配置
+    @Bean
+    public EventBus eventBusListener(OrderPaySuccessListener listener){
+        EventBus eventBus=new EventBus();
+        eventBus.register(listener);
+        return eventBus;
+    }
 }

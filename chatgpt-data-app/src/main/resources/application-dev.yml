@@ -9,7 +9,7 @@ app:
     # 跨域，开发阶段可以设置为 * 不限制
     cross-origin: '*'
     # 访问频次限制
-    limit-count: 2
+    limit-count: 20
     # 白名单，不做频次拦截【微信的openai】oxfA9w8-23yvwTmo2ombz0E4zJv4
     # 是根据用户关注公众号发送403获取验证码的时候，获取到的 openid 你可以配置多个。以及分别去掉配置进行验证。
     white-list: o7l1z6WC5UAS0D56aNRGBP3irAOo
@@ -31,18 +31,16 @@ thread:
 chatgpt:
   sdk:
     config:
-      # 官网地址 https://api.openai.com/
+      # 官网地址 https://api.openai.com/      # 官网申请 https://platform.openai.com/account/api-keys
       api-host: https://api.xty.app/
-      # 官网申请 https://platform.openai.com/account/api-keys
-      # sk-x1J6vfuoi5FiBF3y2d8e8fB4E8B94f189140A962D0C0B9Ed
       api-key: sk-PhkuxiwP0G5nSV6uBbEf19C6DeEf4e75B9A3592d71A1AfAc
 
       #备用key1：sk-vByCQ4XTfdDbvUWBB6FeC3D6A4Bc4bDaB280BfE8630fC224
       #备用key2：sk-9Lq297e43tDiprhL92DcDb0f6e194693AfB72eEdAeAc0491
       #使用次数查询：https://api.xty.app
 
-      # 自主申请 http://api.xfg.im:8080/authorize?username=xfg&password=123 - 有时效性，主要为了大家学习使用
-      #auth-token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ4ZmciLCJleHAiOjE2ODMyODE2NzEsImlhdCI6MTY4MzI3ODA3MSwianRpIjoiMWUzZTkwYjYtY2UyNy00NzNlLTk5ZTYtYWQzMWU1MGVkNWE4IiwidXNlcm5hbWUiOiJ4ZmcifQ.YgQRJ2U5-9uydtd6Wbkg2YatsoX-y8mS_OJ3FdNRaX0
+      # http://api.xfg.im:8080/authorize?username=xfg&password=123
+      # auth-token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ4ZmciLCJleHAiOjE2ODMyODE2NzEsImlhdCI6MTY4MzI3ODA3MSwianRpIjoiMWUzZTkwYjYtY2UyNy00NzNlLTk5ZTYtYWQzMWU1MGVkNWE4IiwidXNlcm5hbWUiOiJ4ZmcifQ.YgQRJ2U5-9uydtd6Wbkg2YatsoX-y8mS_OJ3FdNRaX0
 
 # 微信公众号配置信息
 # originalid：原始ID
@@ -84,3 +82,20 @@ logging:
   config: classpath:logback-spring.xml
 
 
+# 支付配置；如果你申请了支付渠道，则可以配置 enable = true，否则就配置 false 走流程测试
+wxpay:
+  config:
+    # 状态；true = 开启、false 关闭
+    enabled: enabled
+    # 申请支付主体的 appid
+    appid:
+    # 商户号
+    mchid:
+    # 回调地址
+    notify-url: http://你的地址.natapp1.cc/api/v1/mall/pay_notify
+    # 商户API私钥路径
+    private-key-path: cert/apiclient_key.pem
+    # 商户证书序列号：openssl x509 -in apiclient_cert.pem -noout -serial
+    merchant-serial-number:
+    # 商户APIV3密钥
+    api-v3-key:
