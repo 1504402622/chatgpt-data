@@ -1,69 +1,110 @@
-24-05-10.00:00:25.260 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-24-05-10.00:00:25.261 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-24-05-10.00:00:25.263 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 2 ms
-24-05-10.00:02:01.152 [http-nio-8090-exec-4] INFO  WeiXinPortalController - 微信公众号验签信息wx861d0c8b6e7eb1b8开始 [1ecc820c1002a6a6633f3d146f5bd9feb210bb57, 1715270520, 2102866920, 8366125510484294650]
-24-05-10.00:02:01.188 [http-nio-8090-exec-4] INFO  WeiXinPortalController - 微信公众号验签信息wx861d0c8b6e7eb1b8完成 check：true
-24-05-10.00:10:04.433 [http-nio-8090-exec-6] INFO  ChatGPTAIServiceController - 流式问答请求开始，使用模型：gpt-3.5-turbo 请求信息：[{"content":"                Pattern pattern = Pattern.compile(\"(#\\\\{(.*?)})\");\n                Matcher matcher = pattern.matcher(sql);\n                for (int i = 1; matcher.find(); i++) {\n                    String g1 = matcher.group(1);\n                    String g2 = matcher.group(2);\n                    parameter.put(i, g2);\n                    sql = sql.replace(g1, \"?\");\n                }这里的匹配流程并举例","role":"user"},{"content":"这段代码使用了正则表达式来匹配一个 SQL 语句中的参数，并将参数替换为问号（?），同时将参数与其在 SQL 语句中的位置映射起来。\n\n让我解释一下代码的流程，并给出一个示例：\n\n1. 首先，使用 `Pattern.compile(\"(#\\\\{(.*?)})\")` 创建了一个正则表达式模式，该模式用于匹配形如 `#{param}` 的参数模式。\n   - `#\\\\{(.*?)}` 这个正则表达式用来匹配 `#{param}`，`#\\\\{` 表示匹配 `#{`，`(.*?)` 表示匹配任意字符的零个或多个，并且采用非贪婪模式，即尽可能少地匹配字符，`}` 表示匹配 `}`。\n\n2. 然后，通过 `pattern.matcher(sql)` 创建了一个 Matcher 对象，该对象用于在给定的 SQL 语句中进行匹配。\n\n3. 接下来是一个 for 循环，循环条件是 `matcher.find()`，意味着在 SQL 语句中查找所有匹配模式的参数。\n   - `matcher.find()` 方法用于查找输入字符串中与模式匹配的下一个子序列。\n\n4. 在循环体内，首先使用 `matcher.group(1)` 获取整个匹配的子串，即 `#{param}`，并将其赋值给变量 `g1`。\n   - `matcher.group(1)` 返回与正则表达式中第一个圆括号匹配的子串。\n\n5. 然后使用 `matcher.group(2)` 获取匹配到的参数名称，即去掉 `#{}` 后的部分，赋值给变量 `g2`。\n   - `matcher.group(2)` 返回与正则表达式中第二个圆括号匹配的子串。\n\n6. 接着将参数与其在 SQL 语句中的位置进行映射，将参数的序号作为键，参数名称作为值，存储到一个 Map 中，即 `parameter.put(i, g2)`。\n\n7. 最后，使用 `sql.replace(g1, \"?\")` 将匹配到的参数模式替换为问号（?），将替换后的 SQL 语句重新赋值给变量 `sql`。\n\n示例：\n假设有一个 SQL 语句为：\n\n```sql\nSELECT * FROM users WHERE id = #{userId} AND name = #{userName}\n```\n\n经过上述代码处理后，会将 SQL 语句替换为：\n\n```sql\nSELECT * FROM users WHERE id = ? AND name = ?\n```\n\n并且将参数 `userId` 和 `userName` 与其在 SQL 语句中的位置映射为：\n\n```java\nparameter.put(1, \"userId\");\nparameter.put(2, \"userName\");\n```\n\n这样就完成了对 SQL 语句中参数的匹配和替换，并且建立了参数与其在 SQL 语句中位置的映射关系。","role":"system"},{"content":"您好","role":"user"}]
-24-05-10.00:10:04.616 [http-nio-8090-exec-6] INFO  ChatGPTAIServiceController - 流式问答请求处理，openid:o7l1z6WC5UAS0D56aNRGBP3irAOo 请求模型:gpt-3.5-turbo
-24-05-10.00:10:04.745 [http-nio-8090-exec-6] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-05-10.00:10:05.161 [http-nio-8090-exec-6] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-05-10.00:10:05.671 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> POST https://api.xty.app/v1/chat/completions
-24-05-10.00:10:05.671 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
-24-05-10.00:10:05.671 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Length: 2972
-24-05-10.00:10:05.671 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - apiKey: sk-PhkuxiwP0G5nSV6uBbEf19C6DeEf4e75B9A3592d71A1AfAc
-24-05-10.00:10:05.671 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Accept: text/event-stream
-24-05-10.00:10:05.671 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> END POST
-24-05-10.00:10:08.992 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- 200 https://api.xty.app/v1/chat/completions?token (3320ms)
-24-05-10.00:10:08.992 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - date: Thu, 09 May 2024 16:10:08 GMT
-24-05-10.00:10:08.992 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - content-type: text/event-stream
-24-05-10.00:10:08.993 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cache-control: no-cache
-24-05-10.00:10:08.993 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - x-oneapi-request-id: 20240509161006914071463T0B9O0MM
-24-05-10.00:10:08.993 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-cache-status: DYNAMIC
-24-05-10.00:10:08.993 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=z4VJvSgQJEjRu7D1ubF28DFuG6AUiyFz0Pq4ef58CFoybM5vWNtUnNpq50sFYnmsMArI%2FhJxDWpBMDe0aiw8H%2FSEObWrcLkNadO8vdE1GAOVwUWgRfLiwICNuwkCbw%3D%3D"}],"group":"cf-nel","max_age":604800}
-24-05-10.00:10:08.993 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
-24-05-10.00:10:08.993 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - server: cloudflare
-24-05-10.00:10:08.993 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-ray: 8812f5308b990fd5-LAX
-24-05-10.00:10:08.993 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - alt-svc: h3=":443"; ma=86400
-24-05-10.00:10:08.993 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- END HTTP
-24-05-10.00:10:10.501 [http-nio-8090-exec-7] INFO  AbstractChatService    - 流式问答请求完成，使用模型：gpt-3.5-turbo
-24-05-10.00:13:00.183 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-05-10.00:13:00.193 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-05-10.00:13:08.131 [main            ] INFO  Application            - Starting Application using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 23000 (E:\java_Demo\chatgpt-data\chatgpt-data-app\target\classes started by lenovo in E:\java_Demo\chatgpt-data)
-24-05-10.00:13:08.135 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-24-05-10.00:13:09.810 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
-24-05-10.00:13:09.822 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
-24-05-10.00:13:09.823 [main            ] INFO  StandardService        - Starting service [Tomcat]
-24-05-10.00:13:09.823 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-24-05-10.00:13:09.993 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-24-05-10.00:13:09.993 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1803 ms
-24-05-10.00:13:11.730 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
-24-05-10.00:13:11.765 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
-24-05-10.00:13:11.779 [main            ] INFO  Application            - Started Application in 4.407 seconds (JVM running for 6.206)
-24-05-10.00:16:13.833 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-24-05-10.00:16:13.833 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-24-05-10.00:16:13.835 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 2 ms
-24-05-10.00:16:14.218 [http-nio-8090-exec-1] INFO  ChatGPTAIServiceController - 流式问答请求开始，使用模型：gpt-3.5-turbo 请求信息：[{"content":"您好","role":"user"},{"content":"您好！有什么可以帮助您的吗？","role":"system"},{"content":"您好","role":"user"}]
-24-05-10.00:16:14.292 [http-nio-8090-exec-1] INFO  ChatGPTAIServiceController - 流式问答请求处理，openid:o7l1z6WC5UAS0D56aNRGBP3irAOo 请求模型:gpt-3.5-turbo
-24-05-10.00:16:14.331 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-05-10.00:16:14.522 [http-nio-8090-exec-1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-05-10.00:16:14.616 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> POST https://api.xty.app/v1/chat/completions
-24-05-10.00:16:14.616 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
-24-05-10.00:16:14.616 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Content-Length: 260
-24-05-10.00:16:14.616 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - apiKey: sk-vByCQ4XTfdDbvUWBB6FeC3D6A4Bc4bDaB280BfE8630fC224
-24-05-10.00:16:14.616 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - Accept: text/event-stream
-24-05-10.00:16:14.616 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - --> END POST
-24-05-10.00:16:20.679 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- 200 https://api.xty.app/v1/chat/completions?token (6062ms)
-24-05-10.00:16:20.679 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - date: Thu, 09 May 2024 16:16:20 GMT
-24-05-10.00:16:20.679 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - content-type: text/event-stream
-24-05-10.00:16:20.679 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cache-control: no-cache
-24-05-10.00:16:20.679 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - x-oneapi-request-id: 202405091616167547263999hayFfd3
-24-05-10.00:16:20.680 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-cache-status: DYNAMIC
-24-05-10.00:16:20.680 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=9Vgt5qMxJmULnm8IDDNaVYnLIj54kf92bKpko8Iu5PTK1U1edAz5ZxzxIO5sqddvEaNnP8C2TlRkByizyvqnWdBVBoDfHmcoLHJ90UPwen695ffj3ndLZeG4l6%2Fl0g%3D%3D"}],"group":"cf-nel","max_age":604800}
-24-05-10.00:16:20.680 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
-24-05-10.00:16:20.680 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - server: cloudflare
-24-05-10.00:16:20.680 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - cf-ray: 8812fe36f88dec2b-SEA
-24-05-10.00:16:20.680 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - alt-svc: h3=":443"; ma=86400
-24-05-10.00:16:20.680 [OkHttp https://api.xty.app/...] INFO  OkHttpClient           - <-- END HTTP
-24-05-10.00:16:22.021 [http-nio-8090-exec-2] INFO  AbstractChatService    - 流式问答请求完成，使用模型：gpt-3.5-turbo
-24-05-10.00:27:45.190 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-05-10.00:27:45.217 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-10-06.09:56:08.377 [main            ] INFO  Application            - Starting Application using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 7800 (E:\java_Demo\chatgpt-data\chatgpt-data-app\target\classes started by lenovo in E:\java_Demo\chatgpt-data)
+24-10-06.09:56:08.380 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-10-06.09:56:10.441 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-10-06.09:56:10.454 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-10-06.09:56:10.455 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-10-06.09:56:10.455 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-10-06.09:56:10.618 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-10-06.09:56:10.618 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2182 ms
+24-10-06.09:56:11.921 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
+24-10-06.09:56:11.928 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+24-10-06.09:56:11.935 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+24-10-06.09:56:11.942 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+24-10-06.09:56:11.950 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+24-10-06.09:56:12.470 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-10-06.09:56:12.497 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-10-06.09:56:12.510 [main            ] INFO  Application            - Started Application in 4.841 seconds (JVM running for 6.435)
+24-10-06.09:58:19.602 [http-nio-8090-exec-4] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-10-06.09:58:19.602 [http-nio-8090-exec-4] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-10-06.09:58:19.603 [http-nio-8090-exec-4] INFO  DispatcherServlet      - Completed initialization in 1 ms
+24-10-06.09:58:19.650 [http-nio-8090-exec-4] INFO  AuthController         - 鉴权登录校验开始,验证码:4178
+24-10-06.09:58:19.654 [http-nio-8090-exec-4] INFO  AuthService            - 鉴权,用户收入的验证码不存在4178
+24-10-06.09:58:19.788 [http-nio-8090-exec-4] INFO  AuthController         - 鉴权登录校验完成,验证码:4178,结果:{"code":"0001","info":"验证码不存在"}
+24-10-06.09:58:27.016 [http-nio-8090-exec-5] INFO  AuthController         - 鉴权登录校验开始,验证码:4178
+24-10-06.09:58:27.016 [http-nio-8090-exec-5] INFO  AuthService            - 鉴权,用户收入的验证码不存在4178
+24-10-06.09:58:27.017 [http-nio-8090-exec-5] INFO  AuthController         - 鉴权登录校验完成,验证码:4178,结果:{"code":"0001","info":"验证码不存在"}
+24-10-06.09:58:52.497 [http-nio-8090-exec-1] INFO  AuthController         - 鉴权登录校验开始,验证码:4178
+24-10-06.09:58:52.497 [http-nio-8090-exec-1] INFO  AuthService            - 鉴权,用户收入的验证码不存在4178
+24-10-06.09:58:52.497 [http-nio-8090-exec-1] INFO  AuthController         - 鉴权登录校验完成,验证码:4178,结果:{"code":"0001","info":"验证码不存在"}
+24-10-06.09:59:36.304 [http-nio-8090-exec-2] INFO  AuthController         - 鉴权登录校验开始,验证码:4178
+24-10-06.09:59:36.305 [http-nio-8090-exec-2] INFO  AuthService            - 鉴权,用户收入的验证码不存在4178
+24-10-06.09:59:36.305 [http-nio-8090-exec-2] INFO  AuthController         - 鉴权登录校验完成,验证码:4178,结果:{"code":"0001","info":"验证码不存在"}
+24-10-06.09:59:37.945 [http-nio-8090-exec-3] INFO  AuthController         - 鉴权登录校验开始,验证码:4178
+24-10-06.09:59:37.945 [http-nio-8090-exec-3] INFO  AuthService            - 鉴权,用户收入的验证码不存在4178
+24-10-06.09:59:37.945 [http-nio-8090-exec-3] INFO  AuthController         - 鉴权登录校验完成,验证码:4178,结果:{"code":"0001","info":"验证码不存在"}
+24-10-06.10:00:43.936 [http-nio-8090-exec-9] INFO  AuthController         - 鉴权登录校验开始,验证码:验证码不存在
+24-10-06.10:00:43.936 [http-nio-8090-exec-9] INFO  AbstractAuthService    - 鉴权，用户输入验证码无效验证码不存在
+24-10-06.10:00:43.937 [http-nio-8090-exec-9] INFO  AuthController         - 鉴权登录校验完成,验证码:验证码不存在,结果:{"code":"0002","info":"验证码无效"}
+24-10-06.10:01:06.495 [http-nio-8090-exec-10] INFO  AuthController         - 鉴权登录校验开始,验证码:4178
+24-10-06.10:01:06.495 [http-nio-8090-exec-10] INFO  AuthService            - 鉴权,用户收入的验证码不存在4178
+24-10-06.10:01:06.496 [http-nio-8090-exec-10] INFO  AuthController         - 鉴权登录校验完成,验证码:4178,结果:{"code":"0001","info":"验证码不存在"}
+24-10-06.10:02:21.428 [http-nio-8090-exec-6] INFO  AuthController         - 鉴权登录校验开始,验证码:8420
+24-10-06.10:02:21.428 [http-nio-8090-exec-6] INFO  AuthService            - 鉴权,用户收入的验证码不存在8420
+24-10-06.10:02:21.429 [http-nio-8090-exec-6] INFO  AuthController         - 鉴权登录校验完成,验证码:8420,结果:{"code":"0001","info":"验证码不存在"}
+24-10-06.10:02:30.463 [http-nio-8090-exec-4] INFO  AuthController         - 鉴权登录校验开始,验证码: 8420
+24-10-06.10:02:30.463 [http-nio-8090-exec-4] INFO  AbstractAuthService    - 鉴权，用户输入验证码无效 8420
+24-10-06.10:02:30.464 [http-nio-8090-exec-4] INFO  AuthController         - 鉴权登录校验完成,验证码: 8420,结果:{"code":"0002","info":"验证码无效"}
+24-10-06.10:02:40.060 [http-nio-8090-exec-5] INFO  AuthController         - 鉴权登录校验开始,验证码:8420
+24-10-06.10:02:40.060 [http-nio-8090-exec-5] INFO  AuthService            - 鉴权,用户收入的验证码不存在8420
+24-10-06.10:02:40.060 [http-nio-8090-exec-5] INFO  AuthController         - 鉴权登录校验完成,验证码:8420,结果:{"code":"0001","info":"验证码不存在"}
+24-10-06.10:02:41.191 [http-nio-8090-exec-1] INFO  AuthController         - 鉴权登录校验开始,验证码:8420
+24-10-06.10:02:41.191 [http-nio-8090-exec-1] INFO  AuthService            - 鉴权,用户收入的验证码不存在8420
+24-10-06.10:02:41.191 [http-nio-8090-exec-1] INFO  AuthController         - 鉴权登录校验完成,验证码:8420,结果:{"code":"0001","info":"验证码不存在"}
+24-10-06.10:02:41.829 [http-nio-8090-exec-2] INFO  AuthController         - 鉴权登录校验开始,验证码:8420
+24-10-06.10:02:41.829 [http-nio-8090-exec-2] INFO  AuthService            - 鉴权,用户收入的验证码不存在8420
+24-10-06.10:02:41.829 [http-nio-8090-exec-2] INFO  AuthController         - 鉴权登录校验完成,验证码:8420,结果:{"code":"0001","info":"验证码不存在"}
+24-10-06.10:09:00.581 [main            ] INFO  Application            - Starting Application using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 19224 (E:\java_Demo\chatgpt-data\chatgpt-data-app\target\classes started by lenovo in E:\java_Demo\chatgpt-data)
+24-10-06.10:09:00.585 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-10-06.10:09:02.196 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-10-06.10:09:02.220 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-10-06.10:09:02.221 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-10-06.10:09:02.221 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-10-06.10:09:02.382 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-10-06.10:09:02.382 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1744 ms
+24-10-06.10:09:03.660 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
+24-10-06.10:09:03.667 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+24-10-06.10:09:03.674 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+24-10-06.10:09:03.703 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+24-10-06.10:09:03.714 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+24-10-06.10:09:04.236 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-10-06.10:09:04.261 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-10-06.10:09:04.276 [main            ] INFO  Application            - Started Application in 4.412 seconds (JVM running for 6.228)
+24-10-06.10:09:24.185 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-10-06.10:09:24.185 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-10-06.10:09:24.186 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+24-10-06.10:09:24.259 [http-nio-8090-exec-1] INFO  AuthController         - 鉴权登录校验开始,验证码:6589
+24-10-06.10:09:24.263 [http-nio-8090-exec-1] INFO  AuthService            - 鉴权,用户收入的验证码不存在6589
+24-10-06.10:10:48.052 [http-nio-8090-exec-1] INFO  AuthService            - 鉴权,用户收入的验证码不存在6589
+24-10-06.10:11:02.294 [http-nio-8090-exec-1] INFO  AuthController         - 鉴权登录校验完成,验证码:6589,结果:{"code":"0001","info":"验证码不存在"}
+24-10-06.10:11:08.204 [main            ] INFO  Application            - Starting Application using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 9748 (E:\java_Demo\chatgpt-data\chatgpt-data-app\target\classes started by lenovo in E:\java_Demo\chatgpt-data)
+24-10-06.10:11:08.212 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-10-06.10:11:10.697 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-10-06.10:11:10.750 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-10-06.10:11:10.751 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-10-06.10:11:10.752 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-10-06.10:11:10.991 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-10-06.10:11:10.991 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2665 ms
+24-10-06.10:11:12.312 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
+24-10-06.10:11:12.319 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+24-10-06.10:11:12.326 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+24-10-06.10:11:12.332 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+24-10-06.10:11:12.339 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+24-10-06.10:11:12.860 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-10-06.10:11:12.882 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-10-06.10:11:12.897 [main            ] INFO  Application            - Started Application in 5.727 seconds (JVM running for 7.81)
+24-10-06.10:11:20.728 [main            ] INFO  Application            - Starting Application using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 9720 (E:\java_Demo\chatgpt-data\chatgpt-data-app\target\classes started by lenovo in E:\java_Demo\chatgpt-data)
+24-10-06.10:11:20.732 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-10-06.10:11:22.429 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-10-06.10:11:22.443 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-10-06.10:11:22.444 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-10-06.10:11:22.444 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-10-06.10:11:22.604 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-10-06.10:11:22.604 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1815 ms
+24-10-06.10:11:23.784 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
+24-10-06.10:11:23.791 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+24-10-06.10:11:23.798 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+24-10-06.10:11:23.805 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+24-10-06.10:11:23.813 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+24-10-06.10:11:24.359 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-10-06.10:11:24.384 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-10-06.10:11:24.399 [main            ] INFO  Application            - Started Application in 4.434 seconds (JVM running for 5.866)

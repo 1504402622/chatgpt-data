@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * 下单
+ */
 @Slf4j
 @RestController()
 @CrossOrigin("${app.config.cross-origin}")//设置可跨域

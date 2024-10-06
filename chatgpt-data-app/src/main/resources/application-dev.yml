@@ -99,3 +99,12 @@ wxpay:
     merchant-serial-number:
     # 商户APIV3密钥
     api-v3-key:
+
+# 对接蓝兔支付
+ltzf:
+  sdk:
+    config:
+      enabled: true
+      app_id: 1107245
+      merchant_id: 1676472264
+      partner_key: dedba96426f8f9ca3ad9738f55f3399a

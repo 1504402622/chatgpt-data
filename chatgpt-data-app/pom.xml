@@ -92,6 +92,12 @@
             <artifactId>chatgpt-data-infrastructure</artifactId>
         </dependency>
         <!-- 自身模块 end -->
+
+        <!--蓝兔支付sdk-->
+        <dependency>
+            <groupId>cn.glfs</groupId>
+            <artifactId>ltzf-sdk</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
