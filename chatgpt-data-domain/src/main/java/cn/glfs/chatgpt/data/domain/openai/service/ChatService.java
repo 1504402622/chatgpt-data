@@ -39,7 +39,7 @@ public class ChatService extends AbstractChatService{
             entity = logicFilterMap.get(code).filter(chatProcess,userAccountQuotaEntity);
             if(!LogicCheckTypeVO.SUCCESS.equals(entity.getType())) return entity;//有一个过滤失败就返回，也就是白名单
         }
-        return entity!=null?entity:RuleLogicEntity.<ChatProcessAggregate>builder()
+        return entity != null ? entity : RuleLogicEntity.<ChatProcessAggregate>builder()
                 .type(LogicCheckTypeVO.SUCCESS)
                 .data(chatProcess)
                 .build();

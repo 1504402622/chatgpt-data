@@ -10,7 +10,7 @@ import cn.glfs.chatgpt.data.domain.openai.repository.IOpenAiRepository;
 import cn.glfs.chatgpt.data.domain.openai.service.IChatService;
 import cn.glfs.chatgpt.data.domain.openai.service.rule.ILogicFilter;
 import cn.glfs.chatgpt.data.domain.openai.service.rule.factory.DefaultLogicFactory;
-import com.glfs.chatgpt.session.OpenAiSession;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter;

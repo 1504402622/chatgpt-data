@@ -13,10 +13,11 @@
         <result column="update_time" property="updateTime"/>
     </resultMap>
     <insert id="insert" parameterType="cn.glfs.chatgpt.data.infrastructure.po.UserAccountPO">
-        UPDATE user_account SET
-                                total_quota = total_quota + #{totalQuota},
-                                surplus_quota = surplus_quota + #{surplusQuota},
-                                update_time = now()
+        UPDATE user_account
+        SET
+                total_quota = total_quota + #{totalQuota},
+                surplus_quota = surplus_quota + #{surplusQuota},
+                update_time = now()
         WHERE openid = #{openid}
     </insert>
 
@@ -31,15 +32,20 @@
     <!--根据用户id,有剩余额度并且用户可用将用户额度-1-->
     <update id="subAccountQuota" parameterType="java.lang.String">
         UPDATE user_account SET surplus_quota = surplus_quota - 1
-        WHERE openid = #{openid} AND surplus_quota > 0 AND status = 0
+        WHERE openid = #{openid}
+          AND
+            surplus_quota > 0
+          AND
+            status = 0
     </update>
 
     <!--根据用户id更新剩余额度和总额度和更新时间-->
     <update id="addAccountQuota" parameterType="cn.glfs.chatgpt.data.infrastructure.po.UserAccountPO">
-        UPDATE user_account SET
-                                total_quota = total_quota + #{totalQuota},
-                                surplus_quota = surplus_quota + #{surplusQuota},
-                                update_time = now()
+        UPDATE user_account
+        SET
+            total_quota = total_quota + #{totalQuota},
+            surplus_quota = surplus_quota + #{surplusQuota},
+            update_time = now()
         WHERE openid = #{openid}
     </update>
 
