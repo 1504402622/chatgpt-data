@@ -19,6 +19,7 @@ public class AuthService extends AbstractAuthService{
     @Resource
     private Cache<String, String> codeCache;
 
+
     @Override
     protected AuthStateEntity checkCode(String code) {
         //code 是键，openId 是对应的值
