@@ -4,17 +4,7 @@ import cn.glfs.chatgpt.data.domain.order.model.aggregates.CreateOrderAggregate;
 import cn.glfs.chatgpt.data.domain.order.model.entity.OrderEntity;
 import cn.glfs.chatgpt.data.domain.order.model.entity.PayOrderEntity;
 import cn.glfs.chatgpt.data.domain.order.model.entity.ProductEntity;
-import cn.glfs.chatgpt.data.domain.order.model.valobj.OrderStatusVO;
-import cn.glfs.chatgpt.data.domain.order.model.valobj.PayStatusVO;
-import cn.glfs.chatgpt.data.domain.order.model.valobj.PayTypeVO;
-import com.wechat.pay.java.service.payments.nativepay.model.PrepayRequest;
-import com.wechat.pay.java.service.payments.nativepay.model.PrepayResponse;
-import com.wechat.pay.java.service.payments.nativepay.NativePayService;
-import com.wechat.pay.java.service.payments.nativepay.model.Amount;
 
-import org.apache.commons.lang3.RandomStringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
