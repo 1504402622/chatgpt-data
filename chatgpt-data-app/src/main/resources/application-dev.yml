@@ -108,3 +108,4 @@ ltzf:
       app_id: 1107245
       merchant_id: 1676472264
       partner_key: dedba96426f8f9ca3ad9738f55f3399a
+      notify_url: 待回调后填写

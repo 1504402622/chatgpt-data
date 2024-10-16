@@ -5,32 +5,89 @@ import cn.glfs.chatgpt.data.domain.order.model.entity.OrderEntity;
 import cn.glfs.chatgpt.data.domain.order.model.entity.PayOrderEntity;
 import cn.glfs.chatgpt.data.domain.order.model.entity.ProductEntity;
 
+import cn.glfs.chatgpt.data.domain.order.model.valobj.OrderStatusVO;
+import cn.glfs.chatgpt.data.domain.order.model.valobj.PayStatusVO;
+import cn.glfs.chatgpt.data.domain.order.model.valobj.PayTypeVO;
+import org.apache.commons.lang3.RandomStringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class OrderService extends AbstractOrderService{
 
+    @Value("${ltzf.sdk.config.app_id}")
+    private String appid;
+    @Value("${ltzf.sdk.config.merchant_id}")
+    private String mchid;
+    @Value("${ltzf.sdk.config.notify_url}")
+    private String notifyUrl;
+    @Autowired(required = false)
+    private NativePayService payService;
+
 
     @Override
     protected OrderEntity doSaveOrder(String openid, ProductEntity productEntity) {
-        return null;
+        OrderEntity orderEntity = new OrderEntity();
+        // 数据库有幂等拦截，如果有重复的订单ID会报错主键冲突。如果是公司里一般会有专门的雪花算法UUID服务
+        orderEntity.setOrderId(RandomStringUtils.randomNumeric(12));
+        orderEntity.setOrderTime(new Date());
+        orderEntity.setOrderStatus(OrderStatusVO.CREATE);
+        orderEntity.setTotalAmount(productEntity.getPrice());
+        orderEntity.setPayTypeVO(PayTypeVO.WEIXIN_NATIVE);
+        // 聚合信息
+        CreateOrderAggregate aggregate = CreateOrderAggregate.builder()
+                .openid(openid)
+                .product(productEntity)
+                .order(orderEntity)
+                .build();
+        // 保存订单；订单和支付，是2个操作。
+        // 一个是数据库操作，一个是HTTP操作。所以不能一个事务处理，只能先保存订单再操作创建支付单，如果失败则需要任务补偿
+        orderRepository.saveOrder(aggregate);
+        return orderEntity;
     }
 
-    /**
-     *
-     * @param openid
-     * @param orderId
-     * @param productName
-     * @param amountTotal
-     * @return
-     */
+
     @Override
     protected PayOrderEntity doPrepayOrder(String openid, String orderId, String productName, BigDecimal amountTotal) {
-        return null;
+        PrepayRequest request = new PrepayRequest();
+        request.setMchId(mchid);
+        request.setOutTradeNo(orderId);//RandomStringUtils.randomNumeric(8)
+        request.setTotalFee(amountTotal.toString());
+        request.setBody(productName);
+        request.setNotifyUrl(notifyUrl);
+        // 2.发起支付请求并返回
+        PrepayResponse response = nativePayService.prepay(request);
+
+        // 创建微信支付单，如果你有多种支付方式，则可以根据支付类型的策略模式进行创建支付单
+        String codeUrl = "";
+        if (Objects.nonNull(payService)) {
+            PrepayResponse prepay = payService.prepay(request);
+            if (prepay.getCode() == 1) {
+                codeUrl = prepay.getData().getQrcodeUrl();
+            } else {
+                codeUrl = "获取支付失败";
+            }
+        } else {
+            codeUrl = "因你未配置支付渠道，所以暂时不能生成有效的支付URL。请配置支付渠道后，在application-dev.yml中配置支付渠道信息";
+        }
+
+
+        PayOrderEntity payOrderEntity = PayOrderEntity.builder()
+                .openid(openid)
+                .orderId(orderId)
+                .payUrl(codeUrl)
+                .payStatus(PayStatusVO.WAIT)
+                .build();
+
+        // 更新订单支付信息
+        orderRepository.updateOrderPayInfo(payOrderEntity);
+        return payOrderEntity;
     }
 
     @Override

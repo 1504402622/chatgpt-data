@@ -4,7 +4,6 @@ package cn.glfs.chatgpt.data.trigger.job;
 import cn.glfs.chatgpt.data.domain.order.service.IOrderService;
 import cn.glfs.ltzf.payments.nativepay.NativePayService;
 import cn.hutool.core.collection.CollectionUtil;
-import com.wechat.pay.java.service.payments.nativepay.model.CloseOrderRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
