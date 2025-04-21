@@ -4,7 +4,7 @@ version: '3.9'
 services:
   # yum install -y httpd-tools
   nginx:
-    image: nginx:1.25.3
+    image: registry.cn-hangzhou.aliyuncs.com/xfg-studio/nginx:1.25.1
     container_name: nginx
     restart: always
     ports:
@@ -19,7 +19,7 @@ services:
     privileged: true
 #
   mysql:
-    image: mysql:8.0.32
+    image: registry.cn-hangzhou.aliyuncs.com/xfg-studio/mysql:8.0.32
     container_name: mysql
     command: --default-authentication-plugin=mysql_native_password
     restart: always
@@ -48,14 +48,14 @@ services:
 
   # 自动加载数据
   mysql-job-dbdata:
-    image: alpine:3.18.2
+    image: registry.cn-hangzhou.aliyuncs.com/xfg-studio/alpine:3.20.1
     container_name: mysql-job-dbdata
     volumes:
       - /var/lib/mysql
 
 #   phpmyadmin https://hub.docker.com/_/phpmyadmin
   phpmyadmin:
-    image: phpmyadmin:5.2.1
+    image: registry.cn-hangzhou.aliyuncs.com/xfg-studio/phpmyadmin:5.2.1
     container_name: phpmyadmin
     hostname: phpmyadmin
     ports:
@@ -72,7 +72,7 @@ services:
 
 #   RedisAdmin https://github.com/joeferner/redis-commander
   redis-admin:
-    image: spryker/redis-commander:0.8.0
+    image: registry.cn-hangzhou.aliyuncs.com/xfg-studio/redis-commander:0.8.0
     container_name: redis-admin
     hostname: redis-commander
     restart: always
@@ -90,7 +90,7 @@ services:
 
   # Redis
   redis:
-    image: redis:7.2.0
+    image: registry.cn-hangzhou.aliyuncs.com/xfg-studio/redis:7.2
     container_name: redis
     restart: always
     hostname: redis
@@ -109,7 +109,7 @@ services:
       retries: 3
 
   chatgpt-data-app:
-    image: gelifisikk/chatgpt-data-app:1.0
+    image: gelifisikk/chatgpt-data-app:1.1
     container_name: chatgpt-data-app
     ports:
       - "8090:8090"
@@ -146,7 +146,7 @@ services:
 
   chatgpt-web:
     container_name: chatgpt-web
-    image: gelifisikk/chatgpt-web:1.0
+    image: gelifisikk/chatgpt-web:1.1
     ports:
       - "3000:3000"
     networks:

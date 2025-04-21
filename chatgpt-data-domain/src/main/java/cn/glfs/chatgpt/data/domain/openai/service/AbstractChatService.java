@@ -28,7 +28,7 @@ public abstract class AbstractChatService implements IChatService{
             emitter.onCompletion(() -> {
                 log.info("流式问答请求完成，使用模型：{}", chatProcess.getModel());
             });
-            emitter.onError(throwable -> log.error("流式问答请求疫情，使用模型：{}", chatProcess.getModel(), throwable));
+            emitter.onError(throwable -> log.error("流式问答请求异常，使用模型：{}", chatProcess.getModel(), throwable));
 
             // 2. 账户获取
             UserAccountQuotaEntity userAccountQuotaEntity = openAiRepository.queryUserAccount(chatProcess.getOpenid());

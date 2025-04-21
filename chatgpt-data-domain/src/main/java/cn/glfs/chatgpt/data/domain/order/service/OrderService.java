@@ -27,8 +27,8 @@ public class OrderService extends AbstractOrderService{
     private String mchid;
     @Value("${ltzf.sdk.config.notify_url}")
     private String notifyUrl;
-    @Autowired(required = false)
-    private NativePayService payService;
+//    @Autowired(required = false)
+//    private NativePayService payService;
 
 
     @Override
@@ -55,39 +55,40 @@ public class OrderService extends AbstractOrderService{
 
     @Override
     protected PayOrderEntity doPrepayOrder(String openid, String orderId, String productName, BigDecimal amountTotal) {
-        PrepayRequest request = new PrepayRequest();
-        request.setMchId(mchid);
-        request.setOutTradeNo(orderId);//RandomStringUtils.randomNumeric(8)
-        request.setTotalFee(amountTotal.toString());
-        request.setBody(productName);
-        request.setNotifyUrl(notifyUrl);
-        // 2.发起支付请求并返回
-        PrepayResponse response = nativePayService.prepay(request);
-
-        // 创建微信支付单，如果你有多种支付方式，则可以根据支付类型的策略模式进行创建支付单
-        String codeUrl = "";
-        if (Objects.nonNull(payService)) {
-            PrepayResponse prepay = payService.prepay(request);
-            if (prepay.getCode() == 1) {
-                codeUrl = prepay.getData().getQrcodeUrl();
-            } else {
-                codeUrl = "获取支付失败";
-            }
-        } else {
-            codeUrl = "因你未配置支付渠道，所以暂时不能生成有效的支付URL。请配置支付渠道后，在application-dev.yml中配置支付渠道信息";
-        }
-
-
-        PayOrderEntity payOrderEntity = PayOrderEntity.builder()
-                .openid(openid)
-                .orderId(orderId)
-                .payUrl(codeUrl)
-                .payStatus(PayStatusVO.WAIT)
-                .build();
-
-        // 更新订单支付信息
-        orderRepository.updateOrderPayInfo(payOrderEntity);
-        return payOrderEntity;
+//        PrepayRequest request = new PrepayRequest();
+//        request.setMchId(mchid);
+//        request.setOutTradeNo(orderId);//RandomStringUtils.randomNumeric(8)
+//        request.setTotalFee(amountTotal.toString());
+//        request.setBody(productName);
+//        request.setNotifyUrl(notifyUrl);
+//        // 2.发起支付请求并返回
+//        PrepayResponse response = nativePayService.prepay(request);
+//
+//        // 创建微信支付单，如果你有多种支付方式，则可以根据支付类型的策略模式进行创建支付单
+//        String codeUrl = "";
+//        if (Objects.nonNull(payService)) {
+//            PrepayResponse prepay = payService.prepay(request);
+//            if (prepay.getCode() == 1) {
+//                codeUrl = prepay.getData().getQrcodeUrl();
+//            } else {
+//                codeUrl = "获取支付失败";
+//            }
+//        } else {
+//            codeUrl = "因你未配置支付渠道，所以暂时不能生成有效的支付URL。请配置支付渠道后，在application-dev.yml中配置支付渠道信息";
+//        }
+//
+//
+//        PayOrderEntity payOrderEntity = PayOrderEntity.builder()
+//                .openid(openid)
+//                .orderId(orderId)
+//                .payUrl(codeUrl)
+//                .payStatus(PayStatusVO.WAIT)
+//                .build();
+//
+//        // 更新订单支付信息
+//        orderRepository.updateOrderPayInfo(payOrderEntity);
+//        return payOrderEntity;
+        return null;
     }
 
     @Override
