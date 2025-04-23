@@ -4,6 +4,9 @@ import cn.glfs.chatgpt.data.domain.openai.model.entity.UserAccountQuotaEntity;
 import cn.glfs.chatgpt.data.domain.openai.model.valobj.LogicCheckTypeVO;
 import cn.glfs.chatgpt.data.domain.openai.model.aggregates.ChatProcessAggregate;
 import cn.glfs.chatgpt.data.domain.openai.model.entity.RuleLogicEntity;
+import cn.glfs.chatgpt.data.domain.openai.service.channel.impl.ChatGLMService;
+import cn.glfs.chatgpt.data.domain.openai.service.channel.impl.ChatGPTService;
+import cn.glfs.chatgpt.data.domain.openai.service.channel.impl.DeepSeekService;
 import cn.glfs.chatgpt.data.domain.openai.service.rule.ILogicFilter;
 import cn.glfs.chatgpt.data.domain.openai.service.rule.factory.DefaultLogicFactory;
 import com.alibaba.fastjson.JSON;
@@ -13,6 +16,8 @@ import com.glfs.chatgpt.domain.chatModel.ChatChoice;
 import com.glfs.chatgpt.domain.chatModel.ChatCompletionRequest;
 import com.glfs.chatgpt.domain.chatModel.ChatCompletionResponse;
 import com.glfs.chatgpt.domain.chatModel.Message;
+import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import okhttp3.sse.EventSource;
 import okhttp3.sse.EventSourceListener;
 import org.apache.commons.lang3.StringUtils;
@@ -26,7 +31,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 @Service
+@Slf4j
 public class ChatService extends AbstractChatService{
+
+    public ChatService(ChatGPTService chatGPTService, ChatGLMService chatGLMService, DeepSeekService deepSeekService) {
+        super(chatGPTService, chatGLMService, deepSeekService);
+    }
 
     @Resource
     private DefaultLogicFactory logicFactory;
@@ -45,51 +55,4 @@ public class ChatService extends AbstractChatService{
                 .build();
     }
 
-    @Override
-    protected void doMessageResponse(ChatProcessAggregate chatProcess, ResponseBodyEmitter emitter) throws JsonProcessingException {
-        // 1. 请求消息
-        List<Message> messages = chatProcess.getMessages().stream()
-                .map(entity -> Message.builder()
-                        .role(Constants.Role.valueOf(entity.getRole().toUpperCase()))
-                        .content(entity.getContent())
-                        .name(entity.getName())
-                        .build())
-                .collect(Collectors.toList());
-
-        // 2. 封装参数
-        ChatCompletionRequest chatCompletion = ChatCompletionRequest
-                .builder()
-                .stream(true)
-                .messages(messages)
-                .model(chatProcess.getModel())
-                .build();
-
-        // 3.2 请求应答
-        openAiSession.chatCompletions(chatCompletion, new EventSourceListener() {
-            @Override
-            public void onEvent(@NotNull EventSource eventSource, @Nullable String id, @Nullable String type, @NotNull String data) {
-                ChatCompletionResponse chatCompletionResponse = JSON.parseObject(data, ChatCompletionResponse.class);
-                List<ChatChoice> choices = chatCompletionResponse.getChoices();
-                for (ChatChoice chatChoice : choices) {
-                    Message delta = chatChoice.getDelta();
-                    if (Constants.Role.ASSISTANT.getCode().equals(delta.getRole())) continue;
-
-                    // 应答完成
-                    String finishReason = chatChoice.getFinishReason();
-                    if (StringUtils.isNoneBlank(finishReason) && "stop".equals(finishReason)) {
-                        emitter.complete();
-                        break;
-                    }
-
-                    // 发送信息
-                    try {
-                        emitter.send(delta.getContent());
-                    } catch (Exception e) {
-                        throw new RuntimeException(e);
-                    }
-                }
-
-            }
-        });
-    }
 }

@@ -5,8 +5,13 @@ import cn.glfs.chatgpt.data.domain.openai.model.valobj.LogicCheckTypeVO;
 import cn.glfs.chatgpt.data.domain.openai.model.aggregates.ChatProcessAggregate;
 import cn.glfs.chatgpt.data.domain.openai.model.entity.RuleLogicEntity;
 import cn.glfs.chatgpt.data.domain.openai.repository.IOpenAiRepository;
+import cn.glfs.chatgpt.data.domain.openai.service.channel.OpenAiGroupService;
+import cn.glfs.chatgpt.data.domain.openai.service.channel.impl.ChatGLMService;
+import cn.glfs.chatgpt.data.domain.openai.service.channel.impl.ChatGPTService;
+import cn.glfs.chatgpt.data.domain.openai.service.channel.impl.DeepSeekService;
 import cn.glfs.chatgpt.data.domain.openai.service.rule.factory.DefaultLogicFactory;
 import cn.glfs.chatgpt.data.types.common.Constants;
+import cn.glfs.chatgpt.data.types.enums.OpenAiChannel;
 import cn.glfs.chatgpt.data.types.exception.ChatGPTException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.glfs.chatgpt.session.OpenAiSession;
@@ -14,10 +19,18 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
+import java.util.Map;
+
 @Slf4j
 public abstract class AbstractChatService implements IChatService{
-    @Resource
-    protected OpenAiSession openAiSession;
+    private final Map<OpenAiChannel, OpenAiGroupService> openAiGroup = new HashMap<>();
+
+    public AbstractChatService(ChatGPTService chatGPTService, ChatGLMService chatGLMService, DeepSeekService deepSeekService) {
+        openAiGroup.put(OpenAiChannel.ChatGPT, chatGPTService);
+        openAiGroup.put(OpenAiChannel.ChatGLM, chatGLMService);
+        openAiGroup.put(OpenAiChannel.DeepSeek, deepSeekService);
+    }
     @Resource
     private IOpenAiRepository openAiRepository;
     @Override
@@ -49,7 +62,7 @@ public abstract class AbstractChatService implements IChatService{
             }
 
             // 3.应答处理
-            this.doMessageResponse(chatProcess, emitter);
+            openAiGroup.get(chatProcess.getChannel()).doMessageResponse(ruleLogicEntity.getData(), emitter);
         } catch (Exception e) {
             throw new ChatGPTException(Constants.ResponseCode.UN_ERROR.getCode(), Constants.ResponseCode.UN_ERROR.getInfo());
         }
@@ -60,6 +73,4 @@ public abstract class AbstractChatService implements IChatService{
     //规则过滤实际操作
     protected abstract RuleLogicEntity<ChatProcessAggregate> doCheckLogic(ChatProcessAggregate chatProcess, UserAccountQuotaEntity userAccountQuotaEntity, String... logics) throws Exception;
 
-    //对消息的实际操作
-    protected abstract void doMessageResponse(ChatProcessAggregate chatProcess, ResponseBodyEmitter responseBodyEmitter) throws JsonProcessingException;
 }

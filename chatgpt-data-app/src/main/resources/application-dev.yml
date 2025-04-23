@@ -31,6 +31,7 @@ thread:
 chatgpt:
   sdk:
     config:
+      enabled: true
       # 官网地址 https://api.openai.com/      # 官网申请 https://platform.openai.com/account/api-keys
       api-host: https://api.xty.app/
       api-key: sk-PhkuxiwP0G5nSV6uBbEf19C6DeEf4e75B9A3592d71A1AfAc
@@ -41,6 +42,23 @@ chatgpt:
 
       # http://api.xfg.im:8080/authorize?username=xfg&password=123
       # auth-token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ4ZmciLCJleHAiOjE2ODMyODE2NzEsImlhdCI6MTY4MzI3ODA3MSwianRpIjoiMWUzZTkwYjYtY2UyNy00NzNlLTk5ZTYtYWQzMWU1MGVkNWE4IiwidXNlcm5hbWUiOiJ4ZmcifQ.YgQRJ2U5-9uydtd6Wbkg2YatsoX-y8mS_OJ3FdNRaX0
+
+chatglm:
+  sdk:
+    config:
+      # 状态；true = 开启、false 关闭
+      enabled: true
+      # 官网地址
+      api-host: https://open.bigmodel.cn/
+      api-secret-key: 94d64441e4854b948f7d39e8eb7bbbf0.FnoOndbLfbjAiEBq
+
+deepseek:
+  sdk:
+    config:
+      enabled: true
+      # 官网地址 https://api.openai.com/      # 官网申请 https://platform.openai.com/account/api-keys
+      api-host: https://api.deepseek.com/
+      api-key: sk-0d5d8f03d82748909f508b47fd314919
 
 # 微信公众号配置信息
 # originalid：原始ID
@@ -109,3 +127,8 @@ ltzf:
       merchant_id: 1676472264
       partner_key: dedba96426f8f9ca3ad9738f55f3399a
       notify_url: 待回调后填写
+
+
+
+
+

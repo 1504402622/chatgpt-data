@@ -72,6 +72,14 @@
             <artifactId>chatgpt-sdk</artifactId>
         </dependency>
         <dependency>
+            <groupId>cn.GeLiFeiSi.OpenAi</groupId>
+            <artifactId>chatglm-sdk</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.GeLiFeiSi.OpenAi</groupId>
+            <artifactId>deepseek-sdk</artifactId>
+        </dependency>
+        <dependency>
             <groupId>cn.glfs</groupId>
             <artifactId>chatgpt-data-types</artifactId>
         </dependency>

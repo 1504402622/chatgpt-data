@@ -1,8 +1,10 @@
 package cn.glfs.chatgpt.data.domain.openai.model.aggregates;
 
 import cn.glfs.chatgpt.data.domain.openai.model.entity.MessageEntity;
+import cn.glfs.chatgpt.data.domain.openai.model.valobj.GenerativeModelVO;
 import cn.glfs.chatgpt.data.types.common.Constants;
 import cn.glfs.chatgpt.data.types.enums.ChatGPTModel;
+import cn.glfs.chatgpt.data.types.enums.OpenAiChannel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -34,4 +36,10 @@ public class ChatProcessAggregate {
         }
         return false;
     }
+
+    public OpenAiChannel getChannel(){
+        return OpenAiChannel.getChannel(this.model);
+    }
+
+
 }

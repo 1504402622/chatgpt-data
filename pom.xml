@@ -116,6 +116,16 @@
                 <artifactId>chatgpt-sdk</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
+            <dependency>
+                <groupId>cn.GeLiFeiSi.OpenAi</groupId>
+                <artifactId>deepseek-sdk</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.GeLiFeiSi.OpenAi</groupId>
+                <artifactId>chatglm-sdk</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
 
 
             <dependency>

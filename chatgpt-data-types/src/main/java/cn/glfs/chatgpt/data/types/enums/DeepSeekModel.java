@@ -8,10 +8,10 @@ import lombok.Getter;
  */
 @Getter
 @AllArgsConstructor
-public enum ChatGPTModel {
+public enum DeepSeekModel {
 
-    GPT_3_5_TURBO("gpt-3.5-turbo"),
-    GPT_4_TURBO("gpt-4"),
+    DeepSeek_V3("deepseek-chat"),
+    DeepSeek_R1("deepseek-reasoner"),
     ;
     private final String code;
 
