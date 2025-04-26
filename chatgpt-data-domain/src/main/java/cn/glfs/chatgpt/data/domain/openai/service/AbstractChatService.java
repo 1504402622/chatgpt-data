@@ -61,6 +61,7 @@ public abstract class AbstractChatService implements IChatService{
                 return emitter;
             }
 
+            log.info("开始对ds，gpt，glm进行应答处理～");
             // 3.应答处理
             openAiGroup.get(chatProcess.getChannel()).doMessageResponse(ruleLogicEntity.getData(), emitter);
         } catch (Exception e) {

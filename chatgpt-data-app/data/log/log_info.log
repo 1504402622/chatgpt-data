@@ -1,26 +1,8 @@
-24-10-14.17:38:22.625 [main            ] INFO  WeChatPatTest          - Starting WeChatPatTest using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 20568 (started by lenovo in E:\java_Demo\chatgpt-data\chatgpt-data-app)
-24-10-14.17:38:22.626 [main            ] INFO  WeChatPatTest          - The following 1 profile is active: "dev"
-24-10-14.17:38:27.244 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
-24-10-14.17:38:27.255 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-24-10-14.17:38:27.266 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-24-10-14.17:38:27.276 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-24-10-14.17:38:27.291 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-24-10-14.17:38:29.126 [main            ] INFO  WeChatPatTest          - Started WeChatPatTest in 7.105 seconds (JVM running for 8.604)
-24-10-14.17:38:29.762 [main            ] INFO  OkHttpClient           - --> POST https://api.ltzf.cn/api/wxpay/native
-24-10-14.17:38:29.763 [main            ] INFO  OkHttpClient           - Content-Type: application/x-www-form-urlencoded
-24-10-14.17:38:29.763 [main            ] INFO  OkHttpClient           - Content-Length: 182
-24-10-14.17:38:29.763 [main            ] INFO  OkHttpClient           - 
-24-10-14.17:38:29.764 [main            ] INFO  OkHttpClient           - mch_id=1676472264&out_trade_no=12911319&total_fee=0.01&body=QQ%E5%85%AC%E4%BB%94&timestamp=1728898709&notify_url=https%3A%2F%2Fwww.glfskk.top%2F&sign=BA26A632213EE7D4A2D3805FA54CEBA1
-24-10-14.17:38:29.764 [main            ] INFO  OkHttpClient           - --> END POST (182-byte body)
-24-10-14.17:38:41.917 [main            ] INFO  OkHttpClient           - <-- 200 https://api.ltzf.cn/api/wxpay/native (12152ms)
-24-10-14.17:38:41.917 [main            ] INFO  OkHttpClient           - date: Mon, 14 Oct 2024 09:38:40 GMT
-24-10-14.17:38:41.917 [main            ] INFO  OkHttpClient           - content-type: application/json; charset=UTF-8
-24-10-14.17:38:41.917 [main            ] INFO  OkHttpClient           - vary: Accept-Encoding
-24-10-14.17:38:41.917 [main            ] INFO  OkHttpClient           - strict-transport-security: max-age=31536000
-24-10-14.17:38:41.917 [main            ] INFO  OkHttpClient           - server: LTIDC Edge
-24-10-14.17:38:41.917 [main            ] INFO  OkHttpClient           - x-cache-status: MISS
-24-10-14.17:38:41.918 [main            ] INFO  OkHttpClient           - 
-24-10-14.17:38:41.918 [main            ] INFO  OkHttpClient           - {"code":0,"data":{"code_url":"weixin:\/\/wxpay\/bizpayurl?pr=MLKqSUXz1","QRcode_url":"https:\/\/api.ltzf.cn\/uploads\/QRcode\/wxpay\/WX202410141738404965976512.png"},"msg":"\u5fae\u4fe1Native\u4e0b\u5355\u6210\u529f","request_id":"c18fa613-2e92-9a2b-6a27-2613ec46d806"}
-24-10-14.17:38:41.918 [main            ] INFO  OkHttpClient           - <-- END HTTP (269-byte body)
-24-10-14.17:38:42.195 [main            ] INFO  WeChatPatTest          - 请求参数:{"body":"QQ公仔","mch_id":"1676472264","notify_url":"https://www.glfskk.top/","out_trade_no":"12911319","timestamp":"1728898709","total_fee":"0.01"}
-24-10-14.17:38:42.208 [main            ] INFO  WeChatPatTest          - 应答结果:{"code":0,"data":{"QRcode_url":"https://api.ltzf.cn/uploads/QRcode/wxpay/WX202410141738404965976512.png","code_url":"weixin://wxpay/bizpayurl?pr=MLKqSUXz1"},"msg":"微信Native下单成功","request_id":"c18fa613-2e92-9a2b-6a27-2613ec46d806"}
+25-04-26.12:38:57.062 [main            ] INFO  ApiTest                - Starting ApiTest using Java 1.8.0_432 on 192.168.0.108 with PID 73858 (started by heizai in /Users/heizai/IdeaProjects/chatgpt-data/chatgpt-data-app)
+25-04-26.12:38:57.063 [main            ] INFO  ApiTest                - The following 1 profile is active: "dev"
+25-04-26.12:38:58.072 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
+25-04-26.12:38:58.076 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+25-04-26.12:38:58.079 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+25-04-26.12:38:58.081 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+25-04-26.12:38:58.084 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+25-04-26.12:38:58.399 [main            ] INFO  ApiTest                - Started ApiTest in 1.509 seconds (JVM running for 1.905)

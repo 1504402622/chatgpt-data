@@ -53,7 +53,7 @@ public class ChatGPTAIServiceController {
      * }'
      */
     @RequestMapping(value = "chat/completions", method = RequestMethod.POST)
-    public ResponseBodyEmitter completionsStream(@RequestBody ChatGPTRequestDTO request, @RequestHeader("Authorization") String token, HttpServletResponse response) {
+    public ResponseBodyEmitter completionsStream(@RequestBody ChatGPTRequestDTO request, HttpServletResponse response) {
         log.info("流式问答请求开始，使用模型：{} 请求信息：{}", request.getModel(), JSON.toJSONString(request.getMessages()));
         try {
             // 1. 基础配置；流式输出、编码、禁用缓存
@@ -64,20 +64,20 @@ public class ChatGPTAIServiceController {
             // 2.构建异步响应对象（对Token过期拦截）
             // 如果验证失败，则通过 emitter 发送一个 TOKEN_ERROR 的响应码，并立即完成响应。
             ResponseBodyEmitter emitter = new ResponseBodyEmitter(3 * 60 * 1000L);
-            boolean success = authService.checkToken(token);
-
-            if(!success){
-                try {
-                    emitter.send(Constants.ResponseCode.TOKEN_ERROR.getCode());
-                }catch (IOException e){
-                    throw new RuntimeException(e);
-                }
-                emitter.complete();
-                return emitter;
-            }
+//            boolean success = authService.checkToken(token);
+//
+//            if(!success){
+//                try {
+//                    emitter.send(Constants.ResponseCode.TOKEN_ERROR.getCode());
+//                }catch (IOException e){
+//                    throw new RuntimeException(e);
+//                }
+//                emitter.complete();
+//                return emitter;
+//            }
 
             // 3. 获取 OpenID
-            String openid = authService.openid(token);
+            String openid = "o7l1z6WC5UAS0D56aNRGBP3irAOo";
             log.info("流式问答请求处理，openid:{} 请求模型:{}", openid, request.getModel());
 
             // 4.构建参数

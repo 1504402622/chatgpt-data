@@ -109,7 +109,7 @@ services:
       retries: 3
 
   chatgpt-data-app:
-    image: gelifisikk/chatgpt-data-app:1.1
+    image: gelifisikk/chatgpt-data-app:1.22
     container_name: chatgpt-data-app
     ports:
       - "8090:8090"

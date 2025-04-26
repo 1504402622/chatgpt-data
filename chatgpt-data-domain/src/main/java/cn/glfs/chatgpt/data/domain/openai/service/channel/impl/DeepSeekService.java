@@ -1,10 +1,13 @@
 package cn.glfs.chatgpt.data.domain.openai.service.channel.impl;
 
 
+
 import cn.glfs.chatgpt.data.domain.openai.model.aggregates.ChatProcessAggregate;
 import cn.glfs.chatgpt.data.domain.openai.service.channel.OpenAiGroupService;
 import cn.glfs.chatgpt.data.types.exception.ChatGPTException;
 import com.alibaba.fastjson.JSON;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.glfs.deepseek.common.Constants;
 import com.glfs.deepseek.domain.chatModel.ChatChoice;
 import com.glfs.deepseek.domain.chatModel.ChatCompletionRequest;
@@ -21,6 +24,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -34,7 +38,7 @@ public class DeepSeekService implements OpenAiGroupService {
     @Override
     public void doMessageResponse(ChatProcessAggregate chatProcess, ResponseBodyEmitter emitter) throws Exception {
         if (null == deepSeekOpenAiSession) {
-            emitter.send("ChatGPT 通道，模型调用未开启，可以选择其他模型对话！");
+            emitter.send("DeepSeek 通道，模型调用未开启，可以选择其他模型对话！");
             return;
         }
 
@@ -42,9 +46,8 @@ public class DeepSeekService implements OpenAiGroupService {
         // 1. 请求消息
         List<Message> messages = chatProcess.getMessages().stream()
                 .map(entity -> Message.builder()
-                        .role(Constants.Role.valueOf(entity.getRole().toUpperCase()))
+                        .role(Constants.Role.USER)
                         .content(entity.getContent())
-                        .name(entity.getName())
                         .build())
                 .collect(Collectors.toList());
 
@@ -60,27 +63,34 @@ public class DeepSeekService implements OpenAiGroupService {
         deepSeekOpenAiSession.chatCompletions(chatCompletion, new EventSourceListener() {
             @Override
             public void onEvent(@NotNull EventSource eventSource, @Nullable String id, @Nullable String type, @NotNull String data) {
-                ChatCompletionResponse chatCompletionResponse = JSON.parseObject(data, ChatCompletionResponse.class);
-                List<ChatChoice> choices = chatCompletionResponse.getChoices();
-                for (ChatChoice chatChoice : choices) {
-                    Message delta = chatChoice.getMessage();
-                    if (Constants.Role.ASSISTANT.getCode().equals(delta.getRole())) continue;
-
-                    // 应答完成
-                    String finishReason = chatChoice.getFinishReason();
-                    if (StringUtils.isNoneBlank(finishReason) && "stop".equals(finishReason)) {
-                        emitter.complete();
-                        break;
+                ObjectMapper objectMapper = new ObjectMapper();
+                try {
+                    JsonNode rootNode = objectMapper.readTree(data);
+                    JsonNode choicesNode = rootNode.get("choices");
+                    if (choicesNode != null && choicesNode.isArray() && choicesNode.size() > 0) {
+                        JsonNode firstChoice = choicesNode.get(0);
+                        JsonNode deltaNode = firstChoice.get("delta");
+                        String content = null;
+                        if (deltaNode != null) {
+                            JsonNode contentNode = deltaNode.get("content");
+                            if (contentNode != null && !contentNode.isNull()) {
+                                content = contentNode.asText();
+                            } else {
+                                JsonNode reasoningContentNode = deltaNode.get("reasoning_content");
+                                if (reasoningContentNode != null && !reasoningContentNode.isNull()) {
+                                    content = reasoningContentNode.asText();
+                                }
+                            }
+                        }
+                        String finishReason = firstChoice.get("finish_reason") != null ? firstChoice.get("finish_reason").asText() : null;
+                        if (StringUtils.isNoneBlank(finishReason) && "stop".equals(finishReason)) {
+                            emitter.complete();
+                        }
+                        emitter.send(content);
                     }
-
-                    // 发送信息
-                    try {
-                        emitter.send(delta.getContent());
-                    } catch (Exception e) {
-                        throw new ChatGPTException(e.getMessage());
-                    }
+                }catch (IOException e) {
+                        e.printStackTrace();
                 }
-
             }
         });
     }
