@@ -776,3 +776,18 @@ cn.glfs.chatgpt.data.types.exception.ChatGPTException: null
 25-04-26.12:42:14.692 [http-nio-8090-exec-2] INFO  AbstractChatService    - 流式问答请求完成，使用模型：glm-4-air
 25-04-26.12:42:54.052 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
 25-04-26.12:42:54.060 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-04-26.12:44:22.204 [main            ] INFO  Application            - Starting Application using Java 1.8.0_432 on 192.168.0.108 with PID 75639 (/Users/heizai/IdeaProjects/chatgpt-data/chatgpt-data-app/target/classes started by heizai in /Users/heizai/IdeaProjects/chatgpt-data)
+25-04-26.12:44:22.205 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-04-26.12:44:22.621 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+25-04-26.12:44:22.624 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-04-26.12:44:22.624 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-04-26.12:44:22.624 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-04-26.12:44:22.655 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-04-26.12:44:22.655 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 428 ms
+25-04-26.12:44:23.039 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
+25-04-26.12:44:23.040 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+25-04-26.12:44:23.042 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+25-04-26.12:44:23.043 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+25-04-26.12:44:23.046 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+25-04-26.12:44:23.242 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+25-04-26.12:44:23.248 [main            ] INFO  Application            - Started Application in 1.223 seconds (JVM running for 1.488)
