@@ -84,6 +84,10 @@
             <artifactId>chatgpt-data-types</artifactId>
         </dependency>
         <dependency>
+            <groupId>cn.glfs</groupId>
+            <artifactId>chatgpt-data-app</artifactId>
+        </dependency>
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <scope>test</scope>

@@ -10,6 +10,7 @@ import cn.glfs.chatgpt.data.trigger.http.dto.SaleProductDTO;
 import cn.glfs.chatgpt.data.types.common.Constants;
 import cn.glfs.chatgpt.data.types.model.Response;
 import com.alibaba.fastjson.JSON;
+
 import com.google.common.eventbus.EventBus;
 
 import lombok.extern.slf4j.Slf4j;
@@ -23,8 +24,10 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -46,6 +49,7 @@ public class SaleController {
     @Resource
     private EventBus eventBus;
     private final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX");
+
 
     // 商品列表查询
     @RequestMapping(value = "query_product_list", method = RequestMethod.GET)
@@ -131,30 +135,35 @@ public class SaleController {
     }
 
 
-//    // 支付回调
-//    @PostMapping("pay_notify")
-//    public void payNotify(@RequestBody NotifyRequest notify, HttpServletRequest request, HttpServletResponse response) throws IOException {
-//        try {
-//            if (StringUtils.equals(notify.getCode(), "0")) {
-//                // 支付单号
-//                String outTradeNo = notify.getOutTradeNo();
-//                String payNo = notify.getPayNo();
-//                String totalFee = notify.getTotalFee();
-//                String successTime = notify.getSuccessTime();
-//                log.info("支付成功 orderId:{} total:{} successTime: {}", outTradeNo, totalFee, successTime);
-//                // 更新订单
-//               //  boolean isSuccess = orderService.changeOrderPaySuccess(outTradeNo, payNo, new BigDecimal(total).divide(new BigDecimal(100), 2, RoundingMode.HALF_UP), dateFormat.parse(successTime));
-////                if (isSuccess) {
-////                    // 发布消息
-////                    // eventBus.post(orderId);
-////                }
-//                response.getWriter().write("<xml><return_code><![CDATA[SUCCESS]]></return_code></xml>");
-//            } else {
-//                response.getWriter().write("<xml><return_code><![CDATA[FAIL]]></return_code></xml>");
-//            }
-//        } catch (Exception e) {
-//            log.error("支付失败", e);
-//            response.getWriter().write("<xml><return_code><![CDATA[FAIL]]></return_code></xml>");
-//        }
-//    }
+
+    @PostMapping("/pay_notify")
+    public void payNotify(HttpServletRequest request, HttpServletResponse response) {
+        try {
+            // 从表单中获取参数
+            String code = request.getParameter("code");
+            String outTradeNo = request.getParameter("out_trade_no");
+            String payNo = request.getParameter("pay_no");
+            String totalFee = request.getParameter("total_fee");
+            String successTime = request.getParameter("success_time");
+
+            if ("0".equals(code)) {
+                boolean isSuccess = orderService.changeOrderPaySuccess(outTradeNo, payNo, new BigDecimal(totalFee), dateFormat.parse(successTime));
+                if (isSuccess) {
+                    eventBus.post(outTradeNo);
+                }
+                // 返回响应
+                PrintWriter writer = response.getWriter();
+                writer.write("<xml><return_code><![CDATA[SUCCESS]]></return_code></xml>");
+            } else {
+                PrintWriter writer = response.getWriter();
+                writer.write("<xml><return_code><![CDATA[FAIL]]></return_code></xml>");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            // 处理异常，可根据实际情况返回合适的错误响应
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }
