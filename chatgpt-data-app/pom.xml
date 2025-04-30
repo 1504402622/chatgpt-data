@@ -97,6 +97,10 @@
         </dependency>
         <dependency>
             <groupId>cn.glfs</groupId>
+            <artifactId>chatgpt-data-domain</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.glfs</groupId>
             <artifactId>chatgpt-data-infrastructure</artifactId>
         </dependency>
         <!-- 自身模块 end -->

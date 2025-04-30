@@ -65,5 +65,5 @@ public abstract class AbstractOrderService implements IOrderService {
 
     protected abstract OrderEntity doSaveOrder(String openid, ProductEntity productEntity);
 
-    protected abstract PayOrderEntity doPrepayOrder(String openid, String orderId, String productName, BigDecimal amountTotal);
+    protected abstract PayOrderEntity doPrepayOrder(String openid, String orderId, String productName, BigDecimal amountTotal) throws Exception;
 }

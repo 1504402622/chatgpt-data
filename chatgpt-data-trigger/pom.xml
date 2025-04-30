@@ -36,14 +36,16 @@
             <artifactId>chatgpt-data-types</artifactId>
         </dependency>
 
-
-
         <dependency>
             <groupId>cn.glfs</groupId>
             <artifactId>chatgpt-data-domain</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
         </dependency>
+
+        <dependency>
+            <groupId>cn.glfs</groupId>
+            <artifactId>ltzf-sdk</artifactId>
+        </dependency>
+
 
     </dependencies>
 
