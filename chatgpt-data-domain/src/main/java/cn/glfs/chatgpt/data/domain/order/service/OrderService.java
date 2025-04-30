@@ -64,17 +64,16 @@ public class OrderService extends AbstractOrderService{
         request.setTotalFee(amountTotal.toString());
         request.setBody(productName);
         request.setNotifyUrl(notifyUrl);
-        // 2.发起支付请求并返回
-        PrepayResponse response = payService.prepay(request);
 
         // 创建微信支付单，如果你有多种支付方式，则可以根据支付类型的策略模式进行创建支付单
         String codeUrl = "";
         if (Objects.nonNull(payService)) {
             PrepayResponse prepay = payService.prepay(request);
+            codeUrl = prepay.getData().getQrcodeUrl();
             if (prepay.getCode() == 1) {
                 codeUrl = prepay.getData().getQrcodeUrl();
             } else {
-                codeUrl = "获取支付失败";
+                codeUrl = prepay.getMsg();
             }
         } else {
             codeUrl = "因你未配置支付渠道，所以暂时不能生成有效的支付URL。请配置支付渠道后，在application-dev.yml中配置支付渠道信息";

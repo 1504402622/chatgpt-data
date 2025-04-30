@@ -34,7 +34,7 @@ chatgpt:
       enabled: true
       # 官网地址 https://api.openai.com/      # 官网申请 https://platform.openai.com/account/api-keys
       api-host: https://api.xty.app/
-      api-key: sk-PhkuxiwP0G5nSV6uBbEf19C6DeEf4e75B9A3592d71A1AfAc
+      api-key: sk-9Lq297e43tDiprhL92DcDb0f6e194693AfB72eEdAeAc0491
 
       #备用key1：sk-vByCQ4XTfdDbvUWBB6FeC3D6A4Bc4bDaB280BfE8630fC224
       #备用key2：sk-9Lq297e43tDiprhL92DcDb0f6e194693AfB72eEdAeAc0491

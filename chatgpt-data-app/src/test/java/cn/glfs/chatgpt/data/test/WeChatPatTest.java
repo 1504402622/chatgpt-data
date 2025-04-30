@@ -43,6 +43,24 @@ public class WeChatPatTest {
     }
 
     @Test
+    public void testNativePay2Service() throws Exception {
+        // 1. 请求参数
+
+        PrepayRequest request = new PrepayRequest();
+        request.setMchId("1676472264");
+        request.setOutTradeNo("601066755513");//RandomStringUtils.randomNumeric(8)
+        request.setTotalFee("0.01");
+        request.setBody("QQ公仔");
+        request.setNotifyUrl("https://api.glfskk.top/api/v1/sale/pay_notify");
+
+        // 2.发起支付请求并返回
+        PrepayResponse response = nativePayService.prepay(request);
+
+        log.info("请求参数:{}", JSON.toJSONString(request));
+        log.info("应答结果:{}", JSON.toJSONString(response));
+    }
+
+    @Test
     public void testNativePayService2() throws Exception {
         String dateStr = "2025-04-30 13:22:59";
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
