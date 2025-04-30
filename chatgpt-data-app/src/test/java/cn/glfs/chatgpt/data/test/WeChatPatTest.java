@@ -27,7 +27,7 @@ public class WeChatPatTest {
         request.setOutTradeNo(RandomStringUtils.randomNumeric(8));//RandomStringUtils.randomNumeric(8)
         request.setTotalFee("0.01");
         request.setBody("QQ公仔");
-        request.setNotifyUrl("https://www.glfskk.top/");
+        request.setNotifyUrl("https://api.glfskk.top/api/v1/sale/pay_notify");
 
         // 2.发起支付请求并返回
         PrepayResponse response = nativePayService.prepay(request);
