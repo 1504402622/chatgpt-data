@@ -17,6 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import org.apache.commons.lang3.StringUtils;
 import org.checkerframework.checker.units.qual.C;
+import org.checkerframework.checker.units.qual.Time;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,6 +30,9 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -49,8 +53,7 @@ public class SaleController {
     private IAuthService authService;
     @Resource
     private EventBus eventBus;
-    private final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     // 商品列表查询
     @RequestMapping(value = "query_product_list", method = RequestMethod.GET)
     public Response<List<SaleProductDTO>> queryProductList(@RequestHeader("Authorization") String token) {
@@ -124,6 +127,7 @@ public class SaleController {
             return Response.<String>builder()
                     .code(Constants.ResponseCode.SUCCESS.getCode())
                     .info(Constants.ResponseCode.SUCCESS.getInfo())
+                    .data(payOrder.getPayUrl())
                     .build();
         } catch (Exception e) {
             log.error("用户商品下单, 根据商品ID创建支付失败", e);
@@ -143,11 +147,11 @@ public class SaleController {
             String outTradeNo = request.getParameter("out_trade_no");
             String payNo = request.getParameter("pay_no");
             String totalFee = request.getParameter("total_fee");
-            String successTime = request.getParameter("success_time");
+            Date successTime = new Date();
             log.info("支付回调, code:{}, outTradeNo:{}, payNo:{}, totalFee:{}, successTime:{}", code, outTradeNo, payNo, totalFee, successTime);
 
             if ("0".equals(code)) {
-                boolean isSuccess = orderService.changeOrderPaySuccess(outTradeNo, payNo, new BigDecimal(totalFee), dateFormat.parse(successTime));
+                boolean isSuccess = orderService.changeOrderPaySuccess(outTradeNo, payNo, new BigDecimal(totalFee),successTime);
                 if (isSuccess) {
                     eventBus.post(outTradeNo);
                 }
@@ -160,9 +164,6 @@ public class SaleController {
             }
         } catch (ChatGPTException e) {
             log.error("支付回调异常：", e);
-        } catch (ParseException e) {
-            log.error("日志解析异常：", e);
-            throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

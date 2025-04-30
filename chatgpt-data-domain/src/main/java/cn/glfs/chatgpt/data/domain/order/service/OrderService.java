@@ -11,6 +11,7 @@ import cn.glfs.chatgpt.data.domain.order.model.valobj.PayTypeVO;
 import cn.glfs.ltzf.payments.nativepay.NativePayService;
 import cn.glfs.ltzf.payments.nativepay.model.PrepayRequest;
 import cn.glfs.ltzf.payments.nativepay.model.PrepayResponse;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -21,6 +22,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
+@Slf4j
 @Service
 public class OrderService extends AbstractOrderService{
 
@@ -69,12 +71,8 @@ public class OrderService extends AbstractOrderService{
         String codeUrl = "";
         if (Objects.nonNull(payService)) {
             PrepayResponse prepay = payService.prepay(request);
+            log.info("请求支付响应为-prepay:{}", prepay);
             codeUrl = prepay.getData().getQrcodeUrl();
-            if (prepay.getCode() == 1) {
-                codeUrl = prepay.getData().getQrcodeUrl();
-            } else {
-                codeUrl = prepay.getMsg();
-            }
         } else {
             codeUrl = "因你未配置支付渠道，所以暂时不能生成有效的支付URL。请配置支付渠道后，在application-dev.yml中配置支付渠道信息";
         }

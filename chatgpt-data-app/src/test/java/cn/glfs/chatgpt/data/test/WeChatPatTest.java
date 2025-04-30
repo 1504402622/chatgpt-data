@@ -48,7 +48,7 @@ public class WeChatPatTest {
 
         PrepayRequest request = new PrepayRequest();
         request.setMchId("1676472264");
-        request.setOutTradeNo("601066755513");//RandomStringUtils.randomNumeric(8)
+        request.setOutTradeNo("601066750513");//RandomStringUtils.randomNumeric(8)
         request.setTotalFee("0.01");
         request.setBody("QQ公仔");
         request.setNotifyUrl("https://api.glfskk.top/api/v1/sale/pay_notify");
@@ -58,6 +58,7 @@ public class WeChatPatTest {
 
         log.info("请求参数:{}", JSON.toJSONString(request));
         log.info("应答结果:{}", JSON.toJSONString(response));
+        log.info("应答结果:{}", JSON.toJSONString(response.getData().getQrcodeUrl()));
     }
 
     @Test

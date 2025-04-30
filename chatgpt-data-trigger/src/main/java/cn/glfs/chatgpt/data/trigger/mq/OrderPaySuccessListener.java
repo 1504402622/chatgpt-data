@@ -33,8 +33,9 @@ public class OrderPaySuccessListener {
         try {
             log.info("支付完成，发货并记录，开始。订单：{}", orderId);
             orderService.deliverGoods(orderId);
+            log.info("发货成功: {}", orderId);
         } catch (Exception e) {
-            log.error("支付完成，发货并记录，失败。订单：{}", orderId, e);
+            log.error("发货失败。订单：{}", orderId, e);
         }
     }
 }
