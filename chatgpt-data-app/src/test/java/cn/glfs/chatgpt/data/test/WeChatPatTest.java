@@ -11,6 +11,12 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.logging.Level;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Slf4j
@@ -34,5 +40,17 @@ public class WeChatPatTest {
 
         log.info("请求参数:{}", JSON.toJSONString(request));
         log.info("应答结果:{}", JSON.toJSONString(response));
+    }
+
+    @Test
+    public void testNativePayService2() throws Exception {
+        String dateStr = "2025-04-30 13:22:59";
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        try {
+            Date date = sdf.parse(dateStr);
+            log.info("date:{}", date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -8,6 +8,7 @@ import cn.glfs.chatgpt.data.domain.order.model.entity.ShopCartEntity;
 import cn.glfs.chatgpt.data.domain.order.service.IOrderService;
 import cn.glfs.chatgpt.data.trigger.http.dto.SaleProductDTO;
 import cn.glfs.chatgpt.data.types.common.Constants;
+import cn.glfs.chatgpt.data.types.exception.ChatGPTException;
 import cn.glfs.chatgpt.data.types.model.Response;
 import com.alibaba.fastjson.JSON;
 import com.google.common.eventbus.EventBus;
@@ -29,6 +30,7 @@ import java.math.RoundingMode;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -47,7 +49,7 @@ public class SaleController {
     private IAuthService authService;
     @Resource
     private EventBus eventBus;
-    private final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX");
+    private final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     // 商品列表查询
     @RequestMapping(value = "query_product_list", method = RequestMethod.GET)
@@ -142,11 +144,9 @@ public class SaleController {
             String payNo = request.getParameter("pay_no");
             String totalFee = request.getParameter("total_fee");
             String successTime = request.getParameter("success_time");
+            log.info("支付回调, code:{}, outTradeNo:{}, payNo:{}, totalFee:{}, successTime:{}", code, outTradeNo, payNo, totalFee, successTime);
 
             if ("0".equals(code)) {
-                // 支付单号等处理逻辑同前
-                // 此处省略和之前类似的订单更新等逻辑
-                // 假设orderService和eventBus的调用方式不变
                 boolean isSuccess = orderService.changeOrderPaySuccess(outTradeNo, payNo, new BigDecimal(totalFee), dateFormat.parse(successTime));
                 if (isSuccess) {
                     eventBus.post(outTradeNo);
@@ -158,10 +158,12 @@ public class SaleController {
                 PrintWriter writer = response.getWriter();
                 writer.write("<xml><return_code><![CDATA[FAIL]]></return_code></xml>");
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-            // 处理异常，可根据实际情况返回合适的错误响应
+        } catch (ChatGPTException e) {
+            log.error("支付回调异常：", e);
         } catch (ParseException e) {
+            log.error("日志解析异常：", e);
+            throw new RuntimeException(e);
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
