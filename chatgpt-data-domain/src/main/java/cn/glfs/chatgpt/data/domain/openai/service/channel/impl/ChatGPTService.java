@@ -2,6 +2,7 @@ package cn.glfs.chatgpt.data.domain.openai.service.channel.impl;
 
 import cn.glfs.chatgpt.data.domain.openai.model.aggregates.ChatProcessAggregate;
 import cn.glfs.chatgpt.data.domain.openai.service.channel.OpenAiGroupService;
+import cn.glfs.chatgpt.data.types.enums.ChatGPTModel;
 import cn.glfs.chatgpt.data.types.exception.ChatGPTException;
 import com.alibaba.fastjson.JSON;
 import com.glfs.chatgpt.session.OpenAiSession;
@@ -53,7 +54,7 @@ public class ChatGPTService implements OpenAiGroupService {
                 .builder()
                 .stream(true)
                 .messages(messages)
-                .model(chatProcess.getModel())
+                .model(ChatGPTModel.GPT_3_5_TURBO.getCode())
                 .build();
 
         // 3.2 请求应答

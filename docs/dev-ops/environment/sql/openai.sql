@@ -101,11 +101,13 @@ LOCK TABLES `openai_product` WRITE;
 /*!40000 ALTER TABLE `openai_product` DISABLE KEYS */;
 
 INSERT INTO `openai_product` (`id`, `product_id`, `product_name`, `product_desc`, `product_model_types`, `quota`, `price`, `sort`, `is_enabled`, `create_time`, `update_time`) VALUES
-(1, 1001, 'OpenAi 测试商品(3.5)', '测试商品请勿下单', 'gpt-3.5-turbo,gpt-3.5-turbo-16k,chatGLM_6b_SSE,chatglm_lite,chatglm_lite_32k,chatglm_std,chatglm_pro,chatglm_turbo,dall-e-2,dall-e-3', 2, 0.01, 1, 1, '2023-11-25 15:41:29', '2023-11-25 15:41:29'),
-(2, 1002, 'OpenAi 测试商品(3.5)', '测试商品请勿下单', 'gpt-3.5-turbo,gpt-3.5-turbo-16k,chatGLM_6b_SSE,chatglm_lite,chatglm_lite_32k,chatglm_std,chatglm_pro,chatglm_turbo,dall-e-2,dall-e-3', 5, 1.00, 2, 1, '2023-11-25 15:41:33', '2023-11-25 15:41:33'),
-(3, 1003, 'OpenAi 测试商品(3.5&4.0)', '测试商品请勿下单', 'gpt-4,gpt-3.5-turbo,gpt-3.5-turbo-16k,chatGLM_6b_SSE,chatglm_lite,chatglm_lite_32k,chatglm_std,chatglm_pro,chatglm_turbo,dall-e-2,dall-e-3', 10, 9.99, 3, 1, '2023-11-25 15:41:35', '2023-11-25 15:41:35'),
-(4, 1004, 'OpenAi 测试商品(3.5&4.0)', '测试商品请勿下单', 'gpt-4,gpt-3.5-turbo,gpt-3.5-turbo-16k,chatGLM_6b_SSE,chatglm_lite,chatglm_lite_32k,chatglm_std,chatglm_pro,chatglm_turbo,dall-e-2,dall-e-3', 50, 18.88, 3, 0, '2023-11-25 15:41:40', '2023-11-25 15:41:40');
-
+                                                                                                                                                                                   (1011, '模型体验套餐', '适合新手体验五种热门模型', 'glm-4-air,glm-4-flashx,gpt-3.5-turbo,gpt-4,deepseek-chat', 20, 8.00, 1, 1),
+                                                                                                                                                                                   (1012, '基础实用套餐', '满足日常基础使用五种模型的需求', 'glm-4-air,glm-4-flashx,gpt-3.5-turbo,gpt-4,deepseek-chat', 60, 25.00, 2, 1),
+                                                                                                                                                                                   (1013, '进阶专业套餐', '专业人士使用，更多额度畅用五种模型', 'glm-4-air,glm-4-flashx,gpt-3.5-turbo,gpt-4,deepseek-chat', 150, 60.00, 3, 1),
+                                                                                                                                                                                   (1014, '高级畅享套餐', '高级用户必备，大量额度畅享五种模型', 'glm-4-air,glm-4-flashx,gpt-3.5-turbo,gpt-4,deepseek-chat', 500, 200.00, 4, 1),
+                                                                                                                                                                                   (1015, '企业尊享套餐', '企业使用，充足额度保障五种模型使用', 'glm-4-air,glm-4-flashx,gpt-3.5-turbo,gpt-4,deepseek-chat', 1200, 500.00, 5, 1),
+                                                                                                                                                                                   (1016, '至尊无限套餐', '极致体验，近乎无限额度使用五种模型', 'glm-4-air,glm-4-flashx,gpt-3.5-turbo,gpt-4,deepseek-chat', 5000, 1800.00, 6, 1),
+                                                                                                                                                                                   (1017, '测试套餐', '短期快速测试五种模型性能', 'glm-4-air,glm-4-flashx,gpt-3.5-turbo,gpt-4,deepseek-chat', 3, 0.01, 7, 1)
 /*!40000 ALTER TABLE `openai_product` ENABLE KEYS */;
 UNLOCK TABLES;
 
