@@ -22,7 +22,7 @@ import javax.annotation.Resource;
 @LogicStrategy(logicMode = DefaultLogicFactory.LogicModel.ACCESS_LIMIT)
 public class AccessLimitFilter implements ILogicFilter<UserAccountQuotaEntity> {
 
-    @Value("${app.config.limit-count:10}")
+    @Value("${app.config.limit-count}")
     private Integer limitCount;
     @Value("${app.config.white-list}")
     private String whiteListStr;
@@ -40,15 +40,21 @@ public class AccessLimitFilter implements ILogicFilter<UserAccountQuotaEntity> {
         // 2. 个人账户不为空，不做系统访问次数拦截
         if (null != data) {
             return RuleLogicEntity.<ChatProcessAggregate>builder()
-                    .type(LogicCheckTypeVO.SUCCESS).data(chatProcess).build();
+                    .type(LogicCheckTypeVO.SUCCESS)
+                    .data(chatProcess)
+                    .build();
         }
 
         //2.访问次数判断
          int visitCount = visitCache.get(openid,()->0);//()->0 表示创建了一个匿名的 Supplier 对象，当需要默认值时会调用它的 get 方法来得到 0。
-         if(visitCount <limitCount){
+         log.info("今日访问次数总{}, 今日访问次数还剩: {} 次",limitCount, limitCount - visitCount);
+
+         if(visitCount < limitCount){
              visitCache.put(openid,visitCount+1);
              return RuleLogicEntity.<ChatProcessAggregate>builder()
-                     .type(LogicCheckTypeVO.SUCCESS).data(chatProcess).build();
+                     .type(LogicCheckTypeVO.SUCCESS)
+                     .data(chatProcess)
+                     .build();
          }
 
         return RuleLogicEntity.<ChatProcessAggregate>builder()

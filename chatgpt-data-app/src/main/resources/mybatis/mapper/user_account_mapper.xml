@@ -13,12 +13,10 @@
         <result column="update_time" property="updateTime"/>
     </resultMap>
     <insert id="insert" parameterType="cn.glfs.chatgpt.data.infrastructure.po.UserAccountPO">
-        UPDATE user_account
-        SET
-                total_quota = total_quota + #{totalQuota},
-                surplus_quota = surplus_quota + #{surplusQuota},
-                update_time = now()
-        WHERE openid = #{openid}
+        INSERT INTO
+            user_account (openid, total_quota, surplus_quota, model_types)
+        VALUES
+            (#{openid}, #{totalQuota}, #{surplusQuota}, #{modelTypes})
     </insert>
 
 

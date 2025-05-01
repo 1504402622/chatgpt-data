@@ -12,6 +12,7 @@ import cn.glfs.chatgpt.data.infrastructure.po.OpenAIOrderPO;
 import cn.glfs.chatgpt.data.infrastructure.po.OpenAIProductPO;
 import cn.glfs.chatgpt.data.infrastructure.po.UserAccountPO;
 import cn.glfs.chatgpt.data.types.enums.OpenAIProductEnableModel;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
@@ -26,6 +27,7 @@ import java.util.List;
 /**
  * 订单仓储服务
  */
+@Slf4j
 @Repository
 public class OrderRepository implements IOrderRepository {
     @Resource
@@ -77,6 +79,7 @@ public class OrderRepository implements IOrderRepository {
         productEntity.setProductName(openAIProductPO.getProductName());
         productEntity.setProductDesc(openAIProductPO.getProductDesc());
         productEntity.setQuota(openAIProductPO.getQuota());
+        productEntity.setProductModelTypes(openAIProductPO.getProductModelTypes());
         productEntity.setPrice(openAIProductPO.getPrice());
         productEntity.setEnable(OpenAIProductEnableModel.get(openAIProductPO.getIsEnabled()));
         return productEntity;
@@ -92,11 +95,11 @@ public class OrderRepository implements IOrderRepository {
         String openid = aggregate.getOpenid();
         ProductEntity product = aggregate.getProduct();
         OrderEntity order = aggregate.getOrder();
-
         OpenAIOrderPO openAIOrderPO = new OpenAIOrderPO();
         openAIOrderPO.setOpenid(openid);
         openAIOrderPO.setProductId(product.getProductId());
         openAIOrderPO.setProductName(product.getProductName());
+        openAIOrderPO.setProductModelTypes(product.getProductModelTypes());
         openAIOrderPO.setProductQuota(product.getQuota());
         openAIOrderPO.setOrderId(order.getOrderId());
         openAIOrderPO.setOrderTime(order.getOrderTime());
@@ -204,15 +207,19 @@ public class OrderRepository implements IOrderRepository {
         //2.账户额度变更
         //根据用户id查询用户信息
         UserAccountPO userAccountPO = userAccountDao.queryUserAccount(openAIOrderPO.getOpenid());
+        log.info("发货前用户信息为：{}", userAccountPO);
         UserAccountPO userAccountPOReq = new UserAccountPO();
         userAccountPOReq.setOpenid(openAIOrderPO.getOpenid());
         userAccountPOReq.setTotalQuota(openAIOrderPO.getProductQuota());
         userAccountPOReq.setSurplusQuota(openAIOrderPO.getProductQuota());
+        userAccountPOReq.setModelTypes(openAIOrderPO.getProductModelTypes());
         if (null != userAccountPO){
+            // todo 待补全：用户使用模型权限递增
             //根据用户id更新剩余额度和总额度和更新时间
             int addAccountQuotaCount = userAccountDao.addAccountQuota(userAccountPOReq);
             if (1 != addAccountQuotaCount) throw new RuntimeException("addAccountQuotaCount update count is not equal 1");
         } else {
+            log.info("不存在用户{}，发货时创建用户信息{}", openAIOrderPO.getOpenid(), userAccountPOReq);
             userAccountDao.insert(userAccountPOReq);
         }
 

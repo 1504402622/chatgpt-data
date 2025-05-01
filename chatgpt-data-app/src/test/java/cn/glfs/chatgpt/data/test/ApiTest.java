@@ -33,6 +33,8 @@ public class ApiTest {
     @Resource
     private OpenAiSession openAiSession;
 
+
+
     /**
      * 模拟3.5
      */

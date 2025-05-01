@@ -22,6 +22,8 @@ public class OpenAIOrderPO {
     private Long id;
     /** 用户ID：微信分配的唯一id */
     private String openid;
+    /** 商品类型 */
+    private String productModelTypes;
     /** 商品ID */
     private Integer productId;
     /** 商品名称 */

@@ -45,6 +45,7 @@ public class OrderService extends AbstractOrderService{
         orderEntity.setOrderStatus(OrderStatusVO.CREATE);
         orderEntity.setTotalAmount(productEntity.getPrice());
         orderEntity.setPayTypeVO(PayTypeVO.WEIXIN_NATIVE);
+        orderEntity.setProductModelTypes(productEntity.getProductModelTypes());
         // 聚合信息
         CreateOrderAggregate aggregate = CreateOrderAggregate.builder()
                 .openid(openid)

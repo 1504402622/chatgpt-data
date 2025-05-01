@@ -24,6 +24,8 @@ public class OrderEntity {
     private String orderId;
     /** 下单时间 */
     private Date orderTime;
+    /** 商品类型 */
+    private String productModelTypes;
     /** 订单状态；0-创建完成、1-等待发货、2-发货完成、3-系统关单 */
     private OrderStatusVO orderStatus;
     /** 订单金额 */

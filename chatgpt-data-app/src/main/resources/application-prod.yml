@@ -9,7 +9,7 @@ app:
     # 跨域，开发阶段可以设置为 * 不限制
     cross-origin: '*'
     # 访问频次限制
-    limit-count: 50
+    limit-count: 3
     # 白名单，不做频次拦截【微信的openai】oxfA9w8-23yvwTmo2ombz0E4zJv4
     # 是根据用户关注公众号发送403获取验证码的时候，获取到的 openid 你可以配置多个。以及分别去掉配置进行验证。
     white-list: o7l1z6WC5UAS0D56aNRGBP3irAOo

@@ -25,6 +25,8 @@ public class OpenAIProductPO {
     private String productName;
     /** 商品描述 */
     private String productDesc;
+    /** 商品类型 */
+    private String productModelTypes;
     /** 额度次数 */
     private Integer quota;
     /** 商品价格 */

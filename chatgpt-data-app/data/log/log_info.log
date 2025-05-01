@@ -1,417 +1,474 @@
-24-10-14.17:38:22.625 [main            ] INFO  WeChatPatTest          - Starting WeChatPatTest using Java 1.8.0_382 on LAPTOP-7QN67S71 with PID 20568 (started by lenovo in E:\java_Demo\chatgpt-data\chatgpt-data-app)
-24-10-14.17:38:22.626 [main            ] INFO  WeChatPatTest          - The following 1 profile is active: "dev"
-24-10-14.17:38:27.244 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
-24-10-14.17:38:27.255 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-24-10-14.17:38:27.266 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-24-10-14.17:38:27.276 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-24-10-14.17:38:27.291 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-24-10-14.17:38:29.126 [main            ] INFO  WeChatPatTest          - Started WeChatPatTest in 7.105 seconds (JVM running for 8.604)
-24-10-14.17:38:29.762 [main            ] INFO  OkHttpClient           - --> POST https://api.ltzf.cn/api/wxpay/native
-24-10-14.17:38:29.763 [main            ] INFO  OkHttpClient           - Content-Type: application/x-www-form-urlencoded
-24-10-14.17:38:29.763 [main            ] INFO  OkHttpClient           - Content-Length: 182
-24-10-14.17:38:29.763 [main            ] INFO  OkHttpClient           - 
-24-10-14.17:38:29.764 [main            ] INFO  OkHttpClient           - mch_id=1676472264&out_trade_no=12911319&total_fee=0.01&body=QQ%E5%85%AC%E4%BB%94&timestamp=1728898709&notify_url=https%3A%2F%2Fwww.glfskk.top%2F&sign=BA26A632213EE7D4A2D3805FA54CEBA1
-24-10-14.17:38:29.764 [main            ] INFO  OkHttpClient           - --> END POST (182-byte body)
-24-10-14.17:38:41.917 [main            ] INFO  OkHttpClient           - <-- 200 https://api.ltzf.cn/api/wxpay/native (12152ms)
-24-10-14.17:38:41.917 [main            ] INFO  OkHttpClient           - date: Mon, 14 Oct 2024 09:38:40 GMT
-24-10-14.17:38:41.917 [main            ] INFO  OkHttpClient           - content-type: application/json; charset=UTF-8
-24-10-14.17:38:41.917 [main            ] INFO  OkHttpClient           - vary: Accept-Encoding
-24-10-14.17:38:41.917 [main            ] INFO  OkHttpClient           - strict-transport-security: max-age=31536000
-24-10-14.17:38:41.917 [main            ] INFO  OkHttpClient           - server: LTIDC Edge
-24-10-14.17:38:41.917 [main            ] INFO  OkHttpClient           - x-cache-status: MISS
-24-10-14.17:38:41.918 [main            ] INFO  OkHttpClient           - 
-24-10-14.17:38:41.918 [main            ] INFO  OkHttpClient           - {"code":0,"data":{"code_url":"weixin:\/\/wxpay\/bizpayurl?pr=MLKqSUXz1","QRcode_url":"https:\/\/api.ltzf.cn\/uploads\/QRcode\/wxpay\/WX202410141738404965976512.png"},"msg":"\u5fae\u4fe1Native\u4e0b\u5355\u6210\u529f","request_id":"c18fa613-2e92-9a2b-6a27-2613ec46d806"}
-24-10-14.17:38:41.918 [main            ] INFO  OkHttpClient           - <-- END HTTP (269-byte body)
-24-10-14.17:38:42.195 [main            ] INFO  WeChatPatTest          - 请求参数:{"body":"QQ公仔","mch_id":"1676472264","notify_url":"https://www.glfskk.top/","out_trade_no":"12911319","timestamp":"1728898709","total_fee":"0.01"}
-24-10-14.17:38:42.208 [main            ] INFO  WeChatPatTest          - 应答结果:{"code":0,"data":{"QRcode_url":"https://api.ltzf.cn/uploads/QRcode/wxpay/WX202410141738404965976512.png","code_url":"weixin://wxpay/bizpayurl?pr=MLKqSUXz1"},"msg":"微信Native下单成功","request_id":"c18fa613-2e92-9a2b-6a27-2613ec46d806"}
-25-04-30.10:37:31.055 [main            ] INFO  WeChatPatTest          - Starting WeChatPatTest using Java 1.8.0_432 on heizaideMacBook-Pro.local with PID 86967 (started by heizai in /Users/heizai/IdeaProjects/chatgpt-data/chatgpt-data-app)
-25-04-30.10:37:31.055 [main            ] INFO  WeChatPatTest          - The following 1 profile is active: "dev"
-25-04-30.10:37:31.960 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
-25-04-30.10:37:31.996 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.10:37:31.998 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.10:37:32.000 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.10:37:32.002 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.10:37:32.314 [main            ] INFO  WeChatPatTest          - Started WeChatPatTest in 1.424 seconds (JVM running for 1.774)
-25-04-30.10:37:32.445 [main            ] INFO  OkHttpClient           - --> POST https://api.ltzf.cn/api/wxpay/native
-25-04-30.10:37:32.445 [main            ] INFO  OkHttpClient           - Content-Type: application/x-www-form-urlencoded
-25-04-30.10:37:32.445 [main            ] INFO  OkHttpClient           - Content-Length: 210
-25-04-30.10:37:32.445 [main            ] INFO  OkHttpClient           - 
-25-04-30.10:37:32.445 [main            ] INFO  OkHttpClient           - mch_id=1676472264&out_trade_no=63120770&total_fee=0.01&body=QQ%E5%85%AC%E4%BB%94&timestamp=1745980652&notify_url=https%3A%2F%2Fapi.glfskk.top%2Fapi%2Fv1%2Fsale%2Fpay_notify&sign=0DB1D6A971AA319940CC8A1CBD74AFFB
-25-04-30.10:37:32.445 [main            ] INFO  OkHttpClient           - --> END POST (210-byte body)
-25-04-30.10:37:33.285 [main            ] INFO  OkHttpClient           - <-- 200 https://api.ltzf.cn/api/wxpay/native (839ms)
-25-04-30.10:37:33.286 [main            ] INFO  OkHttpClient           - date: Wed, 30 Apr 2025 02:37:33 GMT
-25-04-30.10:37:33.286 [main            ] INFO  OkHttpClient           - content-type: application/json; charset=UTF-8
-25-04-30.10:37:33.286 [main            ] INFO  OkHttpClient           - vary: Accept-Encoding
-25-04-30.10:37:33.286 [main            ] INFO  OkHttpClient           - strict-transport-security: max-age=31536000
-25-04-30.10:37:33.286 [main            ] INFO  OkHttpClient           - server: LTIDC Edge
-25-04-30.10:37:33.286 [main            ] INFO  OkHttpClient           - x-cache-status: MISS
-25-04-30.10:37:33.287 [main            ] INFO  OkHttpClient           - 
-25-04-30.10:37:33.287 [main            ] INFO  OkHttpClient           - {"code":0,"data":{"code_url":"weixin:\/\/wxpay\/bizpayurl?pr=OkkuiDTz3","QRcode_url":"https:\/\/api.ltzf.cn\/uploads\/QRcode\/wxpay\/WX202504301037321317688133.png"},"msg":"\u5fae\u4fe1Native\u4e0b\u5355\u6210\u529f","request_id":"e5894b69-b932-2a67-21a7-be2d789b93fd"}
-25-04-30.10:37:33.287 [main            ] INFO  OkHttpClient           - <-- END HTTP (269-byte body)
-25-04-30.10:37:33.443 [main            ] INFO  WeChatPatTest          - 请求参数:{"body":"QQ公仔","mch_id":"1676472264","notify_url":"https://api.glfskk.top/api/v1/sale/pay_notify","out_trade_no":"63120770","timestamp":"1745980652","total_fee":"0.01"}
-25-04-30.10:37:33.447 [main            ] INFO  WeChatPatTest          - 应答结果:{"code":0,"data":{"QRcode_url":"https://api.ltzf.cn/uploads/QRcode/wxpay/WX202504301037321317688133.png","code_url":"weixin://wxpay/bizpayurl?pr=OkkuiDTz3"},"msg":"微信Native下单成功","request_id":"e5894b69-b932-2a67-21a7-be2d789b93fd"}
-25-04-30.13:22:39.197 [main            ] INFO  WeChatPatTest          - Starting WeChatPatTest using Java 1.8.0_432 on heizaideMacBook-Pro.local with PID 241 (started by heizai in /Users/heizai/IdeaProjects/chatgpt-data/chatgpt-data-app)
-25-04-30.13:22:39.198 [main            ] INFO  WeChatPatTest          - The following 1 profile is active: "dev"
-25-04-30.13:22:40.110 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
-25-04-30.13:22:40.164 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.13:22:40.166 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.13:22:40.168 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.13:22:40.171 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.13:22:40.488 [main            ] INFO  WeChatPatTest          - Started WeChatPatTest in 1.462 seconds (JVM running for 1.842)
-25-04-30.13:22:40.608 [main            ] INFO  OkHttpClient           - --> POST https://api.ltzf.cn/api/wxpay/native
-25-04-30.13:22:40.608 [main            ] INFO  OkHttpClient           - Content-Type: application/x-www-form-urlencoded
-25-04-30.13:22:40.608 [main            ] INFO  OkHttpClient           - Content-Length: 210
-25-04-30.13:22:40.609 [main            ] INFO  OkHttpClient           - 
-25-04-30.13:22:40.609 [main            ] INFO  OkHttpClient           - mch_id=1676472264&out_trade_no=39100434&total_fee=0.01&body=QQ%E5%85%AC%E4%BB%94&timestamp=1745990560&notify_url=https%3A%2F%2Fapi.glfskk.top%2Fapi%2Fv1%2Fsale%2Fpay_notify&sign=582BA64EABE5203963E3C8BC480D4D45
-25-04-30.13:22:40.609 [main            ] INFO  OkHttpClient           - --> END POST (210-byte body)
-25-04-30.13:22:41.831 [main            ] INFO  OkHttpClient           - <-- 200 https://api.ltzf.cn/api/wxpay/native (1221ms)
-25-04-30.13:22:41.831 [main            ] INFO  OkHttpClient           - date: Wed, 30 Apr 2025 05:22:41 GMT
-25-04-30.13:22:41.831 [main            ] INFO  OkHttpClient           - content-type: application/json; charset=UTF-8
-25-04-30.13:22:41.831 [main            ] INFO  OkHttpClient           - vary: Accept-Encoding
-25-04-30.13:22:41.831 [main            ] INFO  OkHttpClient           - strict-transport-security: max-age=31536000
-25-04-30.13:22:41.831 [main            ] INFO  OkHttpClient           - server: LTIDC Edge
-25-04-30.13:22:41.831 [main            ] INFO  OkHttpClient           - x-cache-status: MISS
-25-04-30.13:22:41.832 [main            ] INFO  OkHttpClient           - 
-25-04-30.13:22:41.832 [main            ] INFO  OkHttpClient           - {"code":0,"data":{"code_url":"weixin:\/\/wxpay\/bizpayurl?pr=5iNyRU4z3","QRcode_url":"https:\/\/api.ltzf.cn\/uploads\/QRcode\/wxpay\/WX202504301322417943036336.png"},"msg":"\u5fae\u4fe1Native\u4e0b\u5355\u6210\u529f","request_id":"94b809f6-8cf9-1c08-dd5b-b8b0847e4497"}
-25-04-30.13:22:41.832 [main            ] INFO  OkHttpClient           - <-- END HTTP (269-byte body)
-25-04-30.13:22:41.993 [main            ] INFO  WeChatPatTest          - 请求参数:{"body":"QQ公仔","mch_id":"1676472264","notify_url":"https://api.glfskk.top/api/v1/sale/pay_notify","out_trade_no":"39100434","timestamp":"1745990560","total_fee":"0.01"}
-25-04-30.13:22:41.997 [main            ] INFO  WeChatPatTest          - 应答结果:{"code":0,"data":{"QRcode_url":"https://api.ltzf.cn/uploads/QRcode/wxpay/WX202504301322417943036336.png","code_url":"weixin://wxpay/bizpayurl?pr=5iNyRU4z3"},"msg":"微信Native下单成功","request_id":"94b809f6-8cf9-1c08-dd5b-b8b0847e4497"}
-25-04-30.13:25:06.249 [main            ] INFO  WeChatPatTest          - Starting WeChatPatTest using Java 1.8.0_432 on heizaideMacBook-Pro.local with PID 583 (started by heizai in /Users/heizai/IdeaProjects/chatgpt-data/chatgpt-data-app)
-25-04-30.13:25:06.249 [main            ] INFO  WeChatPatTest          - The following 1 profile is active: "dev"
-25-04-30.13:25:07.214 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
-25-04-30.13:25:07.244 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.13:25:07.246 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.13:25:07.248 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.13:25:07.250 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.13:25:07.549 [main            ] INFO  WeChatPatTest          - Started WeChatPatTest in 1.469 seconds (JVM running for 1.821)
-25-04-30.13:26:42.813 [main            ] INFO  WeChatPatTest          - Starting WeChatPatTest using Java 1.8.0_432 on heizaideMacBook-Pro.local with PID 785 (started by heizai in /Users/heizai/IdeaProjects/chatgpt-data/chatgpt-data-app)
-25-04-30.13:26:42.814 [main            ] INFO  WeChatPatTest          - The following 1 profile is active: "dev"
-25-04-30.13:26:43.743 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
-25-04-30.13:26:43.777 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.13:26:43.780 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.13:26:43.782 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.13:26:43.784 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.13:26:44.104 [main            ] INFO  WeChatPatTest          - Started WeChatPatTest in 1.464 seconds (JVM running for 1.81)
-25-04-30.13:26:44.191 [main            ] INFO  WeChatPatTest          - date:Wed Apr 30 13:22:59 CST 2025
-25-04-30.13:42:31.834 [main            ] INFO  WeChatPatTest          - Starting WeChatPatTest using Java 1.8.0_432 on heizaideMacBook-Pro.local with PID 2636 (started by heizai in /Users/heizai/IdeaProjects/chatgpt-data/chatgpt-data-app)
-25-04-30.13:42:31.835 [main            ] INFO  WeChatPatTest          - The following 1 profile is active: "dev"
-25-04-30.13:42:32.779 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
-25-04-30.13:42:32.830 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.13:42:32.833 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.13:42:32.835 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.13:42:32.838 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.13:42:33.164 [main            ] INFO  WeChatPatTest          - Started WeChatPatTest in 1.5 seconds (JVM running for 1.869)
-25-04-30.13:42:33.292 [main            ] INFO  OkHttpClient           - --> POST https://api.ltzf.cn/api/wxpay/native
-25-04-30.13:42:33.292 [main            ] INFO  OkHttpClient           - Content-Type: application/x-www-form-urlencoded
-25-04-30.13:42:33.292 [main            ] INFO  OkHttpClient           - Content-Length: 210
-25-04-30.13:42:33.292 [main            ] INFO  OkHttpClient           - 
-25-04-30.13:42:33.292 [main            ] INFO  OkHttpClient           - mch_id=1676472264&out_trade_no=08995190&total_fee=0.01&body=QQ%E5%85%AC%E4%BB%94&timestamp=1745991753&notify_url=https%3A%2F%2Fapi.glfskk.top%2Fapi%2Fv1%2Fsale%2Fpay_notify&sign=8008A45338E2AFF03E3CB8BF59B55BFC
-25-04-30.13:42:33.292 [main            ] INFO  OkHttpClient           - --> END POST (210-byte body)
-25-04-30.13:42:34.450 [main            ] INFO  OkHttpClient           - <-- 200 https://api.ltzf.cn/api/wxpay/native (1157ms)
-25-04-30.13:42:34.451 [main            ] INFO  OkHttpClient           - date: Wed, 30 Apr 2025 05:42:34 GMT
-25-04-30.13:42:34.451 [main            ] INFO  OkHttpClient           - content-type: application/json; charset=UTF-8
-25-04-30.13:42:34.451 [main            ] INFO  OkHttpClient           - vary: Accept-Encoding
-25-04-30.13:42:34.451 [main            ] INFO  OkHttpClient           - strict-transport-security: max-age=31536000
-25-04-30.13:42:34.452 [main            ] INFO  OkHttpClient           - server: LTIDC Edge
-25-04-30.13:42:34.452 [main            ] INFO  OkHttpClient           - x-cache-status: MISS
-25-04-30.13:42:34.452 [main            ] INFO  OkHttpClient           - 
-25-04-30.13:42:34.452 [main            ] INFO  OkHttpClient           - {"code":0,"data":{"code_url":"weixin:\/\/wxpay\/bizpayurl?pr=hQpXvHXz3","QRcode_url":"https:\/\/api.ltzf.cn\/uploads\/QRcode\/wxpay\/WX202504301342345234564137.png"},"msg":"\u5fae\u4fe1Native\u4e0b\u5355\u6210\u529f","request_id":"ed17edd5-2854-e5e8-e513-20081b6ebe47"}
-25-04-30.13:42:34.452 [main            ] INFO  OkHttpClient           - <-- END HTTP (269-byte body)
-25-04-30.13:42:34.609 [main            ] INFO  WeChatPatTest          - 请求参数:{"body":"QQ公仔","mch_id":"1676472264","notify_url":"https://api.glfskk.top/api/v1/sale/pay_notify","out_trade_no":"08995190","timestamp":"1745991753","total_fee":"0.01"}
-25-04-30.13:42:34.613 [main            ] INFO  WeChatPatTest          - 应答结果:{"code":0,"data":{"QRcode_url":"https://api.ltzf.cn/uploads/QRcode/wxpay/WX202504301342345234564137.png","code_url":"weixin://wxpay/bizpayurl?pr=hQpXvHXz3"},"msg":"微信Native下单成功","request_id":"ed17edd5-2854-e5e8-e513-20081b6ebe47"}
-25-04-30.15:22:01.682 [main            ] INFO  WeChatPatTest          - Starting WeChatPatTest using Java 1.8.0_432 on heizaideMacBook-Pro.local with PID 18447 (started by heizai in /Users/heizai/IdeaProjects/chatgpt-data/chatgpt-data-app)
-25-04-30.15:22:01.682 [main            ] INFO  WeChatPatTest          - The following 1 profile is active: "dev"
-25-04-30.15:22:02.710 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
-25-04-30.15:22:02.752 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:22:02.755 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:22:02.757 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:22:02.760 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:22:03.090 [main            ] INFO  WeChatPatTest          - Started WeChatPatTest in 1.6 seconds (JVM running for 2.106)
-25-04-30.15:22:03.222 [main            ] INFO  OkHttpClient           - --> POST https://api.ltzf.cn/api/wxpay/native
-25-04-30.15:22:03.222 [main            ] INFO  OkHttpClient           - Content-Type: application/x-www-form-urlencoded
-25-04-30.15:22:03.222 [main            ] INFO  OkHttpClient           - Content-Length: 210
-25-04-30.15:22:03.222 [main            ] INFO  OkHttpClient           - 
-25-04-30.15:22:03.223 [main            ] INFO  OkHttpClient           - mch_id=1676472264&out_trade_no=15264583&total_fee=0.01&body=QQ%E5%85%AC%E4%BB%94&timestamp=1745997723&notify_url=https%3A%2F%2Fapi.glfskk.top%2Fapi%2Fv1%2Fsale%2Fpay_notify&sign=C90858BF42F814973794C5C92B3276FD
-25-04-30.15:22:03.223 [main            ] INFO  OkHttpClient           - --> END POST (210-byte body)
-25-04-30.15:22:04.088 [main            ] INFO  OkHttpClient           - <-- 200 https://api.ltzf.cn/api/wxpay/native (865ms)
-25-04-30.15:22:04.088 [main            ] INFO  OkHttpClient           - date: Wed, 30 Apr 2025 07:22:04 GMT
-25-04-30.15:22:04.089 [main            ] INFO  OkHttpClient           - content-type: application/json; charset=UTF-8
-25-04-30.15:22:04.089 [main            ] INFO  OkHttpClient           - vary: Accept-Encoding
-25-04-30.15:22:04.089 [main            ] INFO  OkHttpClient           - strict-transport-security: max-age=31536000
-25-04-30.15:22:04.089 [main            ] INFO  OkHttpClient           - server: LTIDC Edge
-25-04-30.15:22:04.089 [main            ] INFO  OkHttpClient           - x-cache-status: MISS
-25-04-30.15:22:04.089 [main            ] INFO  OkHttpClient           - 
-25-04-30.15:22:04.089 [main            ] INFO  OkHttpClient           - {"code":0,"data":{"code_url":"weixin:\/\/wxpay\/bizpayurl?pr=XNsUwyYz3","QRcode_url":"https:\/\/api.ltzf.cn\/uploads\/QRcode\/wxpay\/WX202504301522035632721342.png"},"msg":"\u5fae\u4fe1Native\u4e0b\u5355\u6210\u529f","request_id":"69828f03-7c4a-0c31-7e9e-5fdf659b04cb"}
-25-04-30.15:22:04.089 [main            ] INFO  OkHttpClient           - <-- END HTTP (269-byte body)
-25-04-30.15:22:04.241 [main            ] INFO  WeChatPatTest          - 请求参数:{"body":"QQ公仔","mch_id":"1676472264","notify_url":"https://api.glfskk.top/api/v1/sale/pay_notify","out_trade_no":"15264583","timestamp":"1745997723","total_fee":"0.01"}
-25-04-30.15:22:04.245 [main            ] INFO  WeChatPatTest          - 应答结果:{"code":0,"data":{"QRcode_url":"https://api.ltzf.cn/uploads/QRcode/wxpay/WX202504301522035632721342.png","code_url":"weixin://wxpay/bizpayurl?pr=XNsUwyYz3"},"msg":"微信Native下单成功","request_id":"69828f03-7c4a-0c31-7e9e-5fdf659b04cb"}
-25-04-30.15:30:14.910 [main            ] INFO  WeChatPatTest          - Starting WeChatPatTest using Java 1.8.0_432 on heizaideMacBook-Pro.local with PID 20766 (started by heizai in /Users/heizai/IdeaProjects/chatgpt-data/chatgpt-data-app)
-25-04-30.15:30:14.910 [main            ] INFO  WeChatPatTest          - The following 1 profile is active: "dev"
-25-04-30.15:30:15.879 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
-25-04-30.15:30:15.921 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:30:15.924 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:30:15.926 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:30:15.928 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:30:16.239 [main            ] INFO  WeChatPatTest          - Started WeChatPatTest in 1.5 seconds (JVM running for 1.856)
-25-04-30.15:30:16.378 [main            ] INFO  OkHttpClient           - --> POST https://api.ltzf.cn/api/wxpay/native
-25-04-30.15:30:16.378 [main            ] INFO  OkHttpClient           - Content-Type: application/x-www-form-urlencoded
-25-04-30.15:30:16.378 [main            ] INFO  OkHttpClient           - Content-Length: 214
-25-04-30.15:30:16.378 [main            ] INFO  OkHttpClient           - 
-25-04-30.15:30:16.378 [main            ] INFO  OkHttpClient           - mch_id=1676472264&out_trade_no=601066755513&total_fee=0.01&body=QQ%E5%85%AC%E4%BB%94&timestamp=1745998216&notify_url=https%3A%2F%2Fapi.glfskk.top%2Fapi%2Fv1%2Fsale%2Fpay_notify&sign=8C9558E0F25ADAD8FCAF78A009BFB9E1
-25-04-30.15:30:16.378 [main            ] INFO  OkHttpClient           - --> END POST (214-byte body)
-25-04-30.15:30:17.060 [main            ] INFO  OkHttpClient           - <-- 200 https://api.ltzf.cn/api/wxpay/native (681ms)
-25-04-30.15:30:17.060 [main            ] INFO  OkHttpClient           - date: Wed, 30 Apr 2025 07:30:17 GMT
-25-04-30.15:30:17.060 [main            ] INFO  OkHttpClient           - content-type: application/json; charset=UTF-8
-25-04-30.15:30:17.060 [main            ] INFO  OkHttpClient           - vary: Accept-Encoding
-25-04-30.15:30:17.060 [main            ] INFO  OkHttpClient           - strict-transport-security: max-age=31536000
-25-04-30.15:30:17.060 [main            ] INFO  OkHttpClient           - server: LTIDC Edge
-25-04-30.15:30:17.060 [main            ] INFO  OkHttpClient           - x-cache-status: MISS
-25-04-30.15:30:17.060 [main            ] INFO  OkHttpClient           - 
-25-04-30.15:30:17.061 [main            ] INFO  OkHttpClient           - {"code":1,"msg":"\u5fae\u4fe1Native\u4e0b\u5355\u5931\u8d25\uff0c\u8fd4\u56de\u4ee3\u7801\uff1aINVALID_REQUEST\uff0c\u8fd4\u56de\u8bf4\u660e\uff1a201 \u5546\u6237\u8ba2\u5355\u53f7\u91cd\u590d","request_id":"7cc10902-2603-c8a4-c4ae-0e0becc9fba8"}
-25-04-30.15:30:17.061 [main            ] INFO  OkHttpClient           - <-- END HTTP (246-byte body)
-25-04-30.15:30:17.206 [main            ] INFO  WeChatPatTest          - 请求参数:{"body":"QQ公仔","mch_id":"1676472264","notify_url":"https://api.glfskk.top/api/v1/sale/pay_notify","out_trade_no":"601066755513","timestamp":"1745998216","total_fee":"0.01"}
-25-04-30.15:30:17.209 [main            ] INFO  WeChatPatTest          - 应答结果:{"code":1,"msg":"微信Native下单失败，返回代码：INVALID_REQUEST，返回说明：201 商户订单号重复","request_id":"7cc10902-2603-c8a4-c4ae-0e0becc9fba8"}
-25-04-30.15:30:32.621 [main            ] INFO  WeChatPatTest          - Starting WeChatPatTest using Java 1.8.0_432 on heizaideMacBook-Pro.local with PID 20858 (started by heizai in /Users/heizai/IdeaProjects/chatgpt-data/chatgpt-data-app)
-25-04-30.15:30:32.622 [main            ] INFO  WeChatPatTest          - The following 1 profile is active: "dev"
-25-04-30.15:30:33.517 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
-25-04-30.15:30:33.556 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:30:33.559 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:30:33.560 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:30:33.563 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:30:33.855 [main            ] INFO  WeChatPatTest          - Started WeChatPatTest in 1.402 seconds (JVM running for 1.73)
-25-04-30.15:30:33.986 [main            ] INFO  OkHttpClient           - --> POST https://api.ltzf.cn/api/wxpay/native
-25-04-30.15:30:33.986 [main            ] INFO  OkHttpClient           - Content-Type: application/x-www-form-urlencoded
-25-04-30.15:30:33.986 [main            ] INFO  OkHttpClient           - Content-Length: 214
-25-04-30.15:30:33.986 [main            ] INFO  OkHttpClient           - 
-25-04-30.15:30:33.986 [main            ] INFO  OkHttpClient           - mch_id=1676472264&out_trade_no=601006755513&total_fee=0.01&body=QQ%E5%85%AC%E4%BB%94&timestamp=1745998233&notify_url=https%3A%2F%2Fapi.glfskk.top%2Fapi%2Fv1%2Fsale%2Fpay_notify&sign=21A6A64B6EC84645D6F9307C4DDD1A68
-25-04-30.15:30:33.986 [main            ] INFO  OkHttpClient           - --> END POST (214-byte body)
-25-04-30.15:30:34.754 [main            ] INFO  OkHttpClient           - <-- 200 https://api.ltzf.cn/api/wxpay/native (767ms)
-25-04-30.15:30:34.755 [main            ] INFO  OkHttpClient           - date: Wed, 30 Apr 2025 07:30:34 GMT
-25-04-30.15:30:34.755 [main            ] INFO  OkHttpClient           - content-type: application/json; charset=UTF-8
-25-04-30.15:30:34.755 [main            ] INFO  OkHttpClient           - vary: Accept-Encoding
-25-04-30.15:30:34.755 [main            ] INFO  OkHttpClient           - strict-transport-security: max-age=31536000
-25-04-30.15:30:34.755 [main            ] INFO  OkHttpClient           - server: LTIDC Edge
-25-04-30.15:30:34.755 [main            ] INFO  OkHttpClient           - x-cache-status: MISS
-25-04-30.15:30:34.756 [main            ] INFO  OkHttpClient           - 
-25-04-30.15:30:34.756 [main            ] INFO  OkHttpClient           - {"code":0,"data":{"code_url":"weixin:\/\/wxpay\/bizpayurl?pr=Odf1Xxvz3","QRcode_url":"https:\/\/api.ltzf.cn\/uploads\/QRcode\/wxpay\/WX202504301530347672079525.png"},"msg":"\u5fae\u4fe1Native\u4e0b\u5355\u6210\u529f","request_id":"e6d27e81-fb55-9338-db7c-58e34ac6181d"}
-25-04-30.15:30:34.756 [main            ] INFO  OkHttpClient           - <-- END HTTP (269-byte body)
-25-04-30.15:30:34.908 [main            ] INFO  WeChatPatTest          - 请求参数:{"body":"QQ公仔","mch_id":"1676472264","notify_url":"https://api.glfskk.top/api/v1/sale/pay_notify","out_trade_no":"601006755513","timestamp":"1745998233","total_fee":"0.01"}
-25-04-30.15:30:34.912 [main            ] INFO  WeChatPatTest          - 应答结果:{"code":0,"data":{"QRcode_url":"https://api.ltzf.cn/uploads/QRcode/wxpay/WX202504301530347672079525.png","code_url":"weixin://wxpay/bizpayurl?pr=Odf1Xxvz3"},"msg":"微信Native下单成功","request_id":"e6d27e81-fb55-9338-db7c-58e34ac6181d"}
-25-04-30.15:35:24.375 [main            ] INFO  WeChatPatTest          - Starting WeChatPatTest using Java 1.8.0_432 on heizaideMacBook-Pro.local with PID 22312 (started by heizai in /Users/heizai/IdeaProjects/chatgpt-data/chatgpt-data-app)
-25-04-30.15:35:24.376 [main            ] INFO  WeChatPatTest          - The following 1 profile is active: "dev"
-25-04-30.15:35:25.303 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
-25-04-30.15:35:25.340 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:35:25.342 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:35:25.344 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:35:25.346 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:35:25.663 [main            ] INFO  WeChatPatTest          - Started WeChatPatTest in 1.451 seconds (JVM running for 1.793)
-25-04-30.15:35:25.789 [main            ] INFO  OkHttpClient           - --> POST https://api.ltzf.cn/api/wxpay/native
-25-04-30.15:35:25.789 [main            ] INFO  OkHttpClient           - Content-Type: application/x-www-form-urlencoded
-25-04-30.15:35:25.789 [main            ] INFO  OkHttpClient           - Content-Length: 213
-25-04-30.15:35:25.789 [main            ] INFO  OkHttpClient           - 
-25-04-30.15:35:25.790 [main            ] INFO  OkHttpClient           - mch_id=1676472264&out_trade_no=60116755513&total_fee=0.01&body=QQ%E5%85%AC%E4%BB%94&timestamp=1745998525&notify_url=https%3A%2F%2Fapi.glfskk.top%2Fapi%2Fv1%2Fsale%2Fpay_notify&sign=547D6EFECC86B3280F620A8A7E9A64A1
-25-04-30.15:35:25.790 [main            ] INFO  OkHttpClient           - --> END POST (213-byte body)
-25-04-30.15:35:26.727 [main            ] INFO  OkHttpClient           - <-- 200 https://api.ltzf.cn/api/wxpay/native (937ms)
-25-04-30.15:35:26.727 [main            ] INFO  OkHttpClient           - date: Wed, 30 Apr 2025 07:35:26 GMT
-25-04-30.15:35:26.728 [main            ] INFO  OkHttpClient           - content-type: application/json; charset=UTF-8
-25-04-30.15:35:26.728 [main            ] INFO  OkHttpClient           - vary: Accept-Encoding
-25-04-30.15:35:26.728 [main            ] INFO  OkHttpClient           - strict-transport-security: max-age=31536000
-25-04-30.15:35:26.728 [main            ] INFO  OkHttpClient           - server: LTIDC Edge
-25-04-30.15:35:26.728 [main            ] INFO  OkHttpClient           - x-cache-status: MISS
-25-04-30.15:35:26.728 [main            ] INFO  OkHttpClient           - 
-25-04-30.15:35:26.729 [main            ] INFO  OkHttpClient           - {"code":0,"data":{"code_url":"weixin:\/\/wxpay\/bizpayurl?pr=QmViqWUz3","QRcode_url":"https:\/\/api.ltzf.cn\/uploads\/QRcode\/wxpay\/WX202504301535265040423341.png"},"msg":"\u5fae\u4fe1Native\u4e0b\u5355\u6210\u529f","request_id":"a940b1a2-254d-b90c-c6be-9265d1ecab37"}
-25-04-30.15:35:26.729 [main            ] INFO  OkHttpClient           - <-- END HTTP (269-byte body)
-25-04-30.15:35:26.893 [main            ] INFO  WeChatPatTest          - 请求参数:{"body":"QQ公仔","mch_id":"1676472264","notify_url":"https://api.glfskk.top/api/v1/sale/pay_notify","out_trade_no":"60116755513","timestamp":"1745998525","total_fee":"0.01"}
-25-04-30.15:35:26.898 [main            ] INFO  WeChatPatTest          - 应答结果:{"code":0,"data":{"QRcode_url":"https://api.ltzf.cn/uploads/QRcode/wxpay/WX202504301535265040423341.png","code_url":"weixin://wxpay/bizpayurl?pr=QmViqWUz3"},"msg":"微信Native下单成功","request_id":"a940b1a2-254d-b90c-c6be-9265d1ecab37"}
-25-04-30.15:35:45.019 [main            ] INFO  WeChatPatTest          - Starting WeChatPatTest using Java 1.8.0_432 on heizaideMacBook-Pro.local with PID 22405 (started by heizai in /Users/heizai/IdeaProjects/chatgpt-data/chatgpt-data-app)
-25-04-30.15:35:45.020 [main            ] INFO  WeChatPatTest          - The following 1 profile is active: "dev"
-25-04-30.15:35:45.896 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
-25-04-30.15:35:45.932 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:35:45.935 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:35:45.937 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:35:45.940 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:35:46.248 [main            ] INFO  WeChatPatTest          - Started WeChatPatTest in 1.386 seconds (JVM running for 1.716)
-25-04-30.15:35:46.373 [main            ] INFO  OkHttpClient           - --> POST https://api.ltzf.cn/api/wxpay/native
-25-04-30.15:35:46.373 [main            ] INFO  OkHttpClient           - Content-Type: application/x-www-form-urlencoded
-25-04-30.15:35:46.373 [main            ] INFO  OkHttpClient           - Content-Length: 213
-25-04-30.15:35:46.373 [main            ] INFO  OkHttpClient           - 
-25-04-30.15:35:46.374 [main            ] INFO  OkHttpClient           - mch_id=1676472264&out_trade_no=60116755513&total_fee=0.01&body=QQ%E5%85%AC%E4%BB%94&timestamp=1745998546&notify_url=https%3A%2F%2Fapi.glfskk.top%2Fapi%2Fv1%2Fsale%2Fpay_notify&sign=C5CE1CE2DE8E8758EF1213DB36FE987F
-25-04-30.15:35:46.374 [main            ] INFO  OkHttpClient           - --> END POST (213-byte body)
-25-04-30.15:35:47.028 [main            ] INFO  OkHttpClient           - <-- 200 https://api.ltzf.cn/api/wxpay/native (653ms)
-25-04-30.15:35:47.028 [main            ] INFO  OkHttpClient           - date: Wed, 30 Apr 2025 07:35:47 GMT
-25-04-30.15:35:47.028 [main            ] INFO  OkHttpClient           - content-type: application/json; charset=UTF-8
-25-04-30.15:35:47.028 [main            ] INFO  OkHttpClient           - vary: Accept-Encoding
-25-04-30.15:35:47.028 [main            ] INFO  OkHttpClient           - strict-transport-security: max-age=31536000
-25-04-30.15:35:47.028 [main            ] INFO  OkHttpClient           - server: LTIDC Edge
-25-04-30.15:35:47.028 [main            ] INFO  OkHttpClient           - x-cache-status: MISS
-25-04-30.15:35:47.029 [main            ] INFO  OkHttpClient           - 
-25-04-30.15:35:47.029 [main            ] INFO  OkHttpClient           - {"code":0,"data":{"code_url":"weixin:\/\/wxpay\/bizpayurl?pr=gd92vUNz1","QRcode_url":"https:\/\/api.ltzf.cn\/uploads\/QRcode\/wxpay\/WX202504301535265040423341.png"},"msg":"\u5fae\u4fe1Native\u4e0b\u5355\u6210\u529f","request_id":"3ef57adf-f8ca-87cc-8a24-1f93558f19a5"}
-25-04-30.15:35:47.029 [main            ] INFO  OkHttpClient           - <-- END HTTP (269-byte body)
-25-04-30.15:35:47.189 [main            ] INFO  WeChatPatTest          - 请求参数:{"body":"QQ公仔","mch_id":"1676472264","notify_url":"https://api.glfskk.top/api/v1/sale/pay_notify","out_trade_no":"60116755513","timestamp":"1745998546","total_fee":"0.01"}
-25-04-30.15:35:47.193 [main            ] INFO  WeChatPatTest          - 应答结果:{"code":0,"data":{"QRcode_url":"https://api.ltzf.cn/uploads/QRcode/wxpay/WX202504301535265040423341.png","code_url":"weixin://wxpay/bizpayurl?pr=gd92vUNz1"},"msg":"微信Native下单成功","request_id":"3ef57adf-f8ca-87cc-8a24-1f93558f19a5"}
-25-04-30.15:35:55.103 [main            ] INFO  WeChatPatTest          - Starting WeChatPatTest using Java 1.8.0_432 on heizaideMacBook-Pro.local with PID 22457 (started by heizai in /Users/heizai/IdeaProjects/chatgpt-data/chatgpt-data-app)
-25-04-30.15:35:55.104 [main            ] INFO  WeChatPatTest          - The following 1 profile is active: "dev"
-25-04-30.15:35:56.037 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
-25-04-30.15:35:56.071 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:35:56.073 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:35:56.075 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:35:56.077 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:35:56.416 [main            ] INFO  WeChatPatTest          - Started WeChatPatTest in 1.471 seconds (JVM running for 1.795)
-25-04-30.15:35:56.525 [main            ] INFO  OkHttpClient           - --> POST https://api.ltzf.cn/api/wxpay/native
-25-04-30.15:35:56.525 [main            ] INFO  OkHttpClient           - Content-Type: application/x-www-form-urlencoded
-25-04-30.15:35:56.525 [main            ] INFO  OkHttpClient           - Content-Length: 213
-25-04-30.15:35:56.525 [main            ] INFO  OkHttpClient           - 
-25-04-30.15:35:56.525 [main            ] INFO  OkHttpClient           - mch_id=1676472264&out_trade_no=60116755513&total_fee=0.01&body=QQ%E5%85%AC%E4%BB%94&timestamp=1745998556&notify_url=https%3A%2F%2Fapi.glfskk.top%2Fapi%2Fv1%2Fsale%2Fpay_notify&sign=161DB80B74AC0FE921D60B5AB187FC4C
-25-04-30.15:35:56.525 [main            ] INFO  OkHttpClient           - --> END POST (213-byte body)
-25-04-30.15:35:57.194 [main            ] INFO  OkHttpClient           - <-- 200 https://api.ltzf.cn/api/wxpay/native (668ms)
-25-04-30.15:35:57.195 [main            ] INFO  OkHttpClient           - date: Wed, 30 Apr 2025 07:35:57 GMT
-25-04-30.15:35:57.195 [main            ] INFO  OkHttpClient           - content-type: application/json; charset=UTF-8
-25-04-30.15:35:57.195 [main            ] INFO  OkHttpClient           - vary: Accept-Encoding
-25-04-30.15:35:57.195 [main            ] INFO  OkHttpClient           - strict-transport-security: max-age=31536000
-25-04-30.15:35:57.195 [main            ] INFO  OkHttpClient           - server: LTIDC Edge
-25-04-30.15:35:57.195 [main            ] INFO  OkHttpClient           - x-cache-status: MISS
-25-04-30.15:35:57.196 [main            ] INFO  OkHttpClient           - 
-25-04-30.15:35:57.196 [main            ] INFO  OkHttpClient           - {"code":0,"data":{"code_url":"weixin:\/\/wxpay\/bizpayurl?pr=GFcmIU6z3","QRcode_url":"https:\/\/api.ltzf.cn\/uploads\/QRcode\/wxpay\/WX202504301535265040423341.png"},"msg":"\u5fae\u4fe1Native\u4e0b\u5355\u6210\u529f","request_id":"ea945b56-2846-e9bc-d490-7dd833efea73"}
-25-04-30.15:35:57.196 [main            ] INFO  OkHttpClient           - <-- END HTTP (269-byte body)
-25-04-30.15:35:57.348 [main            ] INFO  WeChatPatTest          - 请求参数:{"body":"QQ公仔","mch_id":"1676472264","notify_url":"https://api.glfskk.top/api/v1/sale/pay_notify","out_trade_no":"60116755513","timestamp":"1745998556","total_fee":"0.01"}
-25-04-30.15:35:57.352 [main            ] INFO  WeChatPatTest          - 应答结果:{"code":0,"data":{"QRcode_url":"https://api.ltzf.cn/uploads/QRcode/wxpay/WX202504301535265040423341.png","code_url":"weixin://wxpay/bizpayurl?pr=GFcmIU6z3"},"msg":"微信Native下单成功","request_id":"ea945b56-2846-e9bc-d490-7dd833efea73"}
-25-04-30.15:36:26.058 [main            ] INFO  WeChatPatTest          - Starting WeChatPatTest using Java 1.8.0_432 on heizaideMacBook-Pro.local with PID 22609 (started by heizai in /Users/heizai/IdeaProjects/chatgpt-data/chatgpt-data-app)
-25-04-30.15:36:26.059 [main            ] INFO  WeChatPatTest          - The following 1 profile is active: "dev"
-25-04-30.15:36:26.991 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
-25-04-30.15:36:27.029 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:36:27.031 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:36:27.034 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:36:27.036 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:36:27.354 [main            ] INFO  WeChatPatTest          - Started WeChatPatTest in 1.46 seconds (JVM running for 1.8)
-25-04-30.15:36:27.481 [main            ] INFO  OkHttpClient           - --> POST https://api.ltzf.cn/api/wxpay/native
-25-04-30.15:36:27.481 [main            ] INFO  OkHttpClient           - Content-Type: application/x-www-form-urlencoded
-25-04-30.15:36:27.481 [main            ] INFO  OkHttpClient           - Content-Length: 214
-25-04-30.15:36:27.481 [main            ] INFO  OkHttpClient           - 
-25-04-30.15:36:27.482 [main            ] INFO  OkHttpClient           - mch_id=1676472264&out_trade_no=601066755513&total_fee=0.01&body=QQ%E5%85%AC%E4%BB%94&timestamp=1745998587&notify_url=https%3A%2F%2Fapi.glfskk.top%2Fapi%2Fv1%2Fsale%2Fpay_notify&sign=439BC0B02D62DB5CC6DAFF9EF93318FE
-25-04-30.15:36:27.482 [main            ] INFO  OkHttpClient           - --> END POST (214-byte body)
-25-04-30.15:36:28.096 [main            ] INFO  OkHttpClient           - <-- 200 https://api.ltzf.cn/api/wxpay/native (614ms)
-25-04-30.15:36:28.096 [main            ] INFO  OkHttpClient           - date: Wed, 30 Apr 2025 07:36:28 GMT
-25-04-30.15:36:28.097 [main            ] INFO  OkHttpClient           - content-type: application/json; charset=UTF-8
-25-04-30.15:36:28.097 [main            ] INFO  OkHttpClient           - vary: Accept-Encoding
-25-04-30.15:36:28.097 [main            ] INFO  OkHttpClient           - strict-transport-security: max-age=31536000
-25-04-30.15:36:28.097 [main            ] INFO  OkHttpClient           - server: LTIDC Edge
-25-04-30.15:36:28.097 [main            ] INFO  OkHttpClient           - x-cache-status: MISS
-25-04-30.15:36:28.097 [main            ] INFO  OkHttpClient           - 
-25-04-30.15:36:28.098 [main            ] INFO  OkHttpClient           - {"code":1,"msg":"\u5fae\u4fe1Native\u4e0b\u5355\u5931\u8d25\uff0c\u8fd4\u56de\u4ee3\u7801\uff1aINVALID_REQUEST\uff0c\u8fd4\u56de\u8bf4\u660e\uff1a201 \u5546\u6237\u8ba2\u5355\u53f7\u91cd\u590d","request_id":"8d8c6dcf-75ce-fc0d-bbff-fe3842546956"}
-25-04-30.15:36:28.098 [main            ] INFO  OkHttpClient           - <-- END HTTP (246-byte body)
-25-04-30.15:36:28.254 [main            ] INFO  WeChatPatTest          - 请求参数:{"body":"QQ公仔","mch_id":"1676472264","notify_url":"https://api.glfskk.top/api/v1/sale/pay_notify","out_trade_no":"601066755513","timestamp":"1745998587","total_fee":"0.01"}
-25-04-30.15:36:28.257 [main            ] INFO  WeChatPatTest          - 应答结果:{"code":1,"msg":"微信Native下单失败，返回代码：INVALID_REQUEST，返回说明：201 商户订单号重复","request_id":"8d8c6dcf-75ce-fc0d-bbff-fe3842546956"}
-25-04-30.15:53:50.650 [main            ] INFO  WeChatPatTest          - Starting WeChatPatTest using Java 1.8.0_432 on heizaideMacBook-Pro.local with PID 27694 (started by heizai in /Users/heizai/IdeaProjects/chatgpt-data/chatgpt-data-app)
-25-04-30.15:53:50.651 [main            ] INFO  WeChatPatTest          - The following 1 profile is active: "dev"
-25-04-30.15:53:51.569 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
-25-04-30.15:53:51.612 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:53:51.614 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:53:51.616 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:53:51.618 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:53:51.921 [main            ] INFO  WeChatPatTest          - Started WeChatPatTest in 1.442 seconds (JVM running for 1.792)
-25-04-30.15:53:52.037 [main            ] INFO  OkHttpClient           - --> POST https://api.ltzf.cn/api/wxpay/native
-25-04-30.15:53:52.037 [main            ] INFO  OkHttpClient           - Content-Type: application/x-www-form-urlencoded
-25-04-30.15:53:52.038 [main            ] INFO  OkHttpClient           - Content-Length: 214
-25-04-30.15:53:52.038 [main            ] INFO  OkHttpClient           - 
-25-04-30.15:53:52.038 [main            ] INFO  OkHttpClient           - mch_id=1676472264&out_trade_no=601066755513&total_fee=0.01&body=QQ%E5%85%AC%E4%BB%94&timestamp=1745999632&notify_url=https%3A%2F%2Fapi.glfskk.top%2Fapi%2Fv1%2Fsale%2Fpay_notify&sign=E98629C6710E4545CF7FB359ABABED63
-25-04-30.15:53:52.038 [main            ] INFO  OkHttpClient           - --> END POST (214-byte body)
-25-04-30.15:53:52.716 [main            ] INFO  OkHttpClient           - <-- 200 https://api.ltzf.cn/api/wxpay/native (677ms)
-25-04-30.15:53:52.716 [main            ] INFO  OkHttpClient           - date: Wed, 30 Apr 2025 07:53:52 GMT
-25-04-30.15:53:52.716 [main            ] INFO  OkHttpClient           - content-type: application/json; charset=UTF-8
-25-04-30.15:53:52.716 [main            ] INFO  OkHttpClient           - vary: Accept-Encoding
-25-04-30.15:53:52.716 [main            ] INFO  OkHttpClient           - strict-transport-security: max-age=31536000
-25-04-30.15:53:52.716 [main            ] INFO  OkHttpClient           - server: LTIDC Edge
-25-04-30.15:53:52.716 [main            ] INFO  OkHttpClient           - x-cache-status: MISS
-25-04-30.15:53:52.717 [main            ] INFO  OkHttpClient           - 
-25-04-30.15:53:52.717 [main            ] INFO  OkHttpClient           - {"code":1,"msg":"\u5fae\u4fe1Native\u4e0b\u5355\u5931\u8d25\uff0c\u8fd4\u56de\u4ee3\u7801\uff1aINVALID_REQUEST\uff0c\u8fd4\u56de\u8bf4\u660e\uff1a201 \u5546\u6237\u8ba2\u5355\u53f7\u91cd\u590d","request_id":"aabdd3d1-0fb7-ea03-d756-8f6afd7d18a2"}
-25-04-30.15:53:52.717 [main            ] INFO  OkHttpClient           - <-- END HTTP (246-byte body)
-25-04-30.15:53:52.867 [main            ] INFO  WeChatPatTest          - 请求参数:{"body":"QQ公仔","mch_id":"1676472264","notify_url":"https://api.glfskk.top/api/v1/sale/pay_notify","out_trade_no":"601066755513","timestamp":"1745999632","total_fee":"0.01"}
-25-04-30.15:53:52.869 [main            ] INFO  WeChatPatTest          - 应答结果:{"code":1,"msg":"微信Native下单失败，返回代码：INVALID_REQUEST，返回说明：201 商户订单号重复","request_id":"aabdd3d1-0fb7-ea03-d756-8f6afd7d18a2"}
-25-04-30.15:54:05.917 [main            ] INFO  WeChatPatTest          - Starting WeChatPatTest using Java 1.8.0_432 on heizaideMacBook-Pro.local with PID 27779 (started by heizai in /Users/heizai/IdeaProjects/chatgpt-data/chatgpt-data-app)
-25-04-30.15:54:05.917 [main            ] INFO  WeChatPatTest          - The following 1 profile is active: "dev"
-25-04-30.15:54:06.855 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
-25-04-30.15:54:06.892 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:54:06.894 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:54:06.896 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:54:06.898 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:54:07.187 [main            ] INFO  WeChatPatTest          - Started WeChatPatTest in 1.431 seconds (JVM running for 1.77)
-25-04-30.15:54:07.325 [main            ] INFO  OkHttpClient           - --> POST https://api.ltzf.cn/api/wxpay/native
-25-04-30.15:54:07.325 [main            ] INFO  OkHttpClient           - Content-Type: application/x-www-form-urlencoded
-25-04-30.15:54:07.326 [main            ] INFO  OkHttpClient           - Content-Length: 214
-25-04-30.15:54:07.326 [main            ] INFO  OkHttpClient           - 
-25-04-30.15:54:07.326 [main            ] INFO  OkHttpClient           - mch_id=1676472264&out_trade_no=601066759513&total_fee=0.01&body=QQ%E5%85%AC%E4%BB%94&timestamp=1745999647&notify_url=https%3A%2F%2Fapi.glfskk.top%2Fapi%2Fv1%2Fsale%2Fpay_notify&sign=06E781DF1DFFB8799B35CF1DEB2BD858
-25-04-30.15:54:07.326 [main            ] INFO  OkHttpClient           - --> END POST (214-byte body)
-25-04-30.15:54:08.054 [main            ] INFO  OkHttpClient           - <-- 200 https://api.ltzf.cn/api/wxpay/native (727ms)
-25-04-30.15:54:08.055 [main            ] INFO  OkHttpClient           - date: Wed, 30 Apr 2025 07:54:08 GMT
-25-04-30.15:54:08.055 [main            ] INFO  OkHttpClient           - content-type: application/json; charset=UTF-8
-25-04-30.15:54:08.055 [main            ] INFO  OkHttpClient           - vary: Accept-Encoding
-25-04-30.15:54:08.055 [main            ] INFO  OkHttpClient           - strict-transport-security: max-age=31536000
-25-04-30.15:54:08.055 [main            ] INFO  OkHttpClient           - server: LTIDC Edge
-25-04-30.15:54:08.055 [main            ] INFO  OkHttpClient           - x-cache-status: MISS
-25-04-30.15:54:08.056 [main            ] INFO  OkHttpClient           - 
-25-04-30.15:54:08.056 [main            ] INFO  OkHttpClient           - {"code":0,"data":{"code_url":"weixin:\/\/wxpay\/bizpayurl?pr=rtzhIl6z1","QRcode_url":"https:\/\/api.ltzf.cn\/uploads\/QRcode\/wxpay\/WX202504301554076442475030.png"},"msg":"\u5fae\u4fe1Native\u4e0b\u5355\u6210\u529f","request_id":"05947dd2-b921-ac90-23a8-9b497b1ba562"}
-25-04-30.15:54:08.056 [main            ] INFO  OkHttpClient           - <-- END HTTP (269-byte body)
-25-04-30.15:54:08.213 [main            ] INFO  WeChatPatTest          - 请求参数:{"body":"QQ公仔","mch_id":"1676472264","notify_url":"https://api.glfskk.top/api/v1/sale/pay_notify","out_trade_no":"601066759513","timestamp":"1745999647","total_fee":"0.01"}
-25-04-30.15:54:08.217 [main            ] INFO  WeChatPatTest          - 应答结果:{"code":0,"data":{"QRcode_url":"https://api.ltzf.cn/uploads/QRcode/wxpay/WX202504301554076442475030.png","code_url":"weixin://wxpay/bizpayurl?pr=rtzhIl6z1"},"msg":"微信Native下单成功","request_id":"05947dd2-b921-ac90-23a8-9b497b1ba562"}
-25-04-30.15:57:14.657 [main            ] INFO  WeChatPatTest          - Starting WeChatPatTest using Java 1.8.0_432 on heizaideMacBook-Pro.local with PID 28640 (started by heizai in /Users/heizai/IdeaProjects/chatgpt-data/chatgpt-data-app)
-25-04-30.15:57:14.657 [main            ] INFO  WeChatPatTest          - The following 1 profile is active: "dev"
-25-04-30.15:57:15.588 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
-25-04-30.15:57:15.630 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:57:15.632 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:57:15.634 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:57:15.637 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:57:15.953 [main            ] INFO  WeChatPatTest          - Started WeChatPatTest in 1.475 seconds (JVM running for 1.815)
-25-04-30.15:57:16.083 [main            ] INFO  OkHttpClient           - --> POST https://api.ltzf.cn/api/wxpay/native
-25-04-30.15:57:16.083 [main            ] INFO  OkHttpClient           - Content-Type: application/x-www-form-urlencoded
-25-04-30.15:57:16.083 [main            ] INFO  OkHttpClient           - Content-Length: 214
-25-04-30.15:57:16.083 [main            ] INFO  OkHttpClient           - 
-25-04-30.15:57:16.083 [main            ] INFO  OkHttpClient           - mch_id=1676472264&out_trade_no=601066750513&total_fee=0.01&body=QQ%E5%85%AC%E4%BB%94&timestamp=1745999836&notify_url=https%3A%2F%2Fapi.glfskk.top%2Fapi%2Fv1%2Fsale%2Fpay_notify&sign=A99D20748F732BE75D81D1CC459D0DB1
-25-04-30.15:57:16.083 [main            ] INFO  OkHttpClient           - --> END POST (214-byte body)
-25-04-30.15:57:16.799 [main            ] INFO  OkHttpClient           - <-- 200 https://api.ltzf.cn/api/wxpay/native (716ms)
-25-04-30.15:57:16.800 [main            ] INFO  OkHttpClient           - date: Wed, 30 Apr 2025 07:57:16 GMT
-25-04-30.15:57:16.800 [main            ] INFO  OkHttpClient           - content-type: application/json; charset=UTF-8
-25-04-30.15:57:16.800 [main            ] INFO  OkHttpClient           - vary: Accept-Encoding
-25-04-30.15:57:16.800 [main            ] INFO  OkHttpClient           - strict-transport-security: max-age=31536000
-25-04-30.15:57:16.800 [main            ] INFO  OkHttpClient           - server: LTIDC Edge
-25-04-30.15:57:16.800 [main            ] INFO  OkHttpClient           - x-cache-status: MISS
-25-04-30.15:57:16.800 [main            ] INFO  OkHttpClient           - 
-25-04-30.15:57:16.800 [main            ] INFO  OkHttpClient           - {"code":0,"data":{"code_url":"weixin:\/\/wxpay\/bizpayurl?pr=s39kunTz3","QRcode_url":"https:\/\/api.ltzf.cn\/uploads\/QRcode\/wxpay\/WX202504301557163525449621.png"},"msg":"\u5fae\u4fe1Native\u4e0b\u5355\u6210\u529f","request_id":"fac7f565-0609-f394-0985-b7ec5d525955"}
-25-04-30.15:57:16.800 [main            ] INFO  OkHttpClient           - <-- END HTTP (269-byte body)
-25-04-30.15:57:16.948 [main            ] INFO  WeChatPatTest          - 请求参数:{"body":"QQ公仔","mch_id":"1676472264","notify_url":"https://api.glfskk.top/api/v1/sale/pay_notify","out_trade_no":"601066750513","timestamp":"1745999836","total_fee":"0.01"}
-25-04-30.15:57:16.952 [main            ] INFO  WeChatPatTest          - 应答结果:{"code":0,"data":{"QRcode_url":"https://api.ltzf.cn/uploads/QRcode/wxpay/WX202504301557163525449621.png","code_url":"weixin://wxpay/bizpayurl?pr=s39kunTz3"},"msg":"微信Native下单成功","request_id":"fac7f565-0609-f394-0985-b7ec5d525955"}
-25-04-30.15:57:46.376 [main            ] INFO  WeChatPatTest          - Starting WeChatPatTest using Java 1.8.0_432 on heizaideMacBook-Pro.local with PID 28795 (started by heizai in /Users/heizai/IdeaProjects/chatgpt-data/chatgpt-data-app)
-25-04-30.15:57:46.377 [main            ] INFO  WeChatPatTest          - The following 1 profile is active: "dev"
-25-04-30.15:57:47.344 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
-25-04-30.15:57:47.396 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:57:47.398 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:57:47.400 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:57:47.403 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.15:57:47.711 [main            ] INFO  WeChatPatTest          - Started WeChatPatTest in 1.5 seconds (JVM running for 1.846)
-25-04-30.15:57:47.836 [main            ] INFO  OkHttpClient           - --> POST https://api.ltzf.cn/api/wxpay/native
-25-04-30.15:57:47.836 [main            ] INFO  OkHttpClient           - Content-Type: application/x-www-form-urlencoded
-25-04-30.15:57:47.836 [main            ] INFO  OkHttpClient           - Content-Length: 214
-25-04-30.15:57:47.836 [main            ] INFO  OkHttpClient           - 
-25-04-30.15:57:47.836 [main            ] INFO  OkHttpClient           - mch_id=1676472264&out_trade_no=601066750513&total_fee=0.01&body=QQ%E5%85%AC%E4%BB%94&timestamp=1745999867&notify_url=https%3A%2F%2Fapi.glfskk.top%2Fapi%2Fv1%2Fsale%2Fpay_notify&sign=9670958250B9D073252FDD8176B31169
-25-04-30.15:57:47.836 [main            ] INFO  OkHttpClient           - --> END POST (214-byte body)
-25-04-30.15:57:48.400 [main            ] INFO  OkHttpClient           - <-- 200 https://api.ltzf.cn/api/wxpay/native (563ms)
-25-04-30.15:57:48.400 [main            ] INFO  OkHttpClient           - date: Wed, 30 Apr 2025 07:57:48 GMT
-25-04-30.15:57:48.400 [main            ] INFO  OkHttpClient           - content-type: application/json; charset=UTF-8
-25-04-30.15:57:48.400 [main            ] INFO  OkHttpClient           - vary: Accept-Encoding
-25-04-30.15:57:48.400 [main            ] INFO  OkHttpClient           - strict-transport-security: max-age=31536000
-25-04-30.15:57:48.400 [main            ] INFO  OkHttpClient           - server: LTIDC Edge
-25-04-30.15:57:48.401 [main            ] INFO  OkHttpClient           - x-cache-status: MISS
-25-04-30.15:57:48.401 [main            ] INFO  OkHttpClient           - 
-25-04-30.15:57:48.401 [main            ] INFO  OkHttpClient           - {"code":0,"data":{"code_url":"weixin:\/\/wxpay\/bizpayurl?pr=lGbgn6wz1","QRcode_url":"https:\/\/api.ltzf.cn\/uploads\/QRcode\/wxpay\/WX202504301557163525449621.png"},"msg":"\u5fae\u4fe1Native\u4e0b\u5355\u6210\u529f","request_id":"0d97a84d-870e-5e47-584c-ea4fb98f3bcf"}
-25-04-30.15:57:48.401 [main            ] INFO  OkHttpClient           - <-- END HTTP (269-byte body)
-25-04-30.15:57:48.547 [main            ] INFO  WeChatPatTest          - 请求参数:{"body":"QQ公仔","mch_id":"1676472264","notify_url":"https://api.glfskk.top/api/v1/sale/pay_notify","out_trade_no":"601066750513","timestamp":"1745999867","total_fee":"0.01"}
-25-04-30.15:57:48.551 [main            ] INFO  WeChatPatTest          - 应答结果:{"code":0,"data":{"QRcode_url":"https://api.ltzf.cn/uploads/QRcode/wxpay/WX202504301557163525449621.png","code_url":"weixin://wxpay/bizpayurl?pr=lGbgn6wz1"},"msg":"微信Native下单成功","request_id":"0d97a84d-870e-5e47-584c-ea4fb98f3bcf"}
-25-04-30.15:57:48.551 [main            ] INFO  WeChatPatTest          - 应答结果:"https://api.ltzf.cn/uploads/QRcode/wxpay/WX202504301557163525449621.png"
-25-04-30.16:03:19.281 [main            ] INFO  WeChatPatTest          - Starting WeChatPatTest using Java 1.8.0_432 on heizaideMacBook-Pro.local with PID 30341 (started by heizai in /Users/heizai/IdeaProjects/chatgpt-data/chatgpt-data-app)
-25-04-30.16:03:19.282 [main            ] INFO  WeChatPatTest          - The following 1 profile is active: "dev"
-25-04-30.16:03:20.267 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
-25-04-30.16:03:20.324 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.16:03:20.327 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.16:03:20.329 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.16:03:20.331 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
-25-04-30.16:03:20.648 [main            ] INFO  WeChatPatTest          - Started WeChatPatTest in 1.531 seconds (JVM running for 1.902)
-25-04-30.16:03:20.735 [main            ] INFO  WeChatPatTest          - date:Wed Apr 30 13:22:59 CST 2025
+25-05-01.18:30:20.685 [main            ] INFO  GLMTest                - Starting GLMTest using Java 1.8.0_432 on 192.168.0.102 with PID 50735 (started by heizai in /Users/heizai/IdeaProjects/chatgpt-data/chatgpt-data-app)
+25-05-01.18:30:20.686 [main            ] INFO  GLMTest                - The following 1 profile is active: "dev"
+25-05-01.18:30:21.697 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
+25-05-01.18:30:21.770 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+25-05-01.18:30:21.773 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+25-05-01.18:30:21.776 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+25-05-01.18:30:21.778 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+25-05-01.18:30:22.123 [main            ] INFO  GLMTest                - Started GLMTest in 1.616 seconds (JVM running for 1.984)
+25-05-01.18:30:22.246 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> POST https://open.bigmodel.cn/api/paas/v4/chat/completions
+25-05-01.18:30:22.246 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+25-05-01.18:30:22.246 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Length: 332
+25-05-01.18:30:22.246 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Accept: text/event-stream
+25-05-01.18:30:22.247 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> END POST
+25-05-01.18:30:26.681 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- 200 https://open.bigmodel.cn/api/paas/v4/chat/completions (4434ms)
+25-05-01.18:30:26.682 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - date: Thu, 01 May 2025 10:30:26 GMT
+25-05-01.18:30:26.682 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - content-type: text/event-stream;charset=UTF-8
+25-05-01.18:30:26.682 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - set-cookie: acw_tc=1a0c655417460954225791488e006a804491c7be59ab0364a8a79f32ea45d7;path=/;HttpOnly;Max-Age=1800
+25-05-01.18:30:26.682 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-05-01.18:30:26.682 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-05-01.18:30:26.682 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-05-01.18:30:26.682 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - x-log-id: 202505011830226c7b06d1918c4df6
+25-05-01.18:30:26.682 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-05-01.18:30:26.682 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-05-01.18:30:26.682 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-05-01.18:30:26.682 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - strict-transport-security: max-age=31536000; includeSubDomains
+25-05-01.18:30:26.682 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- END HTTP
+25-05-01.18:30:26.849 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"小","role":"assistant"},"index":0}],"created":1746095422,"data":"小","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.850 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"傅","role":"assistant"},"index":0}],"created":1746095422,"data":"傅","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.850 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"哥","role":"assistant"},"index":0}],"created":1746095422,"data":"哥","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.850 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"的真","role":"assistant"},"index":0}],"created":1746095422,"data":"的真","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.850 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"名","role":"assistant"},"index":0}],"created":1746095422,"data":"名","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.850 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"是","role":"assistant"},"index":0}],"created":1746095422,"data":"是","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.850 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"傅","role":"assistant"},"index":0}],"created":1746095422,"data":"傅","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.851 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"声","role":"assistant"},"index":0}],"created":1746095422,"data":"声","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.851 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"，","role":"assistant"},"index":0}],"created":1746095422,"data":"，","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.851 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"他","role":"assistant"},"index":0}],"created":1746095422,"data":"他","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.851 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"是一名","role":"assistant"},"index":0}],"created":1746095422,"data":"是一名","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.851 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"中国","role":"assistant"},"index":0}],"created":1746095422,"data":"中国","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.851 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"香港","role":"assistant"},"index":0}],"created":1746095422,"data":"香港","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.851 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"男演员","role":"assistant"},"index":0}],"created":1746095422,"data":"男演员","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.851 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"、","role":"assistant"},"index":0}],"created":1746095422,"data":"、","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.851 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"歌手","role":"assistant"},"index":0}],"created":1746095422,"data":"歌手","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.851 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"，","role":"assistant"},"index":0}],"created":1746095422,"data":"，","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.851 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"出生于","role":"assistant"},"index":0}],"created":1746095422,"data":"出生于","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.852 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"1","role":"assistant"},"index":0}],"created":1746095422,"data":"1","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.852 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"9","role":"assistant"},"index":0}],"created":1746095422,"data":"9","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.852 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"5","role":"assistant"},"index":0}],"created":1746095422,"data":"5","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.852 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"7","role":"assistant"},"index":0}],"created":1746095422,"data":"7","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.852 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"年","role":"assistant"},"index":0}],"created":1746095422,"data":"年","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.852 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"3","role":"assistant"},"index":0}],"created":1746095422,"data":"3","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.852 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"月","role":"assistant"},"index":0}],"created":1746095422,"data":"月","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.852 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"2","role":"assistant"},"index":0}],"created":1746095422,"data":"2","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.853 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"0","role":"assistant"},"index":0}],"created":1746095422,"data":"0","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.853 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"日","role":"assistant"},"index":0}],"created":1746095422,"data":"日","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.853 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"，","role":"assistant"},"index":0}],"created":1746095422,"data":"，","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.853 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"祖籍","role":"assistant"},"index":0}],"created":1746095422,"data":"祖籍","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.853 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"广东省","role":"assistant"},"index":0}],"created":1746095422,"data":"广东省","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.853 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"汕头","role":"assistant"},"index":0}],"created":1746095422,"data":"汕头","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.853 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"市","role":"assistant"},"index":0}],"created":1746095422,"data":"市","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.853 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"潮","role":"assistant"},"index":0}],"created":1746095422,"data":"潮","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.853 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"南区","role":"assistant"},"index":0}],"created":1746095422,"data":"南区","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.853 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"。","role":"assistant"},"index":0}],"created":1746095422,"data":"。","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.853 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"傅","role":"assistant"},"index":0}],"created":1746095422,"data":"傅","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.853 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"声","role":"assistant"},"index":0}],"created":1746095422,"data":"声","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.853 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"在","role":"assistant"},"index":0}],"created":1746095422,"data":"在","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.853 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"1","role":"assistant"},"index":0}],"created":1746095422,"data":"1","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.854 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"9","role":"assistant"},"index":0}],"created":1746095422,"data":"9","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.854 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"7","role":"assistant"},"index":0}],"created":1746095422,"data":"7","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.854 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"0","role":"assistant"},"index":0}],"created":1746095422,"data":"0","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.854 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"年代","role":"assistant"},"index":0}],"created":1746095422,"data":"年代","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.854 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"至","role":"assistant"},"index":0}],"created":1746095422,"data":"至","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.854 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"1","role":"assistant"},"index":0}],"created":1746095422,"data":"1","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.854 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"9","role":"assistant"},"index":0}],"created":1746095422,"data":"9","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.854 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"8","role":"assistant"},"index":0}],"created":1746095422,"data":"8","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.854 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"0","role":"assistant"},"index":0}],"created":1746095422,"data":"0","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.854 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"年代初","role":"assistant"},"index":0}],"created":1746095422,"data":"年代初","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:26.854 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"活跃","role":"assistant"},"index":0}],"created":1746095422,"data":"活跃","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.781 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"于","role":"assistant"},"index":0}],"created":1746095422,"data":"于","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.782 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"香港","role":"assistant"},"index":0}],"created":1746095422,"data":"香港","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.782 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"电影","role":"assistant"},"index":0}],"created":1746095422,"data":"电影","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.782 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"界","role":"assistant"},"index":0}],"created":1746095422,"data":"界","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.783 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"，","role":"assistant"},"index":0}],"created":1746095422,"data":"，","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.783 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"曾","role":"assistant"},"index":0}],"created":1746095422,"data":"曾","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.783 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"主演","role":"assistant"},"index":0}],"created":1746095422,"data":"主演","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.783 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"多部","role":"assistant"},"index":0}],"created":1746095422,"data":"多部","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.783 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"著名","role":"assistant"},"index":0}],"created":1746095422,"data":"著名","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.783 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"电影","role":"assistant"},"index":0}],"created":1746095422,"data":"电影","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.784 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"，","role":"assistant"},"index":0}],"created":1746095422,"data":"，","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.784 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"如","role":"assistant"},"index":0}],"created":1746095422,"data":"如","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.784 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"《","role":"assistant"},"index":0}],"created":1746095422,"data":"《","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.797 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"英雄","role":"assistant"},"index":0}],"created":1746095422,"data":"英雄","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.797 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"本色","role":"assistant"},"index":0}],"created":1746095422,"data":"本色","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.798 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"》《","role":"assistant"},"index":0}],"created":1746095422,"data":"》《","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.798 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"黄","role":"assistant"},"index":0}],"created":1746095422,"data":"黄","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.798 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"飞","role":"assistant"},"index":0}],"created":1746095422,"data":"飞","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.798 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"鸿","role":"assistant"},"index":0}],"created":1746095422,"data":"鸿","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.799 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"》","role":"assistant"},"index":0}],"created":1746095422,"data":"》","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.799 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"等","role":"assistant"},"index":0}],"created":1746095422,"data":"等","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.799 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"。","role":"assistant"},"index":0}],"created":1746095422,"data":"。","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.800 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"他的","role":"assistant"},"index":0}],"created":1746095422,"data":"他的","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.800 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"表演","role":"assistant"},"index":0}],"created":1746095422,"data":"表演","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.800 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"风格","role":"assistant"},"index":0}],"created":1746095422,"data":"风格","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.800 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"深受","role":"assistant"},"index":0}],"created":1746095422,"data":"深受","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.800 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"观众","role":"assistant"},"index":0}],"created":1746095422,"data":"观众","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.800 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"喜爱","role":"assistant"},"index":0}],"created":1746095422,"data":"喜爱","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.800 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"，","role":"assistant"},"index":0}],"created":1746095422,"data":"，","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.801 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"曾","role":"assistant"},"index":0}],"created":1746095422,"data":"曾","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.801 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"获得","role":"assistant"},"index":0}],"created":1746095422,"data":"获得","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.801 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"多个","role":"assistant"},"index":0}],"created":1746095422,"data":"多个","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.801 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"奖项","role":"assistant"},"index":0}],"created":1746095422,"data":"奖项","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.801 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"肯定","role":"assistant"},"index":0}],"created":1746095422,"data":"肯定","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.801 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"。","role":"assistant"},"index":0}],"created":1746095422,"data":"。","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.801 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"不幸","role":"assistant"},"index":0}],"created":1746095422,"data":"不幸","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.802 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"的是","role":"assistant"},"index":0}],"created":1746095422,"data":"的是","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.802 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"，","role":"assistant"},"index":0}],"created":1746095422,"data":"，","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.802 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"傅","role":"assistant"},"index":0}],"created":1746095422,"data":"傅","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.802 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"声","role":"assistant"},"index":0}],"created":1746095422,"data":"声","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.802 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"在","role":"assistant"},"index":0}],"created":1746095422,"data":"在","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.802 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"1","role":"assistant"},"index":0}],"created":1746095422,"data":"1","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.802 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"9","role":"assistant"},"index":0}],"created":1746095422,"data":"9","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.803 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"8","role":"assistant"},"index":0}],"created":1746095422,"data":"8","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.803 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"3","role":"assistant"},"index":0}],"created":1746095422,"data":"3","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.803 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"年","role":"assistant"},"index":0}],"created":1746095422,"data":"年","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.803 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"7","role":"assistant"},"index":0}],"created":1746095422,"data":"7","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.803 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"月","role":"assistant"},"index":0}],"created":1746095422,"data":"月","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.803 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"1","role":"assistant"},"index":0}],"created":1746095422,"data":"1","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.804 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"日","role":"assistant"},"index":0}],"created":1746095422,"data":"日","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.804 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"因","role":"assistant"},"index":0}],"created":1746095422,"data":"因","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.804 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"车祸","role":"assistant"},"index":0}],"created":1746095422,"data":"车祸","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.804 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"遇难","role":"assistant"},"index":0}],"created":1746095422,"data":"遇难","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.804 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"，","role":"assistant"},"index":0}],"created":1746095422,"data":"，","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.804 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"终","role":"assistant"},"index":0}],"created":1746095422,"data":"终","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.804 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"年","role":"assistant"},"index":0}],"created":1746095422,"data":"年","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.804 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"2","role":"assistant"},"index":0}],"created":1746095422,"data":"2","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.805 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"6","role":"assistant"},"index":0}],"created":1746095422,"data":"6","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.805 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"岁","role":"assistant"},"index":0}],"created":1746095422,"data":"岁","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.805 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"。","role":"assistant"},"index":0}],"created":1746095422,"data":"。","id":"202505011830226c7b06d1918c4df6","model":"glm-4v"}
+25-05-01.18:30:28.880 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"","role":"assistant"},"finish_reason":"stop","index":0}],"created":1746095422,"id":"202505011830226c7b06d1918c4df6","meta":"{\"usage\":{\"completion_tokens\":112,\"prompt_tokens\":1672,\"total_tokens\":1784}}","model":"glm-4v","usage":{"completion_tokens":112,"prompt_tokens":1672,"total_tokens":1784}}
+25-05-01.18:30:28.881 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - [输出结束] Tokens "[DONE]"
+25-05-01.18:30:28.881 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 对话完成
+25-05-01.18:32:50.201 [main            ] INFO  GLMTest                - Starting GLMTest using Java 1.8.0_432 on 192.168.0.102 with PID 51396 (started by heizai in /Users/heizai/IdeaProjects/chatgpt-data/chatgpt-data-app)
+25-05-01.18:32:50.201 [main            ] INFO  GLMTest                - The following 1 profile is active: "dev"
+25-05-01.18:32:51.153 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
+25-05-01.18:32:51.187 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+25-05-01.18:32:51.189 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+25-05-01.18:32:51.192 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+25-05-01.18:32:51.194 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+25-05-01.18:32:51.520 [main            ] INFO  GLMTest                - Started GLMTest in 1.492 seconds (JVM running for 1.854)
+25-05-01.18:32:51.649 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> POST https://open.bigmodel.cn/api/paas/v4/chat/completions
+25-05-01.18:32:51.649 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+25-05-01.18:32:51.649 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Length: 340
+25-05-01.18:32:51.649 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Accept: text/event-stream
+25-05-01.18:32:51.649 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> END POST
+25-05-01.18:32:51.886 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- 400 https://open.bigmodel.cn/api/paas/v4/chat/completions (235ms)
+25-05-01.18:32:51.886 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - date: Thu, 01 May 2025 10:32:52 GMT
+25-05-01.18:32:51.886 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - set-cookie: acw_tc=ac11000117460955719588278e0061caf06cdf7062242c0e7e81ebd0cb136c;path=/;HttpOnly;Max-Age=1800
+25-05-01.18:32:51.886 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-05-01.18:32:51.886 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-05-01.18:32:51.886 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-05-01.18:32:51.886 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - x-log-id: 2025050118325244913707b120452e
+25-05-01.18:32:51.886 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-05-01.18:32:51.886 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-05-01.18:32:51.886 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-05-01.18:32:51.886 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - strict-transport-security: max-age=31536000; includeSubDomains
+25-05-01.18:32:51.886 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- END HTTP
+25-05-01.18:32:51.886 [OkHttp https://open.bigmodel.cn/...] ERROR GLMTest                - 对话失败
+25-05-01.18:33:31.807 [main            ] INFO  GLMTest                - Starting GLMTest using Java 1.8.0_432 on 192.168.0.102 with PID 51603 (started by heizai in /Users/heizai/IdeaProjects/chatgpt-data/chatgpt-data-app)
+25-05-01.18:33:31.808 [main            ] INFO  GLMTest                - The following 1 profile is active: "dev"
+25-05-01.18:33:32.774 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
+25-05-01.18:33:32.810 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+25-05-01.18:33:32.812 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+25-05-01.18:33:32.815 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+25-05-01.18:33:32.818 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+25-05-01.18:33:33.140 [main            ] INFO  GLMTest                - Started GLMTest in 1.507 seconds (JVM running for 1.883)
+25-05-01.18:33:33.264 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> POST https://open.bigmodel.cn/api/paas/v4/chat/completions
+25-05-01.18:33:33.264 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+25-05-01.18:33:33.264 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Length: 336
+25-05-01.18:33:33.264 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Accept: text/event-stream
+25-05-01.18:33:33.264 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> END POST
+25-05-01.18:33:35.454 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- 200 https://open.bigmodel.cn/api/paas/v4/chat/completions (2189ms)
+25-05-01.18:33:35.454 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - date: Thu, 01 May 2025 10:33:35 GMT
+25-05-01.18:33:35.454 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - content-type: text/event-stream;charset=UTF-8
+25-05-01.18:33:35.454 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - set-cookie: acw_tc=ac11000117460956135753521e0071b99dfa9f184c4e5fdfb4b1cf323f259b;path=/;HttpOnly;Max-Age=1800
+25-05-01.18:33:35.454 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-05-01.18:33:35.454 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-05-01.18:33:35.454 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-05-01.18:33:35.454 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - x-log-id: 20250501183333ef5b7cdfbfdb4e39
+25-05-01.18:33:35.454 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-05-01.18:33:35.454 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-05-01.18:33:35.455 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-05-01.18:33:35.455 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - strict-transport-security: max-age=31536000; includeSubDomains
+25-05-01.18:33:35.455 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- END HTTP
+25-05-01.18:33:35.759 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"小","role":"assistant"},"index":0}],"created":1746095614,"data":"小","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:35.760 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"傅","role":"assistant"},"index":0}],"created":1746095614,"data":"傅","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:35.760 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"哥","role":"assistant"},"index":0}],"created":1746095614,"data":"哥","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:35.760 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"是一位","role":"assistant"},"index":0}],"created":1746095614,"data":"是一位","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:35.760 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"资深","role":"assistant"},"index":0}],"created":1746095614,"data":"资深","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:35.760 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"的技术","role":"assistant"},"index":0}],"created":1746095614,"data":"的技术","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:35.761 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"UP","role":"assistant"},"index":0}],"created":1746095614,"data":"UP","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:35.761 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"主","role":"assistant"},"index":0}],"created":1746095614,"data":"主","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:35.761 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"和","role":"assistant"},"index":0}],"created":1746095614,"data":"和","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:35.761 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"一线","role":"assistant"},"index":0}],"created":1746095614,"data":"一线","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:35.779 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"互联网","role":"assistant"},"index":0}],"created":1746095614,"data":"互联网","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:35.817 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"Java","role":"assistant"},"index":0}],"created":1746095614,"data":"Java","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:35.853 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"工程师","role":"assistant"},"index":0}],"created":1746095614,"data":"工程师","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:35.853 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"、","role":"assistant"},"index":0}],"created":1746095614,"data":"、","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:35.892 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"架构","role":"assistant"},"index":0}],"created":1746095614,"data":"架构","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:35.892 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"师","role":"assistant"},"index":0}],"created":1746095614,"data":"师","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:35.928 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"。","role":"assistant"},"index":0}],"created":1746095614,"data":"。","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:35.964 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"他在","role":"assistant"},"index":0}],"created":1746095614,"data":"他在","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.001 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"互联网","role":"assistant"},"index":0}],"created":1746095614,"data":"互联网","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.038 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"大","role":"assistant"},"index":0}],"created":1746095614,"data":"大","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.073 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"厂","role":"assistant"},"index":0}],"created":1746095614,"data":"厂","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.111 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"有","role":"assistant"},"index":0}],"created":1746095614,"data":"有","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.150 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"超过","role":"assistant"},"index":0}],"created":1746095614,"data":"超过","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.185 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"10","role":"assistant"},"index":0}],"created":1746095614,"data":"10","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.185 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"年的","role":"assistant"},"index":0}],"created":1746095614,"data":"年的","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.221 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"工作经验","role":"assistant"},"index":0}],"created":1746095614,"data":"工作经验","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.221 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"，","role":"assistant"},"index":0}],"created":1746095614,"data":"，","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.257 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"曾","role":"assistant"},"index":0}],"created":1746095614,"data":"曾","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.258 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"担任","role":"assistant"},"index":0}],"created":1746095614,"data":"担任","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.295 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"T","role":"assistant"},"index":0}],"created":1746095614,"data":"T","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.295 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"8","role":"assistant"},"index":0}],"created":1746095614,"data":"8","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.331 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"级","role":"assistant"},"index":0}],"created":1746095614,"data":"级","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.331 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"架构","role":"assistant"},"index":0}],"created":1746095614,"data":"架构","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.412 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"师","role":"assistant"},"index":0}],"created":1746095614,"data":"师","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.412 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"，","role":"assistant"},"index":0}],"created":1746095614,"data":"，","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.448 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"从事","role":"assistant"},"index":0}],"created":1746095614,"data":"从事","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.485 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"过","role":"assistant"},"index":0}],"created":1746095614,"data":"过","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.485 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"交易","role":"assistant"},"index":0}],"created":1746095614,"data":"交易","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.521 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"、","role":"assistant"},"index":0}],"created":1746095614,"data":"、","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.521 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"信贷","role":"assistant"},"index":0}],"created":1746095614,"data":"信贷","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.558 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"、","role":"assistant"},"index":0}],"created":1746095614,"data":"、","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.558 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"账","role":"assistant"},"index":0}],"created":1746095614,"data":"账","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.596 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"务","role":"assistant"},"index":0}],"created":1746095614,"data":"务","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.596 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"、","role":"assistant"},"index":0}],"created":1746095614,"data":"、","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.630 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"营销","role":"assistant"},"index":0}],"created":1746095614,"data":"营销","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.630 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"、","role":"assistant"},"index":0}],"created":1746095614,"data":"、","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.668 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"平台","role":"assistant"},"index":0}],"created":1746095614,"data":"平台","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.669 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"、","role":"assistant"},"index":0}],"created":1746095614,"data":"、","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.705 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"中间","role":"assistant"},"index":0}],"created":1746095614,"data":"中间","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.705 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"件","role":"assistant"},"index":0}],"created":1746095614,"data":"件","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.743 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"等各类","role":"assistant"},"index":0}],"created":1746095614,"data":"等各类","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.778 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"场景","role":"assistant"},"index":0}],"created":1746095614,"data":"场景","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.818 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"的","role":"assistant"},"index":0}],"created":1746095614,"data":"的","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.818 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"架构","role":"assistant"},"index":0}],"created":1746095614,"data":"架构","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.851 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"设计和","role":"assistant"},"index":0}],"created":1746095614,"data":"设计和","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.887 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"编程","role":"assistant"},"index":0}],"created":1746095614,"data":"编程","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.887 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"实现","role":"assistant"},"index":0}],"created":1746095614,"data":"实现","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.923 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"。","role":"assistant"},"index":0}],"created":1746095614,"data":"。","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:36.923 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"小","role":"assistant"},"index":0}],"created":1746095614,"data":"小","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.024 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"傅","role":"assistant"},"index":0}],"created":1746095614,"data":"傅","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.126 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"哥","role":"assistant"},"index":0}],"created":1746095614,"data":"哥","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.162 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"通过","role":"assistant"},"index":0}],"created":1746095614,"data":"通过","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.200 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"其","role":"assistant"},"index":0}],"created":1746095614,"data":"其","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.236 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"博客","role":"assistant"},"index":0}],"created":1746095614,"data":"博客","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.237 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"“","role":"assistant"},"index":0}],"created":1746095614,"data":"“","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.274 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"bug","role":"assistant"},"index":0}],"created":1746095614,"data":"bug","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.274 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"stack","role":"assistant"},"index":0}],"created":1746095614,"data":"stack","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.312 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":".cn","role":"assistant"},"index":0}],"created":1746095614,"data":".cn","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.347 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"”","role":"assistant"},"index":0}],"created":1746095614,"data":"”","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.348 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"和","role":"assistant"},"index":0}],"created":1746095614,"data":"和","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.384 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"知识","role":"assistant"},"index":0}],"created":1746095614,"data":"知识","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.425 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"星球","role":"assistant"},"index":0}],"created":1746095614,"data":"星球","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.457 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"“","role":"assistant"},"index":0}],"created":1746095614,"data":"“","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.495 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"码","role":"assistant"},"index":0}],"created":1746095614,"data":"码","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.533 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"农","role":"assistant"},"index":0}],"created":1746095614,"data":"农","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.572 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"会","role":"assistant"},"index":0}],"created":1746095614,"data":"会","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.572 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"锁","role":"assistant"},"index":0}],"created":1746095614,"data":"锁","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.615 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"”","role":"assistant"},"index":0}],"created":1746095614,"data":"”","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.615 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"分享","role":"assistant"},"index":0}],"created":1746095614,"data":"分享","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.649 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"实战","role":"assistant"},"index":0}],"created":1746095614,"data":"实战","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.687 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"应用","role":"assistant"},"index":0}],"created":1746095614,"data":"应用","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.721 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"级","role":"assistant"},"index":0}],"created":1746095614,"data":"级","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.722 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"编程","role":"assistant"},"index":0}],"created":1746095614,"data":"编程","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.757 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"项目","role":"assistant"},"index":0}],"created":1746095614,"data":"项目","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.795 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"和技术","role":"assistant"},"index":0}],"created":1746095614,"data":"和技术","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.831 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"经验","role":"assistant"},"index":0}],"created":1746095614,"data":"经验","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.868 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"，","role":"assistant"},"index":0}],"created":1746095614,"data":"，","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.868 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"帮助","role":"assistant"},"index":0}],"created":1746095614,"data":"帮助","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.904 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"开发者","role":"assistant"},"index":0}],"created":1746095614,"data":"开发者","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.942 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"提升","role":"assistant"},"index":0}],"created":1746095614,"data":"提升","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:37.978 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"技能","role":"assistant"},"index":0}],"created":1746095614,"data":"技能","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.014 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"。","role":"assistant"},"index":0}],"created":1746095614,"data":"。","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.050 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"他还","role":"assistant"},"index":0}],"created":1746095614,"data":"他还","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.087 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"开发了","role":"assistant"},"index":0}],"created":1746095614,"data":"开发了","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.125 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"多个","role":"assistant"},"index":0}],"created":1746095614,"data":"多个","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.160 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"开源","role":"assistant"},"index":0}],"created":1746095614,"data":"开源","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.197 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"项目和","role":"assistant"},"index":0}],"created":1746095614,"data":"项目和","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.234 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"工具","role":"assistant"},"index":0}],"created":1746095614,"data":"工具","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.235 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"，","role":"assistant"},"index":0}],"created":1746095614,"data":"，","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.270 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"如","role":"assistant"},"index":0}],"created":1746095614,"data":"如","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.270 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"AI","role":"assistant"},"index":0}],"created":1746095614,"data":"AI","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.307 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":" MCP","role":"assistant"},"index":0}],"created":1746095614,"data":" MCP","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.343 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"、","role":"assistant"},"index":0}],"created":1746095614,"data":"、","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.381 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"vo","role":"assistant"},"index":0}],"created":1746095614,"data":"vo","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.418 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"2","role":"assistant"},"index":0}],"created":1746095614,"data":"2","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.454 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"dto","role":"assistant"},"index":0}],"created":1746095614,"data":"dto","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.490 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"插件","role":"assistant"},"index":0}],"created":1746095614,"data":"插件","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.491 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"等","role":"assistant"},"index":0}],"created":1746095614,"data":"等","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.527 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"，","role":"assistant"},"index":0}],"created":1746095614,"data":"，","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.527 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"并在","role":"assistant"},"index":0}],"created":1746095614,"data":"并在","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.563 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"B","role":"assistant"},"index":0}],"created":1746095614,"data":"B","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.602 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"站","role":"assistant"},"index":0}],"created":1746095614,"data":"站","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.637 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"发布了","role":"assistant"},"index":0}],"created":1746095614,"data":"发布了","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.674 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"《","role":"assistant"},"index":0}],"created":1746095614,"data":"《","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.674 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"重","role":"assistant"},"index":0}],"created":1746095614,"data":"重","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.710 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"学","role":"assistant"},"index":0}],"created":1746095614,"data":"学","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.746 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"Java","role":"assistant"},"index":0}],"created":1746095614,"data":"Java","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.746 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"设计","role":"assistant"},"index":0}],"created":1746095614,"data":"设计","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.785 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"模式","role":"assistant"},"index":0}],"created":1746095614,"data":"模式","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.785 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"》","role":"assistant"},"index":0}],"created":1746095614,"data":"》","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.822 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"视频","role":"assistant"},"index":0}],"created":1746095614,"data":"视频","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.823 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"教程","role":"assistant"},"index":0}],"created":1746095614,"data":"教程","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.858 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"。","role":"assistant"},"index":0}],"created":1746095614,"data":"。","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.859 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"小","role":"assistant"},"index":0}],"created":1746095614,"data":"小","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.894 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"傅","role":"assistant"},"index":0}],"created":1746095614,"data":"傅","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.933 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"哥","role":"assistant"},"index":0}],"created":1746095614,"data":"哥","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:38.974 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"致力于","role":"assistant"},"index":0}],"created":1746095614,"data":"致力于","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:39.010 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"通过","role":"assistant"},"index":0}],"created":1746095614,"data":"通过","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:39.047 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"实战","role":"assistant"},"index":0}],"created":1746095614,"data":"实战","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:39.084 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"项目和","role":"assistant"},"index":0}],"created":1746095614,"data":"项目和","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:39.084 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"教程","role":"assistant"},"index":0}],"created":1746095614,"data":"教程","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:39.121 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"，","role":"assistant"},"index":0}],"created":1746095614,"data":"，","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:39.159 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"帮助","role":"assistant"},"index":0}],"created":1746095614,"data":"帮助","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:39.159 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"开发者","role":"assistant"},"index":0}],"created":1746095614,"data":"开发者","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:39.195 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"构建","role":"assistant"},"index":0}],"created":1746095614,"data":"构建","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:39.234 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"技术","role":"assistant"},"index":0}],"created":1746095614,"data":"技术","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:39.268 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"栈","role":"assistant"},"index":0}],"created":1746095614,"data":"栈","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:39.305 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"体系","role":"assistant"},"index":0}],"created":1746095614,"data":"体系","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:39.305 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"，","role":"assistant"},"index":0}],"created":1746095614,"data":"，","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:39.342 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"提升","role":"assistant"},"index":0}],"created":1746095614,"data":"提升","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:39.342 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"职场","role":"assistant"},"index":0}],"created":1746095614,"data":"职场","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:39.379 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"竞争力","role":"assistant"},"index":0}],"created":1746095614,"data":"竞争力","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:39.417 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"。","role":"assistant"},"index":0}],"created":1746095614,"data":"。","id":"20250501183333ef5b7cdfbfdb4e39","model":"glm-4-plus"}
+25-05-01.18:33:39.626 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"","role":"assistant"},"finish_reason":"stop","index":0}],"created":1746095614,"id":"20250501183333ef5b7cdfbfdb4e39","meta":"{\"usage\":{\"completion_tokens\":145,\"prompt_tokens\":4150,\"total_tokens\":4295}}","model":"glm-4-plus","usage":{"completion_tokens":145,"prompt_tokens":4150,"total_tokens":4295}}
+25-05-01.18:33:39.626 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - [输出结束] Tokens "[DONE]"
+25-05-01.18:33:39.626 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 对话完成
+25-05-01.18:34:05.975 [main            ] INFO  GLMTest                - Starting GLMTest using Java 1.8.0_432 on 192.168.0.102 with PID 51762 (started by heizai in /Users/heizai/IdeaProjects/chatgpt-data/chatgpt-data-app)
+25-05-01.18:34:05.976 [main            ] INFO  GLMTest                - The following 1 profile is active: "dev"
+25-05-01.18:34:06.937 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，扫码支付服务已装配
+25-05-01.18:34:06.975 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+25-05-01.18:34:06.978 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+25-05-01.18:34:06.980 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+25-05-01.18:34:06.983 [main            ] INFO  LtzfSDKConfig          - 蓝兔支付 SDK 启动成功，H5支付服务已装配
+25-05-01.18:34:07.301 [main            ] INFO  GLMTest                - Started GLMTest in 1.492 seconds (JVM running for 1.857)
+25-05-01.18:34:07.430 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> POST https://open.bigmodel.cn/api/paas/v4/chat/completions
+25-05-01.18:34:07.430 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+25-05-01.18:34:07.430 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Length: 336
+25-05-01.18:34:07.430 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Accept: text/event-stream
+25-05-01.18:34:07.430 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> END POST
+25-05-01.18:34:10.931 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- 200 https://open.bigmodel.cn/api/paas/v4/chat/completions (3500ms)
+25-05-01.18:34:10.932 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - date: Thu, 01 May 2025 10:34:11 GMT
+25-05-01.18:34:10.932 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - content-type: text/event-stream;charset=UTF-8
+25-05-01.18:34:10.932 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - set-cookie: acw_tc=ac11000117460956477387248e007d339a60e3ccdc3cec08aca8068f9b0a6d;path=/;HttpOnly;Max-Age=1800
+25-05-01.18:34:10.932 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-05-01.18:34:10.932 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-05-01.18:34:10.932 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-05-01.18:34:10.932 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - x-log-id: 20250501183407fcadc9266c384e20
+25-05-01.18:34:10.932 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-05-01.18:34:10.933 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-05-01.18:34:10.933 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-05-01.18:34:10.933 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - strict-transport-security: max-age=31536000; includeSubDomains
+25-05-01.18:34:10.933 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- END HTTP
+25-05-01.18:34:11.099 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"小","role":"assistant"},"index":0}],"created":1746095648,"data":"小","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.100 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"傅","role":"assistant"},"index":0}],"created":1746095648,"data":"傅","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.100 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"哥","role":"assistant"},"index":0}],"created":1746095648,"data":"哥","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.100 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"是一位","role":"assistant"},"index":0}],"created":1746095648,"data":"是一位","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.100 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"技术","role":"assistant"},"index":0}],"created":1746095648,"data":"技术","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.101 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"UP","role":"assistant"},"index":0}],"created":1746095648,"data":"UP","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.101 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"主","role":"assistant"},"index":0}],"created":1746095648,"data":"主","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.105 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"，","role":"assistant"},"index":0}],"created":1746095648,"data":"，","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.135 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"具有","role":"assistant"},"index":0}],"created":1746095648,"data":"具有","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.163 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"多年","role":"assistant"},"index":0}],"created":1746095648,"data":"多年","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.190 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"一线","role":"assistant"},"index":0}],"created":1746095648,"data":"一线","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.221 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"互联网","role":"assistant"},"index":0}],"created":1746095648,"data":"互联网","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.249 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"Java","role":"assistant"},"index":0}],"created":1746095648,"data":"Java","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.279 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"开发","role":"assistant"},"index":0}],"created":1746095648,"data":"开发","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.308 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"经验","role":"assistant"},"index":0}],"created":1746095648,"data":"经验","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.337 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"，","role":"assistant"},"index":0}],"created":1746095648,"data":"，","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.365 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"担任","role":"assistant"},"index":0}],"created":1746095648,"data":"担任","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.393 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"过","role":"assistant"},"index":0}],"created":1746095648,"data":"过","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.421 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"架构","role":"assistant"},"index":0}],"created":1746095648,"data":"架构","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.451 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"师","role":"assistant"},"index":0}],"created":1746095648,"data":"师","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.480 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"职位","role":"assistant"},"index":0}],"created":1746095648,"data":"职位","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.510 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"。","role":"assistant"},"index":0}],"created":1746095648,"data":"。","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.538 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"他","role":"assistant"},"index":0}],"created":1746095648,"data":"他","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.614 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"通过","role":"assistant"},"index":0}],"created":1746095648,"data":"通过","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.697 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"自己的","role":"assistant"},"index":0}],"created":1746095648,"data":"自己的","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.727 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"博客","role":"assistant"},"index":0}],"created":1746095648,"data":"博客","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.755 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"（","role":"assistant"},"index":0}],"created":1746095648,"data":"（","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.783 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"https","role":"assistant"},"index":0}],"created":1746095648,"data":"https","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.811 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"://","role":"assistant"},"index":0}],"created":1746095648,"data":"://","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.839 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"bug","role":"assistant"},"index":0}],"created":1746095648,"data":"bug","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.868 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"stack","role":"assistant"},"index":0}],"created":1746095648,"data":"stack","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.897 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":".cn","role":"assistant"},"index":0}],"created":1746095648,"data":".cn","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.926 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"）","role":"assistant"},"index":0}],"created":1746095648,"data":"）","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.954 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"分享","role":"assistant"},"index":0}],"created":1746095648,"data":"分享","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:11.983 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"技术","role":"assistant"},"index":0}],"created":1746095648,"data":"技术","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.011 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"知识","role":"assistant"},"index":0}],"created":1746095648,"data":"知识","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.039 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"，","role":"assistant"},"index":0}],"created":1746095648,"data":"，","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.068 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"沉淀","role":"assistant"},"index":0}],"created":1746095648,"data":"沉淀","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.097 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"、","role":"assistant"},"index":0}],"created":1746095648,"data":"、","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.126 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"分享","role":"assistant"},"index":0}],"created":1746095648,"data":"分享","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.157 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"、","role":"assistant"},"index":0}],"created":1746095648,"data":"、","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.185 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"成长","role":"assistant"},"index":0}],"created":1746095648,"data":"成长","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.216 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"，","role":"assistant"},"index":0}],"created":1746095648,"data":"，","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.244 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"并","role":"assistant"},"index":0}],"created":1746095648,"data":"并","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.271 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"帮助","role":"assistant"},"index":0}],"created":1746095648,"data":"帮助","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.299 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"他人","role":"assistant"},"index":0}],"created":1746095648,"data":"他人","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.327 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"提升","role":"assistant"},"index":0}],"created":1746095648,"data":"提升","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.355 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"技术","role":"assistant"},"index":0}],"created":1746095648,"data":"技术","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.384 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"能力","role":"assistant"},"index":0}],"created":1746095648,"data":"能力","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.412 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"。","role":"assistant"},"index":0}],"created":1746095648,"data":"。","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.442 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"小","role":"assistant"},"index":0}],"created":1746095648,"data":"小","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.471 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"傅","role":"assistant"},"index":0}],"created":1746095648,"data":"傅","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.504 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"哥","role":"assistant"},"index":0}],"created":1746095648,"data":"哥","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.527 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"曾","role":"assistant"},"index":0}],"created":1746095648,"data":"曾","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.556 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"开发","role":"assistant"},"index":0}],"created":1746095648,"data":"开发","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.582 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"过","role":"assistant"},"index":0}],"created":1746095648,"data":"过","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.611 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"交易","role":"assistant"},"index":0}],"created":1746095648,"data":"交易","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.641 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"、","role":"assistant"},"index":0}],"created":1746095648,"data":"、","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.668 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"营销","role":"assistant"},"index":0}],"created":1746095648,"data":"营销","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.698 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"类","role":"assistant"},"index":0}],"created":1746095648,"data":"类","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.725 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"项目","role":"assistant"},"index":0}],"created":1746095648,"data":"项目","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.755 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"，","role":"assistant"},"index":0}],"created":1746095648,"data":"，","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.783 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"涉及","role":"assistant"},"index":0}],"created":1746095648,"data":"涉及","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.812 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"中间","role":"assistant"},"index":0}],"created":1746095648,"data":"中间","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.842 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"件","role":"assistant"},"index":0}],"created":1746095648,"data":"件","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.869 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"设计","role":"assistant"},"index":0}],"created":1746095648,"data":"设计","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.897 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"、","role":"assistant"},"index":0}],"created":1746095648,"data":"、","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.926 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"系统","role":"assistant"},"index":0}],"created":1746095648,"data":"系统","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.956 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"重构","role":"assistant"},"index":0}],"created":1746095648,"data":"重构","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:12.983 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"等技术","role":"assistant"},"index":0}],"created":1746095648,"data":"等技术","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.013 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"领域","role":"assistant"},"index":0}],"created":1746095648,"data":"领域","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.040 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"，","role":"assistant"},"index":0}],"created":1746095648,"data":"，","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.069 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"并","role":"assistant"},"index":0}],"created":1746095648,"data":"并","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.098 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"编写","role":"assistant"},"index":0}],"created":1746095648,"data":"编写","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.128 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"过","role":"assistant"},"index":0}],"created":1746095648,"data":"过","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.158 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"技术","role":"assistant"},"index":0}],"created":1746095648,"data":"技术","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.183 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"专利","role":"assistant"},"index":0}],"created":1746095648,"data":"专利","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.213 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"，","role":"assistant"},"index":0}],"created":1746095648,"data":"，","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.241 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"对","role":"assistant"},"index":0}],"created":1746095648,"data":"对","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.270 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"架构","role":"assistant"},"index":0}],"created":1746095648,"data":"架构","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.298 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"设计和","role":"assistant"},"index":0}],"created":1746095648,"data":"设计和","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.327 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"落地","role":"assistant"},"index":0}],"created":1746095648,"data":"落地","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.355 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"具有","role":"assistant"},"index":0}],"created":1746095648,"data":"具有","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.384 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"丰富","role":"assistant"},"index":0}],"created":1746095648,"data":"丰富","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.411 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"经验","role":"assistant"},"index":0}],"created":1746095648,"data":"经验","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.441 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"。","role":"assistant"},"index":0}],"created":1746095648,"data":"。","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.469 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"此外","role":"assistant"},"index":0}],"created":1746095648,"data":"此外","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.500 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"，","role":"assistant"},"index":0}],"created":1746095648,"data":"，","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.526 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"他还","role":"assistant"},"index":0}],"created":1746095648,"data":"他还","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.555 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"录制","role":"assistant"},"index":0}],"created":1746095648,"data":"录制","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.584 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"视频","role":"assistant"},"index":0}],"created":1746095648,"data":"视频","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.612 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"教程","role":"assistant"},"index":0}],"created":1746095648,"data":"教程","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.641 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"、","role":"assistant"},"index":0}],"created":1746095648,"data":"、","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.668 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"开发","role":"assistant"},"index":0}],"created":1746095648,"data":"开发","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.697 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"插件","role":"assistant"},"index":0}],"created":1746095648,"data":"插件","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.729 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"、","role":"assistant"},"index":0}],"created":1746095648,"data":"、","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.754 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"撰写","role":"assistant"},"index":0}],"created":1746095648,"data":"撰写","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.783 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"书籍","role":"assistant"},"index":0}],"created":1746095648,"data":"书籍","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.813 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"，","role":"assistant"},"index":0}],"created":1746095648,"data":"，","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.841 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"多","role":"assistant"},"index":0}],"created":1746095648,"data":"多","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.873 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"渠道","role":"assistant"},"index":0}],"created":1746095648,"data":"渠道","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.897 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"地进行","role":"assistant"},"index":0}],"created":1746095648,"data":"地进行","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.925 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"技术","role":"assistant"},"index":0}],"created":1746095648,"data":"技术","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.954 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"传播","role":"assistant"},"index":0}],"created":1746095648,"data":"传播","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:13.983 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"和","role":"assistant"},"index":0}],"created":1746095648,"data":"和","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:14.012 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"交流","role":"assistant"},"index":0}],"created":1746095648,"data":"交流","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:14.041 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"。","role":"assistant"},"index":0}],"created":1746095648,"data":"。","id":"20250501183407fcadc9266c384e20","model":"glm-4-0520"}
+25-05-01.18:34:14.212 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 测试结果：{"choices":[{"delta":{"content":"","role":"assistant"},"finish_reason":"stop","index":0}],"created":1746095648,"id":"20250501183407fcadc9266c384e20","meta":"{\"usage\":{\"completion_tokens\":109,\"prompt_tokens\":4150,\"total_tokens\":4259}}","model":"glm-4-0520","usage":{"completion_tokens":109,"prompt_tokens":4150,"total_tokens":4259}}
+25-05-01.18:34:14.212 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - [输出结束] Tokens "[DONE]"
+25-05-01.18:34:14.212 [OkHttp https://open.bigmodel.cn/...] INFO  GLMTest                - 对话完成

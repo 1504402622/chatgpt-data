@@ -10,6 +10,9 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum ChatGLMModel {
 
+
+    GLM_4_Plus("glm-4-plus"),
+    GLM_4_0520("glm-4-0520"),
     GLM_4_Air("glm-4-air"),
     GLM_4_FlashX("glm-4-flashx"),
     ;
@@ -21,6 +24,10 @@ public enum ChatGLMModel {
                 return ChatGLMModel.GLM_4_Air;
             case "glm-4-flashx":
                 return ChatGLMModel.GLM_4_FlashX;
+            case "glm-4-plus":
+                return ChatGLMModel.GLM_4_Plus;
+            case "glm-4-0520":
+                return ChatGLMModel.GLM_4_0520;
             default:
                 return ChatGLMModel.GLM_4_Air;
         }

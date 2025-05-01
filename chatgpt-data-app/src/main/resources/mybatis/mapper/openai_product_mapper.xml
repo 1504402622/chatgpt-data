@@ -6,6 +6,7 @@
         <result column="product_id" property="productId"/>
         <result column="product_name" property="productName"/>
         <result column="product_desc" property="productDesc"/>
+        <result column="product_model_types" property="productModelTypes"/>
         <result column="quota" property="quota"/>
         <result column="price" property="price"/>
         <result column="sort" property="sort"/>
@@ -16,14 +17,14 @@
 
     <!--根据商品id查找商品所有信息-->
     <select id="queryProductByProductId" parameterType="java.lang.Integer" resultMap="openAIProductMap">
-        SELECT product_id, product_name, product_desc, quota, price, is_enabled
+        SELECT product_id, product_name, product_desc, product_model_types, quota, price, is_enabled
         FROM openai_product
         WHERE product_id = #{productId}
     </select>
 
     <!--查找可用商品-->
     <select id="queryProductList" resultMap="openAIProductMap">
-        SELECT product_id, product_name, product_desc, quota, price
+        SELECT product_id, product_name, product_model_types, product_desc, quota, price
         FROM openai_product
         WHERE is_enabled = 1
         ORDER BY sort

@@ -35,6 +35,10 @@ public class ProductEntity {
      */
     private Integer quota;
     /**
+     * 商品类型
+     */
+    private String productModelTypes;
+    /**
      * 商品价格
      */
     private BigDecimal price;
