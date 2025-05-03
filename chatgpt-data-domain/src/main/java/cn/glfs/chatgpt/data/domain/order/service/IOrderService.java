@@ -71,4 +71,13 @@ public interface IOrderService {
      */
     List<ProductEntity> queryProductList();
 
+    /**
+     * 判断订单是否已关单
+     */
+    boolean isOrderClosed(String orderId);
+
+    /**
+     * 订单退款
+     */
+    void refundOrder(String orderId);
 }

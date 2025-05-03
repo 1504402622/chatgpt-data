@@ -46,7 +46,6 @@ public class TimeoutCloseOrderJob {
             }
             for (String orderId : orderIds) {
                 boolean status = orderService.changeOrderClose(orderId);
-                // 微信关单(假装关单，呜呜呜蓝兔支付没有关单api，可恶)
                 log.info("定时任务，超时30分钟订单关闭 orderId: {} status：{}", orderId, status);
             }
         } catch (Exception e) {

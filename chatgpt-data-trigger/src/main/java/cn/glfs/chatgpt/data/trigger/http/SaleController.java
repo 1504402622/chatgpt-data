@@ -150,18 +150,28 @@ public class SaleController {
             Date successTime = new Date();
             log.info("支付回调, code:{}, outTradeNo:{}, payNo:{}, totalFee:{}, successTime:{}", code, outTradeNo, payNo, totalFee, successTime);
 
-            if ("0".equals(code)) {
-                boolean isSuccess = orderService.changeOrderPaySuccess(outTradeNo, payNo, new BigDecimal(totalFee),successTime);
-                if (isSuccess) {
-                    eventBus.post(outTradeNo);
-                }
-                // 返回响应
-                PrintWriter writer = response.getWriter();
-                writer.write("<xml><return_code><![CDATA[SUCCESS]]></return_code></xml>");
-            } else {
+            if (!"0".equals(code)) {
                 PrintWriter writer = response.getWriter();
                 writer.write("<xml><return_code><![CDATA[FAIL]]></return_code></xml>");
             }
+
+            // 查看订单状态是否为超时订单，若为超时订单自动退款
+            boolean isOrderClosed = orderService.isOrderClosed(outTradeNo);
+            if (isOrderClosed) {
+                log.info("回调订单已超时关闭,进行退款：outTradeNo:{}}", outTradeNo);
+                orderService.refundOrder(outTradeNo);
+                PrintWriter writer = response.getWriter();
+                writer.write("<xml><return_code><![CDATA[FAIL]]></return_code></xml>");
+            }
+
+            boolean isSuccess = orderService.changeOrderPaySuccess(outTradeNo, payNo, new BigDecimal(totalFee),successTime);
+            if (isSuccess) {
+                eventBus.post(outTradeNo);
+            }
+            // 返回响应
+            PrintWriter writer = response.getWriter();
+            writer.write("<xml><return_code><![CDATA[SUCCESS]]></return_code></xml>");
+
         } catch (ChatGPTException e) {
             log.error("支付回调异常：", e);
         } catch (IOException e) {

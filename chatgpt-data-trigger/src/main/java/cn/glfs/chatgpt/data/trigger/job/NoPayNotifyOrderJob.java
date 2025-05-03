@@ -21,6 +21,7 @@ import javax.annotation.Resource;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -75,7 +76,7 @@ public class NoPayNotifyOrderJob {
                 BigDecimal totalAmount = new BigDecimal(totalFee).divide(new BigDecimal(100), 2, RoundingMode.HALF_UP);
                 String successTime = data.getSuccessTime();
                 // 更新订单
-                boolean isSuccess = orderService.changeOrderPaySuccess(orderId, payNo, totalAmount, dateFormat.parse(successTime));
+                boolean isSuccess = orderService.changeOrderPaySuccess(orderId, payNo, totalAmount, new Date());
                 if (isSuccess) {
                     // 发布消息
                     eventBus.post(orderId);

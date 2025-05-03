@@ -11,6 +11,7 @@ import cn.glfs.chatgpt.data.domain.order.model.valobj.PayTypeVO;
 import cn.glfs.ltzf.payments.nativepay.NativePayService;
 import cn.glfs.ltzf.payments.nativepay.model.PrepayRequest;
 import cn.glfs.ltzf.payments.nativepay.model.PrepayResponse;
+import cn.glfs.ltzf.payments.nativepay.model.RefundOrderRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,7 @@ import java.util.Objects;
 
 @Slf4j
 @Service
-public class OrderService extends AbstractOrderService{
+public class OrderService extends AbstractOrderService {
 
     @Value("${ltzf.sdk.config.app_id}")
     private String appid;
@@ -130,4 +131,31 @@ public class OrderService extends AbstractOrderService{
     public List<ProductEntity> queryProductList() {
         return orderRepository.queryProductList();
     }
+
+    @Override
+    public boolean isOrderClosed(String orderId) {
+        OrderEntity order = orderRepository.queryOrder(orderId).getOrder();
+        if (order.getOrderStatus() != OrderStatusVO.CLOSE) {
+            return false;
+        }
+        return true;
+    }
+
+
+    @Override
+    public void refundOrder(String orderId) {
+        OrderEntity order = orderRepository.queryOrder(orderId).getOrder();
+        RefundOrderRequest refundOrderRequest = new RefundOrderRequest();
+        refundOrderRequest.setMchId(mchid);
+        refundOrderRequest.setOutTradeNo(order.getOrderId());
+        refundOrderRequest.setOutRefundNo(order.getOrderId());
+        refundOrderRequest.setRefundFee(order.getTotalAmount().toString());
+        try {
+            payService.refundOrder(refundOrderRequest);
+        } catch (Exception e) {
+            log.error("退款失败, orderId:{}, e:{}", order.getOrderId(), e);
+            throw new RuntimeException(e);
+        }
+    }
+
 }
