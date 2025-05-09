@@ -76,7 +76,7 @@ wx:
 spring:
   datasource:
     username: root
-    password: 1234
+    password: w1504402622
     url: jdbc:mysql://127.0.0.1:3306/openai?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useSSL=true
     driver-class-name: com.mysql.jdbc.Driver
   hikari:
@@ -114,5 +114,17 @@ ltzf:
 
 
 
-
+redis:
+  sdk:
+    config:
+      host: localhost
+      port: 16379
+      pool-size: 10
+      min-idle-size: 5
+      idle-timeout: 30000
+      connect-timeout: 5000
+      retry-attempts: 3
+      retry-interval: 1000
+      ping-interval: 60000
+      keep-alive: true
 
